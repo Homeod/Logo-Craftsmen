@@ -274,12 +274,32 @@ import {
       answer:"We can convert most raster images to vector format. However, the quality and complexity of the original image can affect the conversion process. We'll assess your image during the project consultation and inform you of any limitations or challenges.",
     },
     {
-      question: "what is your name",
-      answer: "My name is Hritik",
+      question:"What file formats will I receive for my vector or embroidery design?",
+      answer:"For vector conversions, we provide the final design in commonly used vector formats such as AI, EPS, and SVG, which are ideal for printing and digital use. For embroidery designs, you&#39;ll receive the design in formats compatible with embroidery machines, such as DST, PES, or other industry-standard formats.",
     },
     {
-      question: "what is your surname",
-      answer: "My surname is Mandlik",  
+      question:"Do you offer any guarantees or revisions for your designs?",
+      answer:"We value client satisfaction and offer a reasonable number of revisions to ensure you are thrilled with the final design. Your feedback is crucial during the revision process, and we work closely with you to refine the design according to your preferences.",
+    },
+    {
+      question:"How do I provide feedback during the design process?",
+      answer:"We encourage open communication and collaboration. You can provide feedback via email or the communication platform we use for the project. Specific feedback on what you like or would like to change helps us tailor the design to your vision.",
+    },
+    {
+      question:"What is the pricing structure for vector conversion and embroidery services?",
+      answer:"Our pricing is based on the complexity of the project and the specific requirements. We offer transparent pricing with different packages to suit your needs. Contact us for a customized quote, and we'll provide detailed information about the pricing structure.",
+    },
+    {
+      question:"Can you provide embroidery designs for specific fabrics and materials?",
+      answer:"Yes, we consider the type of fabric or material you plan to use for embroidery. We provide guidelines on how the design should be stitched to achieve the best results, ensuring that it suits your chosen fabric and product.",
+    },
+    {
+      question:"Do you offer rush services for urgent projects?",
+      answer:"Yes, we understand that some projects have tight deadlines. We offer rush services for urgent projects, and we will work with you to accommodate your timeline. Without any Rush charges.",
+    },
+    {
+      question:"How can I get started with a logo design, vector conversion, or embroidery project with Logo Craftsmen?",
+      answer:"Getting started is easy. Simply reach out to us via our website or contact us through email or phone. We'll set up an initial consultation to discuss your project, understand your needs, and provide you with a customized plan to bring your design ideas to life.",
     },
   ];
 

@@ -33,6 +33,9 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import rect_img from "./rect_img.png";
+import square_img from "./square_img.png";
+
 export {
   logo,
   backend,
@@ -65,4 +68,6 @@ export {
   carrent,
   jobit,
   tripguide,
+  rect_img,
+  square_img,
 };

@@ -34,23 +34,49 @@ const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-      <div className="py-12 md:py-20 border-b border-gray-100">
-        <div className="pb-10 md:pb-10 w-full text-center ">
-          <h2 className="text-2xl font-medium w-full text-center">Questions and answer</h2>
-        </div>
-        <div className="">
-          {faqs.map((faqs, index) => (
-            // <div key={index}>{faqs.question}</div>
-            <AccordionSection
-              faqs={faqs}
-              key={index}
-              isActiveSection={index === activeIndex}
-              setActiveIndex={setActiveIndex}
-              sectionIndex={index}
-            />
-          ))}
+    <div className="py-10 md:py-10 border-b border-gray-100">
+      <div className="pb-10 md:pb-12 w-full text-center ">
+        <h2 className="sm:text-3xl font-medium w-full text-center text-2xl">
+          Questions and answer
+        </h2>
+      </div>
+
+      <div className="">
+        {faqs.map((faqs, index) => (
+          // <div key={index}>{faqs.question}</div>
+          <AccordionSection
+            faqs={faqs}
+            key={index}
+            isActiveSection={index === activeIndex}
+            setActiveIndex={setActiveIndex}
+            sectionIndex={index}
+          />
+        ))}
+      </div>
+      
+        {/* <div className="bg-green-400 w-full my-10 sm:my-20">
+              <div className="mx-10 py-8 sm:py-12 ">
+                <h2 className="text-white text-center text-2xl sm:text-3xl">Still have questions about how Whatfix can help your business?</h2> <br />
+                <h6 className="text-white text-center">Contact us at <span className="bg-indigo-500">sales@whatfix.com</span> or call us on <span className="bg-indigo-500">+1-800-459-7098</span> to request a demo and see how Whatfix empowers organizations to scale enterprise-wide changes, improve user productivity, and drive user adoption fast.</h6>
+                <button>Contact Us Button</button>
+              </div>            
+          </div> */}
+
+      <div>
+        <div className="mt-10 flex items-center justify-center">
+          <div className="bg-white rounded-lg shadow-md p-8 text-center m-10">
+            <h1 className="text-3xl font-semibold mb-4">
+              Still have questions about how Logo Craftsmen can help you?
+            </h1>
+            <p className="text-lg mb-6">Ask us Out Now</p>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Contact Us
+            </button>
+          </div>
         </div>
       </div>
+      
+    </div>
   );
 };
 
