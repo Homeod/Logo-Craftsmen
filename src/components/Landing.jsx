@@ -3,17 +3,14 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { services } from "../constents";
+import { services, experiences, testimonials } from "../constents";
 import { fadeIn, textVariant } from "../utils/motion";
-
-import { experiences } from "../constents";
 
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -53,8 +50,6 @@ const ExperienceCard = ({ experience }) => (
   </VerticalTimelineElement>
 );
 
-
-
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
@@ -80,33 +75,95 @@ const ServiceCard = ({ index, title, icon }) => {
   );
 };
 
+const FeedbackCard = ({
+  index,
+  testimonial,
+  name,
+  designation,
+  company,
+  image,
+}) => (
+  <motion.div
+    variants={fadeIn("", "spring", index * 0.5, 0.75)}
+    className="bg-green-200 p-10 rounded-3xl xs:w-[320px] w-full"
+  >
+    <p className="text-black font-black text-[48px]">"</p>
+    <div className="mt-1">
+      <p className="text-black tracking-wider text-[18px]">{testimonial}</p>
+
+      <div className="mt-7 flex justify-between items-center gap-1">
+        <div className="flex-1 flex flex-col">
+          <p className="text-black font-medium text-[16px]">
+            <span className="blue-text-gradient">@</span>
+            {name}
+          </p>
+          <p className="mt-1 text-teal-950 text-[12px]">
+            {designation} of {company}
+          </p>
+        </div>
+        <img
+          src={image}
+          alt={`feedback-by-${name}`}
+          className="w-10 h-10 rounded-full object-cover"
+        />
+      </div>
+    </div>
+  </motion.div>
+);
+
 const Landing = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <h2 className="flex justify-center items-center font-semibold text-3xl">
-          Why choose Us?
-        </h2>
-      </motion.div>
+      <div className="mt-10 flex flex-col bg-violet-400 rounded-[20px]">
+        <div className={`${styles.padding}`}>
+          <motion.div variants={textVariant()}>
+            <p className={styles.sectionSubText}>Lorem Ipsum</p>
+            <p className={styles.sectionHeadText}>Why Choose Us.</p>
+          </motion.div>
 
-      <div className="mt-10 flex flex-wrap gap-10 items-center justify-center">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+          <div className="mt-10 flex flex-wrap gap-10 items-center justify-center">
+            {services.map((service, index) => (
+              <ServiceCard key={service.title} index={index} {...service} />
+            ))}
+          </div>
+        </div>
       </div>
 
-      <motion.div variants={textVariant()}>
-        <h2 className="flex justify-center items-center font-semibold text-3xl mt-20">
-          What After Contacting Us?
-        </h2>
-      </motion.div>
+      <div className="m-10 flex flex-col bg-violet-400 rounded-[20px]">
+        <div className={`${styles.padding}`}>
+          <motion.div variants={textVariant()}>
+            {/* <h2 className="flex justify-center items-center font-semibold text-3xl mt-20"> */}
+            <p className={styles.sectionSubText}>Lets see what to write here</p>
+            <p className={styles.sectionHeadText}>Steps.</p>
+            {/* </h2> */}
+          </motion.div>
 
-      <div className="mt-10 flex flex-col bg-violet-400">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
+              <ExperienceCard key={index} experience={experience} />
+            ))}
+          </VerticalTimeline>
+        </div>
+      </div>
+
+      <div className="m-10 bg-violet-100 rounded-[20px]">
+        <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
+          <motion.div>
+            <p className={styles.sectionSubText}>What others say</p>
+            <p className={styles.sectionHeadText}>Testimonials.</p>
+          </motion.div>
+        </div>
+        <div
+          className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 items-center justify-center`}
+        >
+          {testimonials.map((testimonial, index) => (
+            <FeedbackCard
+              key={testimonial.name}
+              index={index}
+              {...testimonial}
+            />
           ))}
-        </VerticalTimeline>
+        </div>
       </div>
     </>
   );
