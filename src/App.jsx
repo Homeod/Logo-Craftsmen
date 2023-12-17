@@ -18,12 +18,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 ">
-        {/* <div className="bg-cover bg-no-repeat bg-center bg-gray-100"> */}
-
-        {/* </div> */}
+        <div className="bg-cover bg-no-repeat bg-violet-100"> 
+          <Navbar/>
+        </div>
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

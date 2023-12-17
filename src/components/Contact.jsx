@@ -42,10 +42,10 @@ const Contact = () => {
 
   return (
     <section className="section Home sm:h-screen h-fit">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="container mx-auto mt-4">
         <div className="flex flex-col items-center justify-center mt-6 ">
-          <h1 className="text-4xl font-semibold mb-2">Contact me</h1>
+          <h1 className="text-4xl font-semibold mb-2 mt-8">Contact me</h1>
           <div className="text-lg font-medium ">
             Its time to create something exciting!
           </div>

@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services, experiences, testimonials } from "../constents";
 import { fadeIn, textVariant } from "../utils/motion";
+import Footer from "./Footer";
+import Home from "./Home";
+import Contact from "./Contact";
 
 import {
   VerticalTimeline,
@@ -114,14 +117,21 @@ const FeedbackCard = ({
 const Landing = () => {
   return (
     <>
-      <div className="mt-10 flex flex-col bg-violet-400 rounded-[20px]">
+      <div>
+        <Home />
+      </div>
+      <div>
+        <Contact />
+      </div>
+
+      <div className="m-10 flex flex-col bg-red-400 rounded-[20px]">
         <div className={`${styles.padding}`}>
           <motion.div variants={textVariant()}>
             <p className={styles.sectionSubText}>Lorem Ipsum</p>
             <p className={styles.sectionHeadText}>Why Choose Us.</p>
           </motion.div>
 
-          <div className="mt-10 flex flex-wrap gap-10 items-center justify-center">
+          <div className="mt-10 flex flex-wrap gap-4 items-center justify-center">
             {services.map((service, index) => (
               <ServiceCard key={service.title} index={index} {...service} />
             ))}
@@ -153,8 +163,9 @@ const Landing = () => {
             <p className={styles.sectionHeadText}>Testimonials.</p>
           </motion.div>
         </div>
+
         <div
-          className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 items-center justify-center`}
+          className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 items-center justify-center `}
         >
           {testimonials.map((testimonial, index) => (
             <FeedbackCard
@@ -164,6 +175,9 @@ const Landing = () => {
             />
           ))}
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );

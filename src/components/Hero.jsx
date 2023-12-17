@@ -15,15 +15,15 @@ const Hero = () => {
       slidesPerView={1}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      className="w-screen h-fit"
+      className="w-full h-fit"
       modules={[Navigation, Pagination, Autoplay]}
       autoplay={{
-        delay: 2500,
+        delay: 5500,
         disableOnInteraction: false,
       }}
     >
       <SwiperSlide className="w-screen">
-        <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 ">
+        <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-16 bg-violet-100 ">
           <div className="flex flex-col gap-6 mt-8 md:px-8 md:py-6">
             <div>
               <div className="md:text-4xl text-2xl leading-8 md:leading-snug md:text-start text-center font-black tracking-widest">
@@ -55,11 +55,11 @@ const Hero = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide className="w-screen">
-        <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 ">
+        <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-16 bg-violet-100 ">
           <div className="flex flex-col gap-6 mt-8 md:px-8 md:py-6">
             <div>
               <div className="md:text-4xl text-2xl leading-8 md:leading-snug md:text-start text-center font-black tracking-widest">
-                The Embriodary Art
+                The Vector Art
               </div>
             </div>
             <div className="md:text-lg text-md md:text-start text-center">
@@ -87,11 +87,11 @@ const Hero = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide className="w-screen">
-        <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 ">
+        <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-16 bg-violet-100">
           <div className="flex flex-col gap-6 mt-8 md:px-8 md:py-6">
             <div>
               <div className="md:text-4xl text-2xl leading-8 md:leading-snug md:text-start text-center font-black tracking-widest">
-                The Embriodary Art
+                The Image Editing Art
               </div>
             </div>
             <div className="md:text-lg text-md md:text-start text-center">
