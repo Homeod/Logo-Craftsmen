@@ -314,4 +314,31 @@ const faqs = [
   },
 ];
 
+export const Contacts = [{ name: "Prashant Jaiswal", link: "#" }, { name: "" }];
+
+export const Services = [
+  { name: "Vector Conversion", link: "#" },
+  { name: "Embroidery Digitizing", link: "#" },
+  { name: "Art / Visual Proofs", link: "#" },
+  { name: "Order Entry Management", link: "#" },
+  { name: "Web & Custom Design", link: "#" },
+  { name: "Image Editing", link: "#" },
+];
+
+export const Insights = [{ name: "Portfolio", link: "#" }];
+
+export const Company = [
+  { name: "About Us", link: "#" },
+  { name: "Our Team", link: "#" },
+  { name: "Careers", link: "#" },
+  { name: "Newsroom", link: "#" },
+];
+
+export const Icons = [
+  { name: "logo-facebook", link: "#" },
+  { name: "logo-twitter", link: "#" },
+  { name: "logo-instagram", link: "#" },
+  { name: "logo-linkedin", link: "#" },
+];
+
 export { faqs, services, technologies, experiences, testimonials, projects };

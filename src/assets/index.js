@@ -7,8 +7,8 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import closee from "./closee.svg";
-import hamburg from "./hamburg.svg"
-import craftsmen from "./craftsmen.svg"
+import hamburg from "./hamburg.svg";
+import craftsmen from "./craftsmen.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -35,6 +35,7 @@ import tripguide from "./tripguide.png";
 
 import rect_img from "./rect_img.png";
 import square_img from "./square_img.png";
+import monkey from "./monkey.png";
 
 export {
   logo,
@@ -70,4 +71,5 @@ export {
   tripguide,
   rect_img,
   square_img,
+  monkey,
 };
