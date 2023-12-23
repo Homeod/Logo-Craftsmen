@@ -15,6 +15,7 @@ import Contact from "./Contact";
 import Portfolio from "./Portfolio";
 import Landing from "./Landing";
 import Footer from "./Footer";
+import Error from "./Error";
 
 export {
   Hero,
@@ -32,4 +33,5 @@ export {
   Portfolio,
   Landing,
   Footer,
+  Error,
 };

@@ -36,6 +36,15 @@ import tripguide from "./tripguide.png";
 import rect_img from "./rect_img.png";
 import square_img from "./square_img.png";
 
+import CirDesign from "./logos/CirDesign.png"
+import ClubLogo from "./logos/ClubLogo.png"
+import CompLogo from "./logos/CompLogo.png"
+import CrickLogo from "./logos/CrickLogo.png"
+import PecksHoodie from "./logos/PecksHoodie.png"
+import SchoolLogo from "./logos/SchoolLogo.png"
+
+
+
 export {
   logo,
   backend,
@@ -70,4 +79,10 @@ export {
   tripguide,
   rect_img,
   square_img,
+  CirDesign,
+  ClubLogo,
+  CompLogo,
+  CrickLogo,
+  PecksHoodie,
+  SchoolLogo,
 };

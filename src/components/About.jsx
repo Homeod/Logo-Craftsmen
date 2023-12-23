@@ -48,7 +48,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="m-3 sm:m-10 border-2 border-violet-400 pb-4 bg-violet-100 rounded-[20px]">
+      <div className="m-3 sm:m-10 border-2 border-violet-400 bg-violet-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
             {/* <section className="container mx-auto "> */}
@@ -85,7 +85,7 @@ const About = () => {
               </div>
               <div className="text-center">
                 <img
-                  className="object-cover w-full h-full md:h-auto rounded-[20px] "
+                  className="object-cover w-full h-full md:h-auto rounded-[20px] sm:pb-0 pb-3"
                   src={square_img}
                   alt="Placeholder"
                 />
@@ -102,7 +102,7 @@ const About = () => {
             <p className={styles.sectionSubText}>Things we follow </p>
             <p className={styles.sectionHeadText}>Our Values.</p>
             <div className="container mx-auto px-4 py-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-1 sm:gap-4">
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2 underline underline-offset-4 ">
                     Precision:
@@ -141,8 +141,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px] flex justify-center">
-        <div className={`${styles.paddingX} rounded-2xl min-h-[200px] py-10 `}>
+      <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
+        <div className={`${styles.padding} rounded-2xl min-h-[200px] py-10 `}>
           <h1 className="text-3xl font-bold mb-4 text-center">
             Get started with Appling your design on your products
           </h1>
@@ -152,11 +152,11 @@ const About = () => {
             craftsmanship and care. Your journey with Logo Craftsmen is not just
             about designs; it's about crafting legacies.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center flex-col sm:flex-row ">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Upload Your Files
             </button>
-            <button className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded ml-4">
+            <button className="bg-red-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded  m-4">
               Contact us
             </button>
           </div>
