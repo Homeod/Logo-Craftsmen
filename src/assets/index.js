@@ -36,7 +36,22 @@ import tripguide from "./tripguide.png";
 import rect_img from "./rect_img.png";
 import square_img from "./square_img.png";
 import monkey from "./monkey.png";
-
+import img2 from "./img2.jpg";
+import img33 from "./img33.jpg";
+import tiger from "./tiger.png";
+import embskull from "./embskull.png";
+import embdragon from "./embdragon.png";
+import vectorcow from "./vectorcow.png";
+import imgedit1 from "./imgedit1.jpeg";
+import imgedit2 from "./imgedit2.jpeg";
+import imgedit3 from "./imgedit3.jpeg";
+import art1 from "./art1.png";
+import art2 from "./art2.png";
+import art3 from "./art3.png";
+import order from "./order.jpg";
+import order1 from "./order1.png";
+import order2 from "./order2.png";
+import map from "./map.png";
 export {
   logo,
   backend,
@@ -72,4 +87,20 @@ export {
   rect_img,
   square_img,
   monkey,
+  img2,
+  img33,
+  tiger,
+  embskull,
+  embdragon,
+  vectorcow,
+  imgedit1,
+  imgedit2,
+  imgedit3,
+  art1,
+  art2,
+  art3,
+  order,
+  order1,
+  order2,
+  map,
 };

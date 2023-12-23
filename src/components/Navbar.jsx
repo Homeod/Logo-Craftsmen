@@ -1,20 +1,19 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import {styles} from '../styles';
+import { styles } from "../styles";
 // import craftsmen from '../assets/craftsmen.png';
-import {navLinks} from '../constents'
-import { act } from '@react-three/fiber';
-import {hamburg, closee, craftsmen} from '../assets'
-
+import { navLinks } from "../constents";
+import { act } from "@react-three/fiber";
+import { hamburg, closee, craftsmen } from "../assets";
 
 const Navbar = () => {
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav>
-      <div className="flex justify-between items-center ">
+    <div>
+      <div className="flex justify-between items-center">
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -74,12 +73,11 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

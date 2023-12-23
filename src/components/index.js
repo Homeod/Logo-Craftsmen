@@ -15,6 +15,12 @@ import Contact from "./Contact";
 import Portfolio from "./Portfolio";
 import Landing from "./Landing";
 import Footer from "./Footer";
+import Vector from "./Vector";
+import ServiceCard from "./ServiceCard";
+import Embroidery from "./Embroidery";
+import ImageEdit from "./ImageEdit";
+import ArtVisuals from "./ArtVisuals";
+import OrderEntry from "./OrderEntry";
 
 export {
   Hero,
@@ -32,4 +38,10 @@ export {
   Portfolio,
   Landing,
   Footer,
+  Vector,
+  ServiceCard,
+  Embroidery,
+  ImageEdit,
+  ArtVisuals,
+  OrderEntry,
 };

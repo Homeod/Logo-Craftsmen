@@ -42,19 +42,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Feature 1",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Feature 2",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Feature 3",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Feature 4",
     icon: creator,
   },
 ];
@@ -117,7 +117,7 @@ const technologies = [
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
+    company_name: "Step-1",
     icon: starbucks,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
@@ -130,7 +130,7 @@ const experiences = [
   },
   {
     title: "React Native Developer",
-    company_name: "Tesla",
+    company_name: "Step-2",
     icon: tesla,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
@@ -143,7 +143,7 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
+    company_name: "Step-3",
     icon: shopify,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
@@ -156,7 +156,7 @@ const experiences = [
   },
   {
     title: "Full stack Developer",
-    company_name: "Meta",
+    company_name: "Step-4",
     icon: meta,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
@@ -317,15 +317,14 @@ const faqs = [
 export const Contacts = [{ name: "Prashant Jaiswal", link: "#" }, { name: "" }];
 
 export const Services = [
-  { name: "Vector Conversion", link: "#" },
-  { name: "Embroidery Digitizing", link: "#" },
-  { name: "Art / Visual Proofs", link: "#" },
-  { name: "Order Entry Management", link: "#" },
-  { name: "Web & Custom Design", link: "#" },
-  { name: "Image Editing", link: "#" },
+  { name: "Vector Conversion", link: "/vector" },
+  { name: "Embroidery Digitizing", link: "/embroidery" },
+  { name: "Art / Visual Proofs", link: "/artvisuals" },
+  { name: "Order Entry Management", link: "/orderentry" },
+  { name: "Image Editing", link: "/imageedit" },
 ];
 
-export const Insights = [{ name: "Portfolio", link: "#" }];
+export const Insights = [{ name: "Portfolio", link: "/portfolio" }];
 
 export const Company = [
   { name: "About Us", link: "#" },
