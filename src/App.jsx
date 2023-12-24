@@ -16,6 +16,7 @@ import {
   ImageEdit,
   ArtVisuals,
   OrderEntry,
+  Error,
 } from "./components";
 import Home from "./components/Home";
 
@@ -24,7 +25,7 @@ const App = () => {
     <BrowserRouter>
       <div className="relative z-0 ">
         <div className="bg-cover bg-no-repeat bg-red-100">
-          {/* <Navbar /> */}
+          <Navbar />
         </div>
 
         <Routes>
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/artvisuals" element={<ArtVisuals />} />
           <Route path="/orderentry" element={<OrderEntry />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/*" element={<Error />} />
         </Routes>
       </div>
     </BrowserRouter>
