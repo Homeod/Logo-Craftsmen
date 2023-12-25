@@ -108,17 +108,23 @@ import { Link, useLocation } from "react-router-dom";
 function ContentWrapper({ path, imageSrc, title, description }) {
   return (
     <div className="group relative items-center justify-center overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:shadow-black rounded-[20px] w-72 h-96">
-      <Link to={path}>
+      <Link
+        to={path}
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth", // Optional: Add smooth scrolling behavior
+          });
+        }}
+      >
         <div
           className={`mx-auto w-full h-full justify-center bg-[url(${imageSrc})] bg-no-repeat bg-cover bg-center rounded-[20px]`}
         >
           <div className="bg-black bg-opacity-60 w-full h-full pt-32 text-white rounded-[20px] flex items-end justify-center pb-7">
-            <Link
-              to={path}
-              className="font-semibold text-xl flex justify-center mb-5"
-            >
+            <div className="font-semibold text-xl flex justify-center mb-5">
               {title}
-            </Link>
+            </div>
+
             <p className="m-2">{description}</p>
           </div>
         </div>
