@@ -21,6 +21,7 @@ import Embroidery from "./Embroidery";
 import ImageEdit from "./ImageEdit";
 import ArtVisuals from "./ArtVisuals";
 import OrderEntry from "./OrderEntry";
+import Error from "./Error";
 
 export {
   Hero,
@@ -44,4 +45,5 @@ export {
   ImageEdit,
   ArtVisuals,
   OrderEntry,
+  Error,
 };

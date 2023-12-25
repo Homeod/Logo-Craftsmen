@@ -52,6 +52,14 @@ import order from "./order.jpg";
 import order1 from "./order1.png";
 import order2 from "./order2.png";
 import map from "./map.png";
+
+import CirDesign from "./logos/CirDesign.png";
+import ClubLogo from "./logos/ClubLogo.png";
+import CompLogo from "./logos/CompLogo.png";
+import CrickLogo from "./logos/CrickLogo.png";
+import PecksHoodie from "./logos/PecksHoodie.png";
+import SchoolLogo from "./logos/SchoolLogo.png";
+
 export {
   logo,
   backend,
@@ -103,4 +111,10 @@ export {
   order1,
   order2,
   map,
+  CirDesign,
+  ClubLogo,
+  CompLogo,
+  CrickLogo,
+  PecksHoodie,
+  SchoolLogo,
 };

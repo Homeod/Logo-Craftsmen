@@ -32,12 +32,12 @@ const ExperienceCard = ({ experience }) => (
     }
   >
     <div>
-      <h3 className="text-black text-[24px] font-semibold">
-        {experience.title}
-      </h3>
       <p className="text-black text-[16px] font-light" style={{ margin: 0 }}>
         {experience.company_name}
       </p>
+      <h3 className="text-black text-[24px] font-semibold">
+        {experience.title}
+      </h3>
     </div>
 
     <ul className="mt-5 list-disc ml-5 space-y-2">
@@ -53,7 +53,7 @@ const ExperienceCard = ({ experience }) => (
   </VerticalTimelineElement>
 );
 
-const ServiceCard = ({ index, title, icon }) => {
+const ServiceCard = ({ index, title, description, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
@@ -66,11 +66,14 @@ const ServiceCard = ({ index, title, icon }) => {
             scale: 1,
             speed: 450,
           }}
-          className="bg-white rounded-[20px] py-5 px-8 min-h[280px] flex justify-evenly items-center flex-col"
+          className="bg-red-100 rounded-[20px] py-5 px-8 min-h[280px] flex justify-evenly items-center flex-col"
         >
           <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-black text-[20px] font-semibold text-center">
+          <h3 className="text-black text-[18px] font-semibold text-center ">
             {title}
+          </h3>
+          <h3 className="text-black text-[16px] font-light text-center ">
+            {description}
           </h3>
         </div>
       </motion.div>
@@ -124,11 +127,11 @@ const Landing = () => {
         <Contact />
       </div>
 
-      <div className="m-10 flex flex-col bg-red-400 rounded-[20px]">
+      <div className="m-3 sm:m-10 pb-8 flex flex-col bg-red-400 rounded-[20px]">
         <div className={`${styles.padding}`}>
           <motion.div variants={textVariant()}>
             <p className={styles.sectionSubText}>Lorem Ipsum</p>
-            <p className={styles.sectionHeadText}>Why Choose Us.</p>
+            <p className={styles.sectionHeadText}>Why Choose Us</p>
           </motion.div>
 
           <div className="mt-10 flex flex-wrap gap-4 items-center justify-center">
@@ -139,12 +142,12 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="m-10 flex flex-col bg-violet-400 rounded-[20px]">
+      <div className="m-4 sm:m-10 pb-6 flex flex-col bg-violet-400 rounded-[20px]">
         <div className={`${styles.padding}`}>
           <motion.div variants={textVariant()}>
             {/* <h2 className="flex justify-center items-center font-semibold text-3xl mt-20"> */}
-            <p className={styles.sectionSubText}>Lets see what to write here</p>
-            <p className={styles.sectionHeadText}>Steps.</p>
+            <p className={styles.sectionSubText}>How we move ahead</p>
+            <p className={styles.sectionHeadText}>Process Flow</p>
             {/* </h2> */}
           </motion.div>
 
@@ -156,17 +159,15 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="m-10 bg-violet-100 rounded-[20px]">
+      <div className="m-3 sm:m-10 pb-6 bg-violet-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
             <p className={styles.sectionSubText}>What others say</p>
-            <p className={styles.sectionHeadText}>Testimonials.</p>
+            <p className={styles.sectionHeadText}>Testimonials</p>
           </motion.div>
         </div>
 
-        <div
-          className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 items-center justify-center `}
-        >
+        <div className={`${styles.paddingX} -mt-48 sm:-mt-20 pb-6 flex flex-wrap gap-7 items-center justify-center `}>
           {testimonials.map((testimonial, index) => (
             <FeedbackCard
               key={testimonial.name}

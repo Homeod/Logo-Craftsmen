@@ -42,19 +42,23 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Feature 1",
+    title: "Fast & Free",
+    description: "Rush jobs? No problem. Our rush service is free, delivering quality with speed.",
     icon: web,
   },
   {
-    title: "Feature 2",
+    title: "Pro Precision",
+    description: "Experts in vector conversion and embroidery design for meticulous results.",
     icon: mobile,
   },
   {
-    title: "Feature 3",
+    title: "Your Vision, Our Mission",
+    description: " Collaborate with us for your project. Questions? Just ask!",
     icon: backend,
   },
   {
-    title: "Feature 4",
+    title: "On-Time Assurance",
+    description: "Timely delivery is not just a promise; it's a cornerstone of our expertise.",
     icon: creator,
   },
 ];
@@ -116,55 +120,48 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
+    title: "Project Consultation:",
     company_name: "Step-1",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Understanding Your Needs: We initiate the process with a thoughtful consultation, where we delve into your project requirements. Whether it's vector conversion, embroidery design, or image editing, we pay close attention to your goals and expectations.",
+      "Evaluating the Source: In this phase, we meticulously review the source images or designs you provide, assessing their complexity and unique features.",
     ],
   },
   {
-    title: "React Native Developer",
+    title: "Conversion or Design Phase:",
     company_name: "Step-2",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Vector Mastery: Our skilled designers transform raster images into precise, scalable vectors, ensuring clarity.",
+      "Embroidery Finesse: For embroidery projects, we meticulously adapt designs with thread colors and stitches for a perfect result.",
+      "Digital Enhancements: Image editing? Our experts refine visuals with adjustments for a compelling visual story. Questions? Ask away!",
     ],
   },
   {
-    title: "Web Developer",
+    title: "Quality Control:",
     company_name: "Step-3",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Thorough Review: Every project undergoes rigorous quality control checks to ensure that the conversion, design, or editing meets our high standards.",
+      "Client Involvement: Your feedback is invaluable during this stage. We encourage your input to make any necessary adjustments, ensuring your complete satisfaction.",
     ],
   },
   {
-    title: "Full stack Developer",
+    title: "Final Delivery:",
     company_name: "Step-4",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "High-Quality Files: Upon successful completion, we provide you with the final converted vector, embroidery design, or edited image in various formats suitable for your specific needs, whether for printing, digital use, or embroidery machines.",
+      "Detailed Guidelines: If your project involves embroidery, we also offer guidelines for proper stitching techniques to achieve the best results on your chosen materials.",
     ],
   },
 ];

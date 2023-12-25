@@ -16,6 +16,7 @@ import {
   ImageEdit,
   ArtVisuals,
   OrderEntry,
+  Error,
 } from "./components";
 import Home from "./components/Home";
 
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/artvisuals" element={<ArtVisuals />} />
           <Route path="/orderentry" element={<OrderEntry />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/*" element={<Error />} />
         </Routes>
       </div>
     </BrowserRouter>
