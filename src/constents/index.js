@@ -23,6 +23,14 @@ import {
   jobit,
   tripguide,
   threejs,
+  fastandfree,
+  proprecision,
+  vision,
+  ontime,
+  consult,
+  designphase,
+  qualitycontrol,
+  delivery,
 } from "../assets";
 
 export const navLinks = [
@@ -43,23 +51,26 @@ export const navLinks = [
 const services = [
   {
     title: "Fast & Free",
-    description: "Rush jobs? No problem. Our rush service is free, delivering quality with speed.",
-    icon: web,
+    description:
+      "Rush jobs? No problem. Our rush service is free, delivering quality with speed.",
+    icon: fastandfree,
   },
   {
     title: "Pro Precision",
-    description: "Experts in vector conversion and embroidery design for meticulous results.",
-    icon: mobile,
+    description:
+      "Experts in vector conversion and embroidery design for meticulous results.",
+    icon: proprecision,
   },
   {
     title: "Your Vision, Our Mission",
     description: " Collaborate with us for your project. Questions? Just ask!",
-    icon: backend,
+    icon: vision,
   },
   {
     title: "On-Time Assurance",
-    description: "Timely delivery is not just a promise; it's a cornerstone of our expertise.",
-    icon: creator,
+    description:
+      "Timely delivery is not just a promise; it's a cornerstone of our expertise.",
+    icon: ontime,
   },
 ];
 
@@ -122,8 +133,8 @@ const experiences = [
   {
     title: "Project Consultation:",
     company_name: "Step-1",
-    icon: starbucks,
-    iconBg: "#383E56",
+    icon: consult,
+    iconBg: "#E6DEDD",
     date: "",
     points: [
       "Understanding Your Needs: We initiate the process with a thoughtful consultation, where we delve into your project requirements. Whether it's vector conversion, embroidery design, or image editing, we pay close attention to your goals and expectations.",
@@ -133,7 +144,7 @@ const experiences = [
   {
     title: "Conversion or Design Phase:",
     company_name: "Step-2",
-    icon: tesla,
+    icon: designphase,
     iconBg: "#E6DEDD",
     date: "",
     points: [
@@ -145,8 +156,8 @@ const experiences = [
   {
     title: "Quality Control:",
     company_name: "Step-3",
-    icon: shopify,
-    iconBg: "#383E56",
+    icon: qualitycontrol,
+    iconBg: "#E6DEDD",
     date: "",
     points: [
       "Thorough Review: Every project undergoes rigorous quality control checks to ensure that the conversion, design, or editing meets our high standards.",
@@ -156,7 +167,7 @@ const experiences = [
   {
     title: "Final Delivery:",
     company_name: "Step-4",
-    icon: meta,
+    icon: delivery,
     iconBg: "#E6DEDD",
     date: "",
     points: [
@@ -169,26 +180,26 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Absolutely stoked wearing my company logo, vectorized to perfection! Jersey game = on point. Thanks! ✨",
+    name: "Filip Cerny",
+    designation: "System Admin",
+    company: "Polymer",
+    image: "https://randomuser.me/api/portraits/men/7.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "Jersey went from meh to wow! with stitch magic. My logo's never looked so legit.Thanks for the upgrade!",
+    name: "Rochelle Fernandes",
+    designation: "Designer",
+    company: "Nudge",
+    image: "https://randomuser.me/api/portraits/women/9.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "Appreciting the work of editing images of our products with great pixelation by Logo Craftsmen",
+    name: "Jessica Strobehn",
+    designation: "Design Lead",
+    company: "Clay",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];

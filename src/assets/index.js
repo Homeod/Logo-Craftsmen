@@ -52,6 +52,15 @@ import order from "./order.jpg";
 import order1 from "./order1.png";
 import order2 from "./order2.png";
 import map from "./map.png";
+import fastandfree from "./fastandfree.png";
+import proprecision from "./proprecision.png";
+import vision from "./vision.png";
+import ontime from "./ontime.png";
+import consult from "./consult.png";
+import designphase from "./designphase.png";
+import qualitycontrol from "./qualitycontrol.png";
+import delivery from "./delivery.png";
+import favicon from "./favicon.png";
 
 import CirDesign from "./logos/CirDesign.png";
 import ClubLogo from "./logos/ClubLogo.png";
@@ -111,10 +120,19 @@ export {
   order1,
   order2,
   map,
+  fastandfree,
+  proprecision,
+  vision,
+  ontime,
+  consult,
+  designphase,
+  qualitycontrol,
+  delivery,
   CirDesign,
   ClubLogo,
   CompLogo,
   CrickLogo,
   PecksHoodie,
   SchoolLogo,
+  favicon,
 };

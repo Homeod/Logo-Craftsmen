@@ -19,7 +19,7 @@ const Showcase = () => {
         <motion.div>
           <section className="container mx-auto ">
             <p className={styles.sectionSubText}>Tour to the Logos </p>
-            <p className={styles.sectionHeadText}>Showcases.</p>
+            <p className={styles.sectionHeadText}>Showcases</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 ">
               {/* <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
             <div className="h-96 w-auto">

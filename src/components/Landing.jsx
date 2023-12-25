@@ -130,7 +130,7 @@ const Landing = () => {
       <div className="m-3 sm:m-10 pb-8 flex flex-col bg-red-400 rounded-[20px]">
         <div className={`${styles.padding}`}>
           <motion.div variants={textVariant()}>
-            <p className={styles.sectionSubText}>Lorem Ipsum</p>
+            <p className={styles.sectionSubText}>Our Efficiency</p>
             <p className={styles.sectionHeadText}>Why Choose Us</p>
           </motion.div>
 
@@ -167,7 +167,9 @@ const Landing = () => {
           </motion.div>
         </div>
 
-        <div className={`${styles.paddingX} -mt-48 sm:-mt-20 pb-6 flex flex-wrap gap-7 items-center justify-center `}>
+        <div
+          className={`${styles.paddingX} -mt-48 sm:-mt-20 pb-6 flex flex-wrap gap-7 items-center justify-center `}
+        >
           {testimonials.map((testimonial, index) => (
             <FeedbackCard
               key={testimonial.name}

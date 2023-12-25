@@ -1,5 +1,6 @@
 import Itemsfooter from "./Itemsfooter";
 import { Insights, Services, Company } from "../constents";
+import { Link } from "react-router-dom";
 import { craftsmen } from "../assets";
 
 const Itemscontainerfooter = () => {
@@ -14,13 +15,21 @@ const Itemscontainerfooter = () => {
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 gap-6 md:px-8 px-5 py-16 sm: justify-center ">
       <div className="flex justify-center ">
-        <a href="/">
+        <Link
+          to="/"
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth", // Optional: Add smooth scrolling behavior
+            });
+          }}
+        >
           <img
             src={craftsmen}
             alt="logo"
             className=" w-42 h-24 object-contain  lg:justify-start "
           />
-        </a>
+        </Link>
       </div>
       <div className="flex justify-center lg:text-left md:text-center text-center">
         <ul>
