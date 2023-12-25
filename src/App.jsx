@@ -24,8 +24,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 ">
-        <div className="bg-cover bg-no-repeat bg-red-100">
-          {/* <Navbar /> */}
+        <div className="bg-cover bg-no-repeat pb-24">
+          <Navbar />
         </div>
 
         <Routes>

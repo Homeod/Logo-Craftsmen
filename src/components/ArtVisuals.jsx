@@ -1,13 +1,48 @@
 import React from "react";
 import { Navbar, Footer, ServiceCard } from "../components";
-import { art2, art3 } from "../assets";
+import { art1, art2, art3 } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 
 const ArtVisuals = () => {
   return (
     <div>
-      <Navbar />
+      <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
+        <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-10 ">
+          <div className="flex flex-col gap-6 mt-8 md:px-8 md:py-6">
+            <div>
+              <div className="md:text-4xl text-2xl leading-8 md:leading-snug md:text-start text-center font-black tracking-widest">
+                Products Mockup!
+              </div>
+            </div>
+            <div className="md:text-lg text-md md:text-start text-center mt-5">
+              <span className=" font-serif font-bold text-2xl italic">
+                &quot;See Your Brand Shine! Perfect Mockups Await Your
+                Preview.&quot;
+              </span>
+              <br />
+              <br />
+              <span className="text-red-500 font-serif md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
+                WINTER SALE IS LIVE
+              </span>
+            </div>
+            <div className="flex gap-4 items-center md:justify-start justify-around">
+              <button className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg">
+                Upload
+              </button>
+              <button className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg">
+                Contact Us
+              </button>
+            </div>
+          </div>
+          <div className="flex items-center justify-center mx-auto my-6 ">
+            <img
+              src={art1}
+              className="md:w-full md:h-[24rem] sm:w-[60vw] mx-auto rounded-2xl shadow-zinc-700 "
+            />
+          </div>
+        </div>
+      </div>
       <div className="m-3 sm:m-10 bg-violet-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
