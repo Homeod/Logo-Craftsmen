@@ -126,7 +126,6 @@ const ImageEdit = () => {
               <p className="flex justify-center font-semibold text-4xl">
                 Why Choose Our Order Entry Services?
               </p>
-              {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6"> */}
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   1. <span className="font-bold">Tailored Solutions:</span> We
@@ -165,7 +164,6 @@ const ImageEdit = () => {
                   </span>
                 </p>
               </div>
-              {/* </div> */}
             </section>
           </motion.div>
         </div>

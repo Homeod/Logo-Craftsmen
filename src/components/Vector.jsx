@@ -116,7 +116,6 @@ const Vector = () => {
               <p className="flex justify-center font-semibold text-4xl">
                 Why Choose Our Vector Artwork Services?
               </p>
-              {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6"> */}
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   <span className="font-bold">Scalability</span>: Enjoy the
@@ -160,55 +159,10 @@ const Vector = () => {
                   </span>
                 </p>
               </div>
-              {/* </div> */}
             </section>
           </motion.div>
         </div>
       </div>
-
-      {/* bg img opacity txt */}
-      {/* <div className="relative bg-[url(https://static-cse.canva.com/blob/976320/Careers.png)] h-[500px] md:h-[400px] bg-no-repeat bg-cover bg-center rounded-[20px]"> */}
-      {/* <img
-                  className="object-cover w-full h-64 md:h-96 sm:h-full opacity-50"
-                  src={rect_img}
-                  alt="Motivation img"
-                /> */}
-      {/* <div className="absolute inset-0 bg-white bg-opacity-60 rounded-[20px] ">
-          <div className="m-10">
-            <p className="flex justify-center font-semibold text-4xl">
-              Why Choose Our Vector Artwork Services?
-            </p>
-            <p className="text-xl text-black text-center lg:mt-6">
-              Scalability: Enjoy the freedom to use your images at any size
-              without compromising quality. Perfect for banners, billboards, or
-              any application where your visuals need to make a statement.
-              <br />
-              Versatility: Vectorized images are versatile and can be easily
-              adapted for various mediums, from digital platforms to physical
-              merchandise.
-              <br />
-              Consistency: Maintain a consistent visual identity across
-              different applications. Vector artwork ensures that your brand's
-              visual elements remain uniform and recognizable.
-              <br />
-              Professional Touch: Our team of experienced designers and advanced
-              tools ensure a professional touch to every vectorization project.
-              Expect precision, creativity, and a commitment to delivering
-              results that exceed expectations.
-              <br />
-              Don't let poor quality imageshinder your progress. Trust Logo
-              Craftsmen for: Raster to Vector Conversion/Image to Vector
-              Conversion JPG to Vector Conversion/Vector Logo Conversion Vector
-              Line Drawing/Vector Map Drawing Vector Floor Plan
-              Drawing/Architectural Vector Drawing Elevate your visual
-              storytelling with Logo Craftsmen&#39;s Vector Artwork Services.
-              Whether it&#39;s breathing new life into your logo or enhancing
-              complex graphics, our commitment to precision ensures your visuals
-              leave a lasting impression.
-            </p>
-          </div>
-        </div>
-      </div> */}
 
       <ServiceCard />
       <Footer />

@@ -8,7 +8,6 @@ import Footer from "./Footer";
 import Home from "./Home";
 import Contact from "./Contact";
 import Showcase from "./Showcase";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -123,7 +122,7 @@ const Landing = () => {
       <div>
         <Home />
       </div>
-      <div>
+      <div id="contact-id">
         <Contact />
       </div>
 
@@ -145,10 +144,8 @@ const Landing = () => {
       <div className="m-4 sm:m-10 pb-6 flex flex-col bg-violet-400 rounded-[20px]">
         <div className={`${styles.padding}`}>
           <motion.div variants={textVariant()}>
-            {/* <h2 className="flex justify-center items-center font-semibold text-3xl mt-20"> */}
             <p className={styles.sectionSubText}>How we move ahead</p>
             <p className={styles.sectionHeadText}>Process Flow</p>
-            {/* </h2> */}
           </motion.div>
 
           <VerticalTimeline>
@@ -167,7 +164,9 @@ const Landing = () => {
           </motion.div>
         </div>
 
-        <div className={`${styles.paddingX} -mt-48 sm:-mt-20 pb-6 flex flex-wrap gap-7 items-center justify-center `}>
+        <div
+          className={`${styles.paddingX} -mt-48 sm:-mt-20 pb-6 flex flex-wrap gap-7 items-center justify-center `}
+        >
           {testimonials.map((testimonial, index) => (
             <FeedbackCard
               key={testimonial.name}

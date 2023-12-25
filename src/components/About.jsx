@@ -1,15 +1,13 @@
 import React from "react";
-
 import { motion } from "framer-motion";
-import { rect_img, square_img } from "../assets";
+import { square_img } from "../assets";
 import { styles } from "../styles";
 import Footer from "./Footer";
 
-const About = () => {
+const About = ({ setIsUploadOpen }) => {
   return (
     <div className="pt-10 md:pt-10 bg-white">
       <div className="pb-2 w-full text-center ">
-        <h2 className="pb-6 font-medium w-full text-center">About</h2>
         <h4 className="font-normal text-4xl font-serif text-violet-900">
           On a mission to
         </h4>
@@ -23,11 +21,6 @@ const About = () => {
           <motion.div>
             <section className="container mx-auto">
               <div className="relative bg-[url(https://static-cse.canva.com/blob/976320/Careers.png)] h-[500px] md:h-[400px] bg-no-repeat bg-cover bg-center rounded-[20px]">
-                {/* <img
-                  className="object-cover w-full h-64 md:h-96 sm:h-full opacity-50"
-                  src={rect_img}
-                  alt="Motivation img"
-                /> */}
                 <div className="absolute inset-0 bg-white bg-opacity-60 rounded-[20px] ">
                   <div className="m-10">
                     <p className={styles.sectionSubText}>What is </p>
@@ -157,7 +150,10 @@ const About = () => {
             about designs; it's about crafting legacies.
           </p>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              onClick={() => setIsUploadOpen(true)}
+            >
               Upload Your Files
             </button>
             <button className="bg-red-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded  m-4">

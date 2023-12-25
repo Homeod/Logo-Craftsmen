@@ -38,17 +38,23 @@ export const navLinks = [
     id: "faqs",
     title: "FAQ",
   },
+  {
+    id: "upload",
+    title: "Upload",
+  },
 ];
 
 const services = [
   {
     title: "Fast & Free",
-    description: "Rush jobs? No problem. Our rush service is free, delivering quality with speed.",
+    description:
+      "Rush jobs? No problem. Our rush service is free, delivering quality with speed.",
     icon: web,
   },
   {
     title: "Pro Precision",
-    description: "Experts in vector conversion and embroidery design for meticulous results.",
+    description:
+      "Experts in vector conversion and embroidery design for meticulous results.",
     icon: mobile,
   },
   {
@@ -58,7 +64,8 @@ const services = [
   },
   {
     title: "On-Time Assurance",
-    description: "Timely delivery is not just a promise; it's a cornerstone of our expertise.",
+    description:
+      "Timely delivery is not just a promise; it's a cornerstone of our expertise.",
     icon: creator,
   },
 ];

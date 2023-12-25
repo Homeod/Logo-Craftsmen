@@ -13,9 +13,7 @@ const Hero = () => {
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-      className="w-full h-fit"
+      className="w-screen h-fit pt-[112px]"
       modules={[Navigation, Pagination, Autoplay]}
       autoplay={{
         delay: 5500,

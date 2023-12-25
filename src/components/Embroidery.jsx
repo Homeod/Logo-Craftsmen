@@ -118,7 +118,6 @@ const Embroidery = () => {
               <p className="flex justify-center font-semibold text-4xl">
                 Why Choose Our Embroidery Digitizing Services?
               </p>
-              {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6"> */}
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   <span className="font-bold">Precision in Detail:</span> Our
@@ -152,7 +151,6 @@ const Embroidery = () => {
                   </span>
                 </p>
               </div>
-              {/* </div> */}
             </section>
           </motion.div>
         </div>

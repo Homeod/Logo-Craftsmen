@@ -43,7 +43,6 @@ const FAQs = () => {
 
       <div className="">
         {faqs.map((faqs, index) => (
-          // <div key={index}>{faqs.question}</div>
           <AccordionSection
             faqs={faqs}
             key={index}
@@ -53,14 +52,6 @@ const FAQs = () => {
           />
         ))}
       </div>
-      
-        {/* <div className="bg-green-400 w-full my-10 sm:my-20">
-              <div className="mx-10 py-8 sm:py-12 ">
-                <h2 className="text-white text-center text-2xl sm:text-3xl">Still have questions about how Whatfix can help your business?</h2> <br />
-                <h6 className="text-white text-center">Contact us at <span className="bg-indigo-500">sales@whatfix.com</span> or call us on <span className="bg-indigo-500">+1-800-459-7098</span> to request a demo and see how Whatfix empowers organizations to scale enterprise-wide changes, improve user productivity, and drive user adoption fast.</h6>
-                <button>Contact Us Button</button>
-              </div>            
-          </div> */}
 
       <div>
         <div className="mt-10 flex items-center justify-center">
@@ -75,7 +66,6 @@ const FAQs = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

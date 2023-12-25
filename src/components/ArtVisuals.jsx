@@ -7,7 +7,7 @@ import { styles } from "../styles";
 const ArtVisuals = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="m-3 sm:m-10 bg-violet-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
@@ -136,7 +136,6 @@ const ArtVisuals = () => {
               <p className="flex justify-center font-semibold text-4xl">
                 Why Trust Logo Craftsmen?
               </p>
-              {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6"> */}
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   1. <span className="font-bold">Precision Personified:</span>{" "}
@@ -169,7 +168,6 @@ const ArtVisuals = () => {
                   </span>
                 </p>
               </div>
-              {/* </div> */}
             </section>
           </motion.div>
         </div>
