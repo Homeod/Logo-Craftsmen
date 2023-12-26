@@ -13,12 +13,10 @@ const Hero = () => {
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
       className="w-full h-fit"
       modules={[Navigation, Pagination, Autoplay]}
       autoplay={{
-        delay: 75500,
+        delay: 5500,
         disableOnInteraction: false,
       }}
     >
