@@ -6,7 +6,6 @@ import {
   ClubLogo,
   CompLogo,
   CrickLogo,
-  PecksHoodie,
   SchoolLogo,
 } from "../assets";
 import { Link } from "react-router-dom";

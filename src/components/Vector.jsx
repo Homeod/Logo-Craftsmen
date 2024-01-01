@@ -251,7 +251,6 @@ const Vector = () => {
       </div> */}
 
       <ServiceCard />
-      <Footer />
     </div>
   );
 };

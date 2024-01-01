@@ -7,14 +7,17 @@ import {
   img33,
   vectorcow,
   embdragon,
+  imgedit1,
+  CirDesign,
 } from "../assets";
+import { SchoolLogo,CrickLogo,CompLogo,ClubLogo } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 
 const Showcase = () => {
   return (
     // <div className="relative">
-    <div className="relative m-3 sm:m-10 bg-violet-100 rounded-[20px]">
+    <div className="relative m-3 sm:m-10 bg-pink-200 rounded-[20px]">
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>
           <section className="container mx-auto ">
@@ -35,7 +38,27 @@ const Showcase = () => {
                 <div className="mx-auto max-w-4xl">
                   <img
                     className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                    src={monkey}
+                    src={img33}
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
+                <div className="mx-auto max-w-4xl">
+                  <img
+                    className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl bg-white"
+                    src={ClubLogo}
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
+                <div className="mx-auto max-w-4xl">
+                  <img
+                    className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl bg-orange-200 py-9"
+                    src={SchoolLogo}
                     alt=""
                   />
                 </div>
@@ -45,7 +68,7 @@ const Showcase = () => {
                 <div className="mx-auto max-w-4xl">
                   <img
                     className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                    src={img2}
+                    src={imgedit1}
                     alt=""
                   />
                 </div>
@@ -55,27 +78,7 @@ const Showcase = () => {
                 <div className="mx-auto max-w-4xl">
                   <img
                     className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                    src={vectorcow}
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                <div className="mx-auto max-w-4xl">
-                  <img
-                    className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                    src={tiger}
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                <div className="mx-auto max-w-4xl">
-                  <img
-                    className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                    src={embskull}
+                    src={CirDesign}
                     alt=""
                   />
                 </div>
@@ -95,7 +98,7 @@ const Showcase = () => {
             <div className="absolute bottom-0 left-0 right-0 h-[352px] bg-gradient-to-t from-white to-transparent">
               <div className="flex h-full items-end justify-center">
                 <a
-                  className="btn text-white bg-green-400  hover:bg-green-600 rounded-full px-2 py-2 shadow-lg mb-6"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   href="/portfolio"
                 >
                   There's More To Explore

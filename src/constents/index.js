@@ -35,21 +35,35 @@ import {
 
 export const navLinks = [
   {
+    id: "upload",
+    title: "Get Quote",
+  },
+  {
     id: "about",
     title: "About",
+  },
+  {
+    title: "Services",
+    sublinks: [
+      { name: "Vector Conversion", link: "/vector" },
+      { name: "Embroidery Digitizing", link: "/embroidery" },
+      { name: "Art / Visual Proofs", link: "/artvisuals" },
+      { name: "Order Entry Management", link: "/orderentry" },
+      { name: "Image Editing", link: "/imageedit" },
+    ],
+  },
+  {
+    id: "portfolio",
+    title: "Portfolio",
   },
   {
     id: "contact",
     title: "Contact",
   },
-  {
-    id: "faqs",
-    title: "FAQ",
-  },
-  {
-    id: "upload",
-    title: "Upload",
-  },
+  // {
+  //   id: "faqs",
+  //   title: "FAQ",
+  // },
 ];
 
 const services = [
@@ -141,20 +155,18 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "",
     points: [
-      "Understanding Your Needs: We initiate the process with a thoughtful consultation, where we delve into your project requirements. Whether it's vector conversion, embroidery design, or image editing, we pay close attention to your goals and expectations.",
-      "Evaluating the Source: In this phase, we meticulously review the source images or designs you provide, assessing their complexity and unique features.",
+      "Understand: Uncover goals.",
+      "Assess: Scrutinize image complexity.",
     ],
   },
   {
-    title: "Conversion or Design Phase:",
+    title: "Perfect & Collaborate:",
     company_name: "Step-2",
     icon: designphase,
     iconBg: "#E6DEDD",
     date: "",
     points: [
-      "Vector Mastery: Our skilled designers transform raster images into precise, scalable vectors, ensuring clarity.",
-      "Embroidery Finesse: For embroidery projects, we meticulously adapt designs with thread colors and stitches for a perfect result.",
-      "Digital Enhancements: Image editing? Our experts refine visuals with adjustments for a compelling visual story. Questions? Ask away!",
+      "Craft Excellence: Transform, adapt, and refine designs for impact.",
     ],
   },
   {
@@ -164,19 +176,19 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "",
     points: [
-      "Thorough Review: Every project undergoes rigorous quality control checks to ensure that the conversion, design, or editing meets our high standards.",
-      "Client Involvement: Your feedback is invaluable during this stage. We encourage your input to make any necessary adjustments, ensuring your complete satisfaction.",
+      "Thorough Review: Rigorous quality control checks ensure high standards.",
+      "Client Collaboration: Valuable feedback ensures satisfaction.",
     ],
   },
   {
-    title: "Final Delivery:",
+    title: "Deliver & Guide:",
     company_name: "Step-4",
     icon: delivery,
     iconBg: "#E6DEDD",
     date: "",
     points: [
-      "High-Quality Files: Upon successful completion, we provide you with the final converted vector, embroidery design, or edited image in various formats suitable for your specific needs, whether for printing, digital use, or embroidery machines.",
-      "Detailed Guidelines: If your project involves embroidery, we also offer guidelines for proper stitching techniques to achieve the best results on your chosen materials.",
+      "Files: Deliver in various formats.",
+      "Guidelines: Guide for optimal results.",
     ],
   },
 ];
@@ -336,13 +348,14 @@ export const Services = [
   { name: "Image Editing", link: "/imageedit" },
 ];
 
-export const Insights = [{ name: "Portfolio", link: "/portfolio" }];
+export const Insights = [
+  { name: "Portfolio", link: "/portfolio" },
+  { name: "FAQs", link: "/faqs" },
+];
 
 export const Company = [
-  { name: "About Us", link: "#" },
-  { name: "Our Team", link: "#" },
-  { name: "Careers", link: "#" },
-  { name: "Newsroom", link: "#" },
+  { name: "About Us", link: "/about" },
+  { name: "Contact Us", link: "/contact" },
 ];
 
 export const Icons = [

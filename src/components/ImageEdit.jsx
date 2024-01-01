@@ -205,7 +205,6 @@ const ImageEdit = () => {
       </div>
 
       <ServiceCard />
-      <Footer />
     </div>
   );
 };

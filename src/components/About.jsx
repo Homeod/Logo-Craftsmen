@@ -57,11 +57,11 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="text-left">
                 <p className="text-xl mt-4 ">
-                  Welcome to{" "}
-                  <span className="font-montserrat">Logo Craftsmen</span>, where
-                  the art of vector and embroidery conversion in logo design
-                  meets the precision of a craftsman's touch. Our journey began
-                  more than 7 years ago when a passion for design and an
+                  Welcome to
+                  <span className="font-montserrat"> Logo Craftsmen</span>,
+                  where the art of vector and embroidery conversion in logo
+                  design meets the precision of a craftsman's touch. Our journey
+                  began more than 7 years ago when a passion for design and an
                   unwavering commitment to quality collided.
                   <br /> <br />
                   <span className="font-semibold underline underline-offset-4 ">
@@ -157,17 +157,20 @@ const About = () => {
             about designs; it's about crafting legacies.
           </p>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Upload Your Files
-            </button>
-            <button className="bg-red-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded  m-4">
-              Contact us
-            </button>
+            <a
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              href="/contact"
+            >
+              Contact Us
+            </a>
+            {/* <a
+              className="bg-red-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded  m-4"
+              href="/contact"
+            >
+              Contact Us
+            </a> */}
           </div>
         </div>
-      </div>
-      <div>
-        <Footer />
       </div>
     </div>
   );

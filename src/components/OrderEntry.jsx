@@ -172,7 +172,6 @@ const ImageEdit = () => {
       </div>
       <Contact />
       <ServiceCard />
-      <Footer />
     </div>
   );
 };

@@ -18,6 +18,9 @@ import {
   ArtVisuals,
   OrderEntry,
   Error,
+  Footer,
+  Terms,
+  Privacy,
 } from "./components";
 import Home from "./components/Home";
 
@@ -61,8 +64,13 @@ const App = () => {
             <Route path="/artvisuals" element={<ArtVisuals />} />
             <Route path="/orderentry" element={<OrderEntry />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="/*" element={<Error />} />
           </Routes>
+        </div>
+        <div>
+          <Footer/>
         </div>
       </BrowserRouter>
       <ToastContainer />

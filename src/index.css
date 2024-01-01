@@ -228,27 +228,27 @@
 }
 
 .background {
-  background-color: var(--background);
+  /* background-color: var(--background); */
   display: grid;
   place-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .gallery {
   display: flex;
-  left: calc(50% - 330px);
+  /* left: calc(50% - 330px); */
 }
 
 .card {
   position: relative;
   left: 0px;
-  width: 110px;
-  height: 160px;
+  width: full;
+  height: full;
   background-color: var(--background-card);
   border-radius: 8px;
-  transition: 1s ease-in-out;
+  transition: 0.8s ease-in-out;
   overflow: hidden;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5); */
 }
 
 .card:not(:first-child) {
@@ -266,10 +266,62 @@
 }
 
 .card img {
-  height: 160px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 4px;
+  /* border-radius: 2px; */
 }
+
+/* Button of Get Quote */
+.button {
+  background-color: #1c87c9;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  /* display: inline-block; */
+  font-family: sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: rgb(59 130 246);;
+    box-shadow: 0 0 5px rgb(59 130 246);;
+  }
+
+  50% {
+    background-color: rgb(29 78 216);
+    box-shadow: 0 0 20px rgb(29 78 216);
+  }
+
+  100% {
+    background-color: rgb(59 130 246);
+    box-shadow: 0 0 5px rgb(59 130 246);
+  }
+}
+
+.button {
+  animation: glowing 1300ms infinite;
+}
+
+/* hero animation */
+.animated-div {
+  /* Define initial styles */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-div.animate {
+  /* Define styles when inView is true */
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* swiper css */
 

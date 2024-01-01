@@ -201,7 +201,6 @@ const Embroidery = () => {
       </div>
 
       <ServiceCard />
-      <Footer />
     </div>
   );
 };

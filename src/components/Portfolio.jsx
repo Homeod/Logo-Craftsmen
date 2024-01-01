@@ -126,7 +126,6 @@ const Portfolio = () => {
           </motion.div>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 };

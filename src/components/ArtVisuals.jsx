@@ -211,7 +211,6 @@ const ArtVisuals = () => {
       </div>
 
       <ServiceCard />
-      <Footer />
     </div>
   );
 };

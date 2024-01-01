@@ -27,6 +27,7 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const { name, email, message, phone, ImageFile } = formData;
 
@@ -62,44 +63,67 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
   };
 
   const handleFileChange = async (e) => {
-    const imageArray = ImageFile;
-    for (var i = 0; i < e.target.files.length; i++) {
-      const file = e.target.files[i];
-      const base64 = await convertToBase64(file);
-      imageArray.push(base64);
+    const input = e.target;
+    const maxSize = 15 * 1024 * 1024; // 20 MB in bytes
+
+    if (input.files.length > 0) {
+      const totalSize = Array.from(input.files).reduce(
+        (acc, file) => acc + file.size,
+        0
+      );
+
+      if (totalSize <= maxSize) {
+        setErrorMessage("");
+      } else {
+        setErrorMessage("Total size of selected attachments exceeds 15 MB.");
+        input.value = "";
+      }
+
+      const imageArray = ImageFile;
+      for (var i = 0; i < input.files.length; i++) {
+        const file = e.target.files[i];
+        const base64 = await convertToBase64(file);
+        imageArray.push(base64);
+      }
+      setFormData((prev) => ({
+        ...prev,
+        ImageFile: imageArray,
+      }));
     }
-    setFormData((prev) => ({
-      ...prev,
-      ImageFile: imageArray,
-    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (
-      (phone.startsWith("91") && phone.length === 12) ||
-      phone.length === 10
+      !((phone.startsWith("91") && phone.length === 12) || phone.length === 10)
     ) {
-      setLoading(true);
-      const response = await axios.post(
-        "http://localhost:4444/uploadImages",
-        formData
-      );
-      if (response.statusText === "OK") {
-        toast.success("Email sent successfully!");
-        setLoading(false);
-        setIsUploadOpen(false);
-      } else toast.error("Error occured while sending email");
-    } else {
-      alert("Phone number is invalid!");
+      toast.error("Phone Number Not valid");
+      return;
     }
-    // setFormData({
-    //   name: "",
-    //   email: "",
-    //   service: "",
-    //   message: "",
-    //   ImageFile: "",
-    // });
+    const serializedFormData = JSON.stringify(formData);
+    const payloadSizeInBytes = new TextEncoder().encode(
+      serializedFormData
+    ).length;
+    const maxTotalPayloadSize = 25 * 1024 * 1024;
+
+    if (payloadSizeInBytes > maxTotalPayloadSize) {
+      toast.error(
+        "Payload Size is greater than 25mb. Try to reduce size of images."
+      );
+    }
+    setLoading(true);
+
+    const response = await axios.post(
+      "http://localhost:4444/uploadImages",
+      formData
+    );
+    if (response.statusText === "OK") {
+      toast.success("Email sent successfully!");
+      setIsUploadOpen(false);
+    } else toast.error("Error occured while sending email");
+
+    setLoading(false);
   };
 
   return (
@@ -194,8 +218,16 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
                       required
                     />
                   </div>
-                  <button className="py-3 bg-teal-400 text-gray-900 font-medium text-xl w-full rounded-lg mt-4  hover:bg-transparent hover:text-teal-400 border-2 border-teal-400">
-                    {loading ? "Loading..." : "Submit"}
+                  {errorMessage && (
+                    <div className="text-red-500 text-xs">*{errorMessage}</div>
+                  )}
+                  <button
+                    className={`py-3 bg-teal-400 text-gray-900 font-medium text-xl w-full rounded-lg mt-4  hover:bg-transparent hover:text-teal-400 border-2 border-teal-400 ${
+                      !loading && "cursor-pointer"
+                    }`}
+                    disabled={loading}
+                  >
+                    {loading ? "Sending... Please Wait" : "Submit"}
                   </button>
                 </form>
               </div>

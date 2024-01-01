@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
@@ -12,6 +12,24 @@ const Navbar = ({ setIsUploadOpen }) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+
+  const dropdownTimeoutRef = useRef(null);
+
+  const handleLinkClick = (title) => {
+    setActive((prev) => (prev === title ? null : title));
+  };
+
+  const handleMouseEnter = (title) => {
+    clearTimeout(dropdownTimeoutRef.current);
+    setActive(title);
+  };
+
+  const handleMouseLeave = () => {
+    // Add a delay before hiding the dropdown
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setActive(null);
+    }, 500); // Adjust the delay in milliseconds (e.g., 300ms)
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +73,7 @@ const Navbar = ({ setIsUploadOpen }) => {
           />
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10 mr-10">
+        {/* <ul className="list-none hidden sm:flex flex-row gap-10 mr-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -68,15 +86,66 @@ const Navbar = ({ setIsUploadOpen }) => {
               }}
             >
               {link.id === "upload" ? (
-                <span onClick={() => setIsUploadOpen(true)}>{link.title}</span>
+                <span className="" onClick={() => setIsUploadOpen(true)}>{link.title}</span>
               ) : (
                 <Link to={`/${link.id}`}>{link.title}</Link>
               )}
             </li>
           ))}
+        </ul> */}
+
+        <ul
+          className="list-none lg:flex flex-row gap-10 mr-10 hidden "
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
+        >
+          {navLinks.map((link) => (
+            <li
+              key={link.id || link.title}
+              className={`relative ${
+                active === link.title ? "text-black" : "text-neutral-500"
+              } text-[18px] font-medium cursor-pointer sm:mb-2`}
+              onMouseEnter={() => handleMouseEnter(link.title)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div
+                onClick={() => handleLinkClick(link.title)}
+                className="cursor-pointer"
+              >
+                {link.id === "upload" ? (
+                  <span
+                    className="button"
+                    onClick={() => setIsUploadOpen(true)}
+                  >
+                    {link.title}
+                  </span>
+                ) : link.title === "Services" ? (
+                  <span>{link.title}</span>
+                ) : (
+                  <Link to={`/${link.id}`}>{link.title}</Link>
+                )}
+              </div>
+              {link.sublinks && active === link.title && (
+                <div className="absolute top-full left-0 mt-[-10px] bg-white p-2 space-y-2 shadow w-72 rounded-[5px] sm:mt-10 sm:block">
+                  {link.sublinks.map((sublink) => (
+                    <Link
+                      key={sublink.link}
+                      to={sublink.link}
+                      className="block px-4 py-2 text-neutral-500 border-b hover:text-black  hover:ml-1"
+                      onClick={() => handleLinkClick(sublink.link)}
+                    >
+                      {sublink.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </li>
+          ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center ">
+        <div className="lg:hidden flex flex-1 justify-end items-center ">
           <img
             src={toggle ? closee : hamburg}
             alt="hamburg"
@@ -85,7 +154,7 @@ const Navbar = ({ setIsUploadOpen }) => {
             onClick={() => setToggle(!toggle)}
           />
 
-          <div
+          {/* <div
             className={`${
               !toggle ? "hidden" : "flex"
             } absolute w-full h-fit top-0 left-0 mt-24 bg-gray-50  
@@ -113,6 +182,73 @@ const Navbar = ({ setIsUploadOpen }) => {
                   )}
                 </li>
               ))}
+            </ul>
+          </div> */}
+
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } absolute w-full h-fit top-0 left-0 mt-24 bg-gray-50  
+              z-10 flex items-center justify-around transition-transform duration-300 ease-in-out transform`}
+          >
+            <ul
+              className="list-none flex justify-end items-center flex-col gap-4"
+              onClick={() => {
+                setActive("");
+                window.scrollTo(0, 0);
+              }}
+            >
+              {/* "Services" as heading without a link */}
+              <li className="text-black text-[16px] font-bold cursor-not-allowed">
+                Services:
+              </li>
+
+              {/* Sublinks after "Services" */}
+              {navLinks
+                .find((link) => link.title === "Services")
+                ?.sublinks.map((sublink) => (
+                  <li
+                    key={sublink.link}
+                    className="text-black text-[16px] font-medium cursor-not-allowed"
+                    onClick={() => {
+                      // Handle the sublink click here
+                      setToggle(false);
+                    }}
+                  >
+                    <Link to={sublink.link}>{sublink.name}</Link>
+                  </li>
+                ))}
+
+              {/* "About" and other links */}
+              {navLinks
+                .filter((link) => link.title !== "Services")
+                .map((link) => (
+                  <li
+                    key={link.id}
+                    className="hover:text-black text-[16px] font-bold cursor-pointer"
+                    onClick={() => {
+                      if (link.sublinks) {
+                        setToggle(!toggle);
+                        setActive(link.title);
+                      } else {
+                        setToggle(false); // Close toggle for links without sublinks
+                      }
+                    }}
+                  >
+                    {/* {link.id ? (
+                      <Link to={`/${link.id}`}>{link.title}</Link>
+                    ) : (
+                      <span>{link.title}</span>
+                    )} */}
+                    {link.id === "upload" ? (
+                      <span className="" onClick={() => setIsUploadOpen(true)}>
+                        {link.title}
+                      </span>
+                    ) : (
+                      <Link to={`/${link.id}`}>{link.title}</Link>
+                    )}
+                  </li>
+                ))}
             </ul>
           </div>
         </div>

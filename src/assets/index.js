@@ -9,6 +9,8 @@ import close from "./close.svg";
 import closee from "./closee.svg";
 import hamburg from "./hamburg.svg";
 import craftsmen from "./craftsmen.svg";
+import craftsmenlogo from "./craftsmenlogo.png";
+import lcwhite from "./lcwhite.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -66,8 +68,14 @@ import CirDesign from "./logos/CirDesign.png";
 import ClubLogo from "./logos/ClubLogo.png";
 import CompLogo from "./logos/CompLogo.png";
 import CrickLogo from "./logos/CrickLogo.png";
-import PecksHoodie from "./logos/PecksHoodie.png";
 import SchoolLogo from "./logos/SchoolLogo.png";
+import img_1 from "./img_1.jpg";
+
+import hero_emb from "./hero_emb.jpg";
+import hero_imgedits from "./hero_imgedits.jpg";
+import hero_mockup from "./hero_mockup.jpg";
+import hero_vector from "./hero_vector.jpg";
+
 
 export {
   logo,
@@ -79,6 +87,8 @@ export {
   menu,
   hamburg,
   craftsmen,
+  craftsmenlogo,
+  lcwhite,
   close,
   closee,
   css,
@@ -132,7 +142,11 @@ export {
   ClubLogo,
   CompLogo,
   CrickLogo,
-  PecksHoodie,
   SchoolLogo,
   favicon,
+  img_1,
+  hero_emb,
+  hero_imgedits,
+  hero_mockup,
+  hero_vector,
 };

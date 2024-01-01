@@ -70,7 +70,6 @@ const FAQs = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

@@ -22,6 +22,9 @@ import ImageEdit from "./ImageEdit";
 import ArtVisuals from "./ArtVisuals";
 import OrderEntry from "./OrderEntry";
 import Error from "./Error";
+import ContactLanding from "./ContactLanding";
+import Terms from "./Terms";
+import Privacy from "./Privacy";
 
 export {
   Hero,
@@ -46,4 +49,7 @@ export {
   ArtVisuals,
   OrderEntry,
   Error,
+  ContactLanding,
+  Terms,
+  Privacy,
 };

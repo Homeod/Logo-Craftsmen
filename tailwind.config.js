@@ -4,6 +4,13 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      fontFamily: {
+        dancing: ["Dancing Script", "cursive"],
+        cabin: ["Cabin Sketch", "cursive"],
+        pacifico: ["Pacifico", "cursive"],
+        lobster: ["Lobster", "cursive"],
+        anton: ["Anton", "sans-serif"],
+      },
       animation: {
         blob: "blob 4s infinite",
       },

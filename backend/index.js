@@ -4,8 +4,8 @@ const cors = require("cors");
 const app = express();
 const port = 4444;
 
-app.use(express.json({ limit: "10mb", extended: true }));
-app.use(express.urlencoded({ limit: "10mb", extended: true }));
+app.use(express.json({ limit: "25mb", extended: true }));
+app.use(express.urlencoded({ limit: "25mb", extended: true }));
 
 app.use(cors());
 
@@ -14,13 +14,13 @@ app.post("/contactAdmin", async (req, res) => {
   var smtpTransport = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "yamkar.ab10@gmail.com",
-      pass: "vhey zguk uxao evox",
+      user: "designlogocraftsmen@gmail.com",
+      pass: "jlao loxo nbfh pfls",
     },
   });
   var mailOptions = {
-    from: "yamkar.ab10@gmail.com",
-    to: "besacey127@avucon.com",
+    from: "designlogocraftsmen@gmail.com",
+    to: "art@logocraftsmen.com",
     cc: data.email,
     subject: `New Message from ${data.name}`,
     html: `
@@ -36,7 +36,7 @@ app.post("/contactAdmin", async (req, res) => {
   smtpTransport.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
-      res.status(400).send(error);
+      res.status(400).json(error);
     } else {
       res.status(200).json(info.response);
     }
@@ -49,13 +49,13 @@ app.post("/uploadImages", async (req, res) => {
   var smtpTransport = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "yamkar.ab10@gmail.com",
-      pass: "vhey zguk uxao evox",
+      user: "designlogocraftsmen@gmail.com",
+      pass: "jlao loxo nbfh pfls",
     },
   });
   var mailOptions = {
-    from: "yamkar.ab10@gmail.com",
-    to: "besacey127@avucon.com",
+    from: "designlogocraftsmen@gmail.com",
+    to: "art@logocraftsmen.com",
     cc: data.email,
     subject: `New Message from ${data.name}`,
     html: `<h3>${data.name}</h3>
@@ -75,11 +75,10 @@ app.post("/uploadImages", async (req, res) => {
       };
     }),
   };
-  console.log("sending email");
   smtpTransport.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
-      res.status(400).send(error);
+      res.status(400).json(error);
     } else {
       res.status(200).json(info.response);
     }

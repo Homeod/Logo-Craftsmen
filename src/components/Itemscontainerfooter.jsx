@@ -1,7 +1,7 @@
 import Itemsfooter from "./Itemsfooter";
 import { Insights, Services, Company } from "../constents";
 import { Link } from "react-router-dom";
-import { craftsmen } from "../assets";
+import { craftsmen, lcwhite } from "../assets";
 
 const Itemscontainerfooter = () => {
   const openMap = (address) => {
@@ -25,9 +25,9 @@ const Itemscontainerfooter = () => {
           }}
         >
           <img
-            src={craftsmen}
+            src={lcwhite}
             alt="logo"
-            className=" w-42 h-24 object-contain  lg:justify-start "
+            className=" w-42 h-24 object-contain lg:justify-start bg "
           />
         </Link>
       </div>
@@ -42,28 +42,17 @@ const Itemscontainerfooter = () => {
             className="text-gray-400 hover:text-teal-400 duration-300"
           >
             <li>
-              <i className="fas fa-phone mr-2 mb-2"></i> 859-181-3460
+              <i className="fas fa-phone mr-2 mb-2"></i>859-181-3460
             </li>
           </a>
           <li>
             <a
               href="mailto:art@logocraftsmen.com"
-              title="art@logocraftsmen"
+              title="art@logocraftsmen.com"
               className="text-gray-400 hover:text-teal-400 duration-300"
             >
-              <i className="fas fa-envelope mr-2 mb-2"></i> art@logocraftsmen
+              <i className="fas fa-envelope mr-2 mb-2"></i>art@logocraftsmen.com
             </a>
-          </li>
-          <li
-            className="text-gray-400 hover:text-teal-400 duration-300"
-            onClick={() =>
-              openMap("Prabhat Nagar,Bhayander West, Thane 401101, India")
-            }
-          >
-            <i className="fas fa-map-marker-alt float-left mt-2"></i>{" "}
-            <p className="ml-7 cursor-pointer">
-              India:- Prabhat Nagar, Bhayander West, Thane 401101, India.
-            </p>
           </li>
           <li
             className="text-gray-400 hover:text-teal-400 duration-300"
@@ -71,9 +60,20 @@ const Itemscontainerfooter = () => {
               openMap("2423 Lyttonsville Rd, Silver Spring, MD 20910, USA")
             }
           >
-            <i className="fas fa-map-marker-alt float-left mt-2"></i>{" "}
+            <i className="fas fa-map-marker-alt float-left mt-2"></i>
             <p className="ml-7 cursor-pointer">
               USA:- 2423 Lyttonsville Rd, Silver Spring, MD 20910
+            </p>
+          </li>
+          <li
+            className="text-gray-400 hover:text-teal-400 duration-300"
+            onClick={() =>
+              openMap("Prabhat Nagar,Bhayander West, Thane 401101, India")
+            }
+          >
+            <i className="fas fa-map-marker-alt float-left mt-2"></i>
+            <p className="ml-7 cursor-pointer">
+              India:- Prabhat Nagar, Bhayander West, Thane 401101, India.
             </p>
           </li>
         </ul>

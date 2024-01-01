@@ -10,7 +10,7 @@ const Itemsfooter = ({ Links, title }) => {
         {Links.map((link) => (
           <li key={link.name}>
             <a
-              className="text-gray-400 hover:text-teal-400 duration-300 flex justify-center items-center"
+              className="text-gray-400 hover:text-teal-400 duration-300 flex justify-center items-center "
               href={link.link}
             >
               {link.name}
