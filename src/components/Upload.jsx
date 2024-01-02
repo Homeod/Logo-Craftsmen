@@ -203,7 +203,7 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
                       type="text"
                       name="message"
                       value={message}
-                      placeholder="Type a message to admin"
+                      placeholder="Type a message: File format and desired size"
                       onChange={handleChange}
                       required
                     />

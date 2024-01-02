@@ -47,6 +47,12 @@ import vectorcow from "./vectorcow.png";
 import imgedit1 from "./imgedit1.jpeg";
 import imgedit2 from "./imgedit2.jpeg";
 import imgedit3 from "./imgedit3.jpeg";
+import imgedit4 from "./imgedit4.jpeg";
+import imgedit5 from "./imgedit5.jpeg";
+import imgedit6 from "./imgedit6.jpeg";
+import imgedit7 from "./imgedit7.jpeg";
+import imgedit8 from "./imgedit8.jpeg";
+import imgedit9 from "./imgedit9.jpeg";
 import art1 from "./art1.png";
 import art2 from "./art2.png";
 import art3 from "./art3.png";
@@ -70,6 +76,7 @@ import CompLogo from "./logos/CompLogo.png";
 import CrickLogo from "./logos/CrickLogo.png";
 import SchoolLogo from "./logos/SchoolLogo.png";
 import img_1 from "./img_1.jpg";
+import Img4 from "./Img4.jpg"
 
 import hero_emb from "./hero_emb.jpg";
 import hero_imgedits from "./hero_imgedits.jpg";
@@ -123,6 +130,12 @@ export {
   imgedit1,
   imgedit2,
   imgedit3,
+  imgedit4,
+  imgedit5,
+  imgedit6,
+  imgedit7,
+  imgedit8,
+  imgedit9,
   art1,
   art2,
   art3,
@@ -145,6 +158,7 @@ export {
   SchoolLogo,
   favicon,
   img_1,
+  Img4,
   hero_emb,
   hero_imgedits,
   hero_mockup,

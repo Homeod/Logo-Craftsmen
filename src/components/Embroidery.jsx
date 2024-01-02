@@ -16,29 +16,39 @@ const Embroidery = () => {
               </div>
             </div>
             <div className="md:text-lg text-md md:text-start text-center mt-5">
-              <span className=" font-serif text-2xl italic">
-                From Logos to Apparel -{" "}
-                <span className="text-2xl font-bold">Stitched Brilliance.</span>
+              {/* <span className=" font-serif text-2xl">
+                From Logos to Apparel -{" "} */}
+                <span className="text-2xl font-bold">
+                  From Logos to Apparel - Stitched Brilliance.
+                {/* </span> */}
               </span>
               <br />
               <br />
-              <span className="text-gray-500 font-black md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
+              {/* <span className="text-gray-500 font-black md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
                 EARLY OFFERS!
-              </span>
+              </span> */}
               <br />
               <br />
               <span className="font-serif text-2xl italic">
                 Price:{" "}
-                <span className="text-4xl font-bold">$1 / 1000 stitches</span>
+                <span className="text-4xl font-bold">
+                  <span className="text-[65px]">$1</span> / 1000 stitches
+                </span>
               </span>
             </div>
-            <div className="flex gap-4 items-center md:justify-start justify-around">
-              <button className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg">
-                Upload
-              </button>
-              <button className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg">
+            <div className="flex gap-4 items-center md:justify-start justify-center">
+              <a
+                className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg"
+                href="/portfolio"
+              >
+                Portfolio
+              </a>
+              <a
+                className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg"
+                href="/contact"
+              >
                 Contact Us
-              </button>
+              </a>
             </div>
           </div>
           <div className="flex items-center justify-center mx-auto my-6 ">

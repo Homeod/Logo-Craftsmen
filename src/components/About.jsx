@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { rect_img, square_img } from "../assets";
 import { styles } from "../styles";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -157,12 +158,19 @@ const About = () => {
             about designs; it's about crafting legacies.
           </p>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
-            <a
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              href="/contact"
+            <Link
+              to="/contact"
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth", // Optional: Add smooth scrolling behavior
+                });
+              }}
             >
-              Contact Us
-            </a>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Contact Us
+              </button>
+            </Link>
             {/* <a
               className="bg-red-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded  m-4"
               href="/contact"

@@ -34,36 +34,27 @@ const Terms = () => {
               agreement.
               <br />
               <br />
-              <span className="font-bold">
-                4. Seamless Payments and Refunds
-              </span>
-              <br />
-              For a hassle-free experience, we require payment details upfront.
-              Check our Refund Policy [link to Refund Policy] for details on
-              refunds.
-              <br />
-              <br />
-              <span className="font-bold">5. Your Design Journey</span>
+              <span className="font-bold">4. Your Design Journey</span>
               <br />
               As we embark on this creative journey together, please ensure your
               uploaded files comply with copyright laws and are free from
               malicious content.
               <br />
               <br />
-              <span className="font-bold">6. Trust in Our Craft</span>
+              <span className="font-bold">5. Trust in Our Craft</span>
               <br />
               While we strive for perfection, Logo Craftsmen is not liable for
               indirect, incidental, or consequential damages arising from the
               use of our services.
               <br />
               <br />
-              <span className="font-bold">7. Tailoring Our Services</span>
+              <span className="font-bold">6. Tailoring Our Services</span>
               <br />
               We reserve the right to terminate services for users not adhering
               to these terms. Your satisfaction is our priority.
               <br />
               <br />
-              <span className="font-bold">8. Evolving Together</span>
+              <span className="font-bold">7. Evolving Together</span>
               <br />
               Logo Craftsmen may modify these terms to better serve you. We'll
               keep you informed of any changes.

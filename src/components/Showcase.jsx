@@ -10,9 +10,10 @@ import {
   imgedit1,
   CirDesign,
 } from "../assets";
-import { SchoolLogo,CrickLogo,CompLogo,ClubLogo } from "../assets";
+import { SchoolLogo, CrickLogo, CompLogo, ClubLogo } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { Link } from "react-router-dom";
 
 const Showcase = () => {
   return (
@@ -97,12 +98,19 @@ const Showcase = () => {
 
             <div className="absolute bottom-0 left-0 right-0 h-[352px] bg-gradient-to-t from-white to-transparent">
               <div className="flex h-full items-end justify-center">
-                <a
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  href="/portfolio"
+                <Link
+                  to="/portfolio"
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // Optional: Add smooth scrolling behavior
+                    });
+                  }}
                 >
-                  There's More To Explore
-                </a>
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    There's More to Explore
+                  </button>
+                </Link>
               </div>
             </div>
           </section>

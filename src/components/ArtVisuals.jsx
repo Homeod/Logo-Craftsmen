@@ -22,9 +22,9 @@ const ArtVisuals = () => {
               </span>
               <br />
               <br />
-              <span className="text-red-500 font-serif md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
+              {/* <span className="text-red-500 font-serif md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
                 WINTER SALE IS LIVE
-              </span>
+              </span> */}
             </div>
             <div className="flex gap-4 items-center md:justify-start justify-around">
               <button className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg">

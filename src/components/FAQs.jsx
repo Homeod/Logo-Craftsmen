@@ -63,9 +63,19 @@ const FAQs = () => {
                 Still have questions about how Logo Craftsmen can help you?
               </h1>
               <p className="text-lg mb-6">Ask us Out Now</p>
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Contact Us
-              </button>
+              <Link
+                to="/contact"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth", // Optional: Add smooth scrolling behavior
+                  });
+                }}
+              >
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>

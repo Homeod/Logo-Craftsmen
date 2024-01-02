@@ -22,17 +22,23 @@ const ImageEdit = () => {
               </span>
               <br />
               <br />
-              <span className="text-black-500 font-serif md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
+              {/* <span className="text-black-500 font-serif md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
                 SALE OF THE MONTH
-              </span>
+              </span> */}
             </div>
-            <div className="flex gap-4 items-center md:justify-start justify-around">
-              <button className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg">
-                Upload
-              </button>
-              <button className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg">
+            <div className="flex gap-4 items-center md:justify-start justify-center">
+              <a
+                className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg"
+                href="/portfolio"
+              >
+                Portfolio
+              </a>
+              <a
+                className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg"
+                href="/contact"
+              >
                 Contact Us
-              </button>
+              </a>
             </div>
           </div>
           <div className="flex items-center justify-center mx-auto my-6 ">

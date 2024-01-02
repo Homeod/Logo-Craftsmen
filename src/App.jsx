@@ -37,7 +37,7 @@ const App = () => {
       )}
       <BrowserRouter>
         <div className="relative z-0 ">
-          <div className="bg-cover bg-no-repeat bg-violet-50 pb-24">
+          <div className="bg-cover bg-no-repeat pb-24">
             <Navbar setIsUploadOpen={setIsUploadOpen} />
           </div>
 

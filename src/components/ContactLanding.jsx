@@ -147,7 +147,7 @@ const ContactLanding = ({ setIsUploadOpen }) => {
           </p>
           <p className={styles.sectionHeadText}>Get Quotation</p>
           <div className="flex justify-center items-center">
-            <div className="flex h-full w-fit items-center justify-center lg:flex-row flex-col-reverse gap-6 sm:gap-12 py-8 px-8 text-center lg:text-left sm:mt-4 sm:rounded-lg ">
+            <div className="flex h-full w-fit items-center justify-center flex-col-reverse gap-6 sm:gap-12 py-8 px-8 text-center lg:text-left sm:mt-4 sm:rounded-lg ">
               <div className="w-full ">
                 <form className="" onSubmit={handleSubmit} mai>
                   <div className="flex flex-col gap-x-10">
@@ -207,7 +207,7 @@ const ContactLanding = ({ setIsUploadOpen }) => {
                       type="text"
                       name="message"
                       value={message}
-                      placeholder="Type a message to admin *"
+                      placeholder="Design Details: Optimal file format and desired size *"
                       onChange={handleChange}
                       required
                     />
@@ -246,6 +246,11 @@ const ContactLanding = ({ setIsUploadOpen }) => {
                   </div>
                   <div className="card">
                     <figure>
+                      <img src={Img} alt="Wooden Bridge" />
+                    </figure>
+                  </div>
+                  <div className="card">
+                    <figure>
                       <img
                         src={ClubLogo}
                         alt="Forest mountains"
@@ -260,11 +265,6 @@ const ContactLanding = ({ setIsUploadOpen }) => {
                         alt="Lavender Field"
                         className="bg-sky-300"
                       />
-                    </figure>
-                  </div>
-                  <div className="card">
-                    <figure>
-                      <img src={Img} alt="Wooden Bridge" />
                     </figure>
                   </div>
                 </div>

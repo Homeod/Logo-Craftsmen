@@ -105,7 +105,7 @@ const FeedbackCard = ({
             {name}
           </p>
           <p className="mt-1 text-teal-950 text-[12px]">
-            {designation} of {company}
+            {designation} at {company}
           </p>
         </div>
         <img

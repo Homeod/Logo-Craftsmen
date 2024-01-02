@@ -54,16 +54,18 @@ const Navbar = ({ setIsUploadOpen }) => {
   return (
     <div>
       <div
-        className={`flex justify-between items-center fixed top-0 z-10 w-full ${
-          hasScrolled && "bg-white shadow-lg"
+        className={`flex justify-between items-center fixed top-0 z-10 bg-white w-full ${
+          hasScrolled && "bg-white shadow-lg "
         }`}
       >
         <Link
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth", // Optional: Add smooth scrolling behavior
+            });
           }}
         >
           <img
@@ -97,8 +99,10 @@ const Navbar = ({ setIsUploadOpen }) => {
         <ul
           className="list-none lg:flex flex-row gap-10 mr-10 hidden "
           onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth", // Optional: Add smooth scrolling behavior
+            });
           }}
         >
           {navLinks.map((link) => (
@@ -185,10 +189,11 @@ const Navbar = ({ setIsUploadOpen }) => {
             </ul>
           </div> */}
 
+          {/* For Mobile Devices  */}
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } absolute w-full h-fit top-0 left-0 mt-24 bg-gray-50  
+            } absolute w-full h-fit top-0 left-0 mt-24 bg-gray-50 pb-3 
               z-10 flex items-center justify-around transition-transform duration-300 ease-in-out transform`}
           >
             <ul
@@ -199,7 +204,7 @@ const Navbar = ({ setIsUploadOpen }) => {
               }}
             >
               {/* "Services" as heading without a link */}
-              <li className="text-black text-[16px] font-bold cursor-not-allowed">
+              <li className="text-black text-[16px] font-bold cursor-not-allowed  border-b-2 pb-1">
                 Services:
               </li>
 
@@ -209,7 +214,7 @@ const Navbar = ({ setIsUploadOpen }) => {
                 ?.sublinks.map((sublink) => (
                   <li
                     key={sublink.link}
-                    className="text-black text-[16px] font-medium cursor-not-allowed"
+                    className="text-black text-[16px] font-medium cursor-not-allowed "
                     onClick={() => {
                       // Handle the sublink click here
                       setToggle(false);
@@ -225,7 +230,7 @@ const Navbar = ({ setIsUploadOpen }) => {
                 .map((link) => (
                   <li
                     key={link.id}
-                    className="hover:text-black text-[16px] font-bold cursor-pointer"
+                    className="hover:text-black text-[16px] font-bold cursor-pointer border-b-2 pb-2"
                     onClick={() => {
                       if (link.sublinks) {
                         setToggle(!toggle);

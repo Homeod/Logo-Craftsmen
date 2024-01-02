@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Itemsfooter = ({ Links, title }) => {
   return (
@@ -9,12 +10,18 @@ const Itemsfooter = ({ Links, title }) => {
         </h1>
         {Links.map((link) => (
           <li key={link.name}>
-            <a
+            <Link
               className="text-gray-400 hover:text-teal-400 duration-300 flex justify-center items-center "
-              href={link.link}
+              to={link.link}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth", // Optional: Add smooth scrolling behavior
+                });
+              }}
             >
               {link.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

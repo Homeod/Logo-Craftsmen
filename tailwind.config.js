@@ -10,6 +10,7 @@ module.exports = {
         pacifico: ["Pacifico", "cursive"],
         lobster: ["Lobster", "cursive"],
         anton: ["Anton", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
       },
       animation: {
         blob: "blob 4s infinite",

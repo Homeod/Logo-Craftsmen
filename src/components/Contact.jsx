@@ -208,38 +208,6 @@ const Contact = ({ setIsUploadOpen }) => {
               <a
                 className="text-black hover:text-blue-600 duration-300 hover:shadow-xl"
                 onClick={() =>
-                  openMap("Prabhat Nagar,Bhayander West, Thane 401101, India")
-                }
-              >
-                <div className="relative w-60 h-44 bg-white rounded-lg shadow-xl flex flex-col justify-end pb-2 gap-3 items-center cursor-pointer">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-8 h-8 text-blue-700"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
-                    />
-                  </svg>
-                  <p className="font-semibold text-center">
-                    <span className="">India</span>
-                    <br /> Prabhat Nagar, Bhayandar west, Thane 401101.
-                  </p>
-                </div>
-              </a>
-              <a
-                className="text-black hover:text-blue-600 duration-300 hover:shadow-xl"
-                onClick={() =>
                   openMap("2423 Lyttonsville Rd, Silver Spring, MD 20910, USA")
                 }
               >
@@ -269,11 +237,43 @@ const Contact = ({ setIsUploadOpen }) => {
                   </p>
                 </div>
               </a>
+              <a
+                className="text-black hover:text-blue-600 duration-300 hover:shadow-xl"
+                onClick={() =>
+                  openMap("Prabhat Nagar,Bhayander West, Thane 401101, India")
+                }
+              >
+                <div className="relative w-60 h-44 bg-white rounded-lg shadow-xl flex flex-col justify-end pb-2 gap-3 items-center cursor-pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-8 h-8 text-blue-700"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                    />
+                  </svg>
+                  <p className="font-semibold text-center">
+                    <span className="">India</span>
+                    <br /> Prabhat Nagar, Bhayandar west, Thane 401101.
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
 
           <div className="flex justify-center items-center">
-            <div className="flex h-full w-fit items-center justify-center lg:flex-row flex-col-reverse gap-6 sm:gap-12 py-8 px-8 text-center lg:text-left sm:mt-4 sm:rounded-lg ">
+            <div className="flex h-full w-fit items-center justify-center flex-col-reverse gap-6 sm:gap-12 py-8 px-8 text-center lg:text-left sm:mt-4 sm:rounded-lg ">
               <div className="w-full ">
                 <form className="" onSubmit={handleSubmit} mai>
                   <div className="flex flex-col gap-x-10">
@@ -372,6 +372,11 @@ const Contact = ({ setIsUploadOpen }) => {
                   </div>
                   <div className="card">
                     <figure>
+                      <img src={Img} alt="Wooden Bridge" />
+                    </figure>
+                  </div>
+                  <div className="card">
+                    <figure>
                       <img
                         src={ClubLogo}
                         alt="Forest mountains"
@@ -386,11 +391,6 @@ const Contact = ({ setIsUploadOpen }) => {
                         alt="Lavender Field"
                         className="bg-sky-300"
                       />
-                    </figure>
-                  </div>
-                  <div className="card">
-                    <figure>
-                      <img src={Img} alt="Wooden Bridge" />
                     </figure>
                   </div>
                 </div>
