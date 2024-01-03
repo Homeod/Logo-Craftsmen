@@ -1,8 +1,4 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -31,9 +27,6 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 
 import rect_img from "./rect_img.png";
 import square_img from "./square_img.png";
@@ -75,7 +68,6 @@ import ClubLogo from "./logos/ClubLogo.png";
 import CompLogo from "./logos/CompLogo.png";
 import CrickLogo from "./logos/CrickLogo.png";
 import SchoolLogo from "./logos/SchoolLogo.png";
-import img_1 from "./img_1.jpg";
 import Img4 from "./img4.jpg"
 
 import hero_emb from "./hero_emb.jpg";
@@ -86,10 +78,6 @@ import hero_vector from "./hero_vector.jpg";
 
 export {
   logo,
-  backend,
-  creator,
-  mobile,
-  web,
   github,
   menu,
   hamburg,
@@ -115,9 +103,6 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
   rect_img,
   square_img,
   monkey,
@@ -157,7 +142,6 @@ export {
   CrickLogo,
   SchoolLogo,
   favicon,
-  img_1,
   Img4,
   hero_emb,
   hero_imgedits,

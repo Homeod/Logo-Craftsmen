@@ -9,8 +9,6 @@ import {
   FAQs,
   Navbar,
   Portfolio,
-  Hero,
-  Works,
   Landing,
   Vector,
   Embroidery,

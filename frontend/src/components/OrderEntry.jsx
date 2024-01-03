@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Footer, ServiceCard, Contact } from "../components";
+import { Navbar, ServiceCard, Contact } from "../components";
 import { order1, order2 } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";

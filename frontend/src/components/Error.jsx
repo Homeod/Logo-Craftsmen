@@ -1,13 +1,7 @@
 import React from "react";
 import { styles } from "../styles";
 import { motion } from "framer-motion";
-import {
-  CirDesign,
-  ClubLogo,
-  CompLogo,
-  CrickLogo,
-  SchoolLogo,
-} from "../assets";
+import { CirDesign } from "../assets";
 import { Link } from "react-router-dom";
 
 const Error = () => {

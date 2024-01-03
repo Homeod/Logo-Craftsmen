@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services, experiences, testimonials } from "../constents";
 import { fadeIn, textVariant } from "../utils/motion";
-import Footer from "./Footer";
 import Home from "./Home";
 import ContactLanding from "./ContactLanding";
 import Showcase from "./Showcase";

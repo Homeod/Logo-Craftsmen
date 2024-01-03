@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { faqs } from "../constents";
-import { Footer } from "../components";
 
 const AccordionSection = ({
   faqs,

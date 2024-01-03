@@ -1,7 +1,7 @@
 import Itemsfooter from "./Itemsfooter";
 import { Insights, Services, Company } from "../constents";
 import { Link } from "react-router-dom";
-import { craftsmen, lcwhite } from "../assets";
+import { lcwhite } from "../assets";
 
 const Itemscontainerfooter = () => {
   const openMap = (address) => {

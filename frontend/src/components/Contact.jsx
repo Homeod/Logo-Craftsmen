@@ -1,15 +1,9 @@
 import React, { useState } from "react";
 import Img from "../assets/Img4.jpg";
 import { vectorcow, ClubLogo, art3 } from "../assets";
-import Navbar from "../components/Navbar";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import { styles } from "../styles";
-import Vector from "./Vector";
-import Footer from "./Footer";
-import convertToBase64 from "./ImgtoBase64";
 
 const Contact = ({ setIsUploadOpen }) => {
   const [formData, setFormData] = useState({

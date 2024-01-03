@@ -11,14 +11,12 @@ import {
   ClubLogo,
   SchoolLogo,
   imgedit1,
-  imgedit2,
   imgedit3,
   imgedit4,
   imgedit5,
   imgedit6,
   imgedit7,
-  imgedit8,
-  imgedit9,
+  
 } from "../assets";
 import React, { useState } from "react";
 import Modal from "react-modal";

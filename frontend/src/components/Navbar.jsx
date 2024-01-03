@@ -1,12 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
-import { styles } from "../styles";
 // import craftsmen from '../assets/craftsmen.png';
 import { navLinks } from "../constents";
-import { act } from "@react-three/fiber";
+
 import { hamburg, closee, craftsmen } from "../assets";
-import Upload from "./Upload";
+
 
 const Navbar = ({ setIsUploadOpen }) => {
   const [active, setActive] = useState("");
