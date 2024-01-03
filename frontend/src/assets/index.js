@@ -31,6 +31,7 @@ import tesla from "./company/tesla.png";
 import rect_img from "./rect_img.png";
 import square_img from "./square_img.png";
 import monkey from "./monkey.png";
+
 import img2 from "./img2.jpg";
 import img33 from "./img33.jpg";
 import tiger from "./tiger.png";
