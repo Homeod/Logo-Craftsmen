@@ -76,7 +76,7 @@ import CompLogo from "./logos/CompLogo.png";
 import CrickLogo from "./logos/CrickLogo.png";
 import SchoolLogo from "./logos/SchoolLogo.png";
 import img_1 from "./img_1.jpg";
-import Img4 from "./Img4.jpg"
+import Img4 from "./img4.jpg"
 
 import hero_emb from "./hero_emb.jpg";
 import hero_imgedits from "./hero_imgedits.jpg";
