@@ -3,8 +3,9 @@ import { Footer, ServiceCard } from "../components";
 import { embskull, embdragon, tiger } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { Link } from "react-router-dom";
 
-const Embroidery = () => {
+const Embroidery = ({ setIsUploadOpen }) => {
   return (
     <div>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
@@ -18,8 +19,9 @@ const Embroidery = () => {
             <div className="md:text-lg text-md md:text-start text-center mt-5">
               {/* <span className=" font-serif text-2xl">
                 From Logos to Apparel -{" "} */}
-                <span className="text-2xl font-bold">
-                  From Logos to Apparel - Stitched Brilliance.
+              <span className="text-2xl font-bold">
+                Dress Your Brand in Elegance! Our Embroidery Design Services
+                Transform Ideas into Textile Art.
                 {/* </span> */}
               </span>
               <br />
@@ -27,9 +29,8 @@ const Embroidery = () => {
               {/* <span className="text-gray-500 font-black md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
                 EARLY OFFERS!
               </span> */}
-              <br />
-              <br />
-              <span className="font-serif text-2xl italic">
+              
+              <span className="font-playfair text-3xl ">
                 Price:{" "}
                 <span className="text-4xl font-bold">
                   <span className="text-[65px]">$1</span> / 1000 stitches
@@ -37,18 +38,26 @@ const Embroidery = () => {
               </span>
             </div>
             <div className="flex gap-4 items-center md:justify-start justify-center">
-              <a
-                className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg"
-                href="/portfolio"
+              <Link
+                to="/portfolio"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth", // Optional: Add smooth scrolling behavior
+                  });
+                }}
               >
-                Portfolio
-              </a>
-              <a
-                className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg"
-                href="/contact"
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Portfolio
+                </button>
+              </Link>
+
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                onClick={() => setIsUploadOpen(true)}
               >
-                Contact Us
-              </a>
+                Get Quote
+              </button>
             </div>
           </div>
           <div className="flex items-center justify-center mx-auto my-6 ">

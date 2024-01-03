@@ -137,7 +137,7 @@ const Hero = () => {
                   </span>
                 </p>
                 <a
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute lg:bottom-2 -bottom-5"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute md-bottom-16 lg:-bottom-5 -bottom-5"
                   href="/embroidery"
                 >
                   Learn More
@@ -187,7 +187,7 @@ const Hero = () => {
                   </span>
                 </p>
                 <a
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute lg:-bottom-16 -bottom-6"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute lg:-bottom-20 -bottom-20 md:-bottom-32"
                   href="/vector"
                 >
                   Learn More
@@ -210,7 +210,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-white bg-opacity-60 rounded-[20px] ">
               <AnimatedDiv>
                 <p className="lg:text-[65px] font-bold text-black  font-playfair text-[40px]">
-                  Products Mockup
+                  Virtual Mockup
                 </p>
                 <p className="lg:text-[45px] font-semibold  lg:px-20 font-playfair text-[30px]">
                   See Your{" "}
@@ -229,7 +229,7 @@ const Hero = () => {
                   From Pens to Apparel – Virtually Perfect Before Production.
                 </p>
                 <a
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute lg:-bottom-16 -bottom-20"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute lg:-bottom-16 -bottom-24"
                   href="/artvisuals"
                 >
                   Learn More
@@ -275,7 +275,7 @@ const Hero = () => {
                   .
                 </p>
                 <a
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute lg:-bottom-32 -bottom-8"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute lg:-bottom-28 -bottom-8 md:-bottom-36"
                   href="/imageedit"
                 >
                   Learn More

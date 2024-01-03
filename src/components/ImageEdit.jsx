@@ -3,8 +3,9 @@ import { Navbar, Footer, ServiceCard } from "../components";
 import { imgedit1, imgedit2, imgedit3 } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { Link } from "react-router-dom";
 
-const ImageEdit = () => {
+const ImageEdit = ({ setIsUploadOpen }) => {
   return (
     <div>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
@@ -17,8 +18,8 @@ const ImageEdit = () => {
             </div>
             <div className="md:text-lg text-md md:text-start text-center mt-5">
               <span className=" font-serif font-bold text-2xl italic">
-                &quot;Visual Brilliance Begins! Perfect Your Images with
-                Precision.&quot;
+                &quot;Logo Craftsmen's Image Editing Elevates Your Pictures.
+                Enhance, Retouch, and Perfect – Your Images.&quot;
               </span>
               <br />
               <br />
@@ -27,18 +28,26 @@ const ImageEdit = () => {
               </span> */}
             </div>
             <div className="flex gap-4 items-center md:justify-start justify-center">
-              <a
-                className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg"
-                href="/portfolio"
+              <Link
+                to="/portfolio"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth", // Optional: Add smooth scrolling behavior
+                  });
+                }}
               >
-                Portfolio
-              </a>
-              <a
-                className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg"
-                href="/contact"
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Portfolio
+                </button>
+              </Link>
+
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                onClick={() => setIsUploadOpen(true)}
               >
-                Contact Us
-              </a>
+                Get Quote
+              </button>
             </div>
           </div>
           <div className="flex items-center justify-center mx-auto my-6 ">

@@ -47,7 +47,7 @@ export const navLinks = [
     sublinks: [
       { name: "Vector Conversion", link: "/vector" },
       { name: "Embroidery Digitizing", link: "/embroidery" },
-      { name: "Art / Visual Proofs", link: "/artvisuals" },
+      { name: "Art / Virtual Proofs", link: "/artvisuals" },
       { name: "Order Entry Management", link: "/orderentry" },
       { name: "Image Editing", link: "/imageedit" },
     ],
@@ -343,7 +343,7 @@ export const Contacts = [{ name: "Prashant Jaiswal", link: "#" }, { name: "" }];
 export const Services = [
   { name: "Vector Conversion", link: "/vector" },
   { name: "Embroidery Digitizing", link: "/embroidery" },
-  { name: "Art / Visual Proofs", link: "/artvisuals" },
+  { name: "Art / Virtual Proofs", link: "/artvisuals" },
   { name: "Order Entry Management", link: "/orderentry" },
   { name: "Image Editing", link: "/imageedit" },
 ];

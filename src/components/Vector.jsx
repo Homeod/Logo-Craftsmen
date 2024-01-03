@@ -3,8 +3,9 @@ import { Navbar, Footer, ServiceCard } from "../components";
 import { monkey, img2, vectorcow } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { Link } from "react-router-dom";
 
-const Vector = () => {
+const Vector = ({ setIsUploadOpen }) => {
   return (
     <div>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
@@ -17,7 +18,8 @@ const Vector = () => {
             </div>
             <div className="md:text-lg text-md md:text-start text-center mt-5">
               <span className="font-semibold font-serif text-2xl italic">
-                Elevate Designs with Precision Vectors
+                Unlock Limitless Possibilities! Transform Raster to Vector with
+                Precision. Elevate Your Designs Today!
                 {/* <span className="text-4xl">Vectors.</span> */}
               </span>
               <br />
@@ -26,24 +28,31 @@ const Vector = () => {
                 GRAB THE OFFER NOW
               </span> */}
               <br />
-              <br />
-              <span className="font-semibold font-serif text-2xl italic">
-                Price Starting from <span className="text-4xl">$1.99</span>
+              <span className="font-semibold font-playfair text-2xl">
+                Price Starting from <span className="text-5xl">$1.99</span>
               </span>
             </div>
             <div className="flex gap-4 items-center md:justify-start justify-center">
-              <a
-                className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg"
-                href="/portfolio"
+              <Link
+                to="/portfolio"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth", // Optional: Add smooth scrolling behavior
+                  });
+                }}
               >
-                Portfolio
-              </a>
-              <a
-                className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg"
-                href="/contact"
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Portfolio
+                </button>
+              </Link>
+
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                onClick={() => setIsUploadOpen(true)}
               >
-                Contact Us
-              </a>
+                Get Quote
+              </button>
             </div>
           </div>
           <div className="flex items-center justify-center mx-auto my-6 ">

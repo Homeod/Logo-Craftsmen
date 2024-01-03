@@ -1,4 +1,3 @@
-import React from "react";
 import {
   monkey,
   tiger,
@@ -21,11 +20,52 @@ import {
   imgedit8,
   imgedit9,
 } from "../assets";
+import React, { useState } from "react";
+import Modal from "react-modal";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { Footer } from "../components";
+
+const images = [
+  monkey,
+  img2,
+  vectorcow,
+  Img4,
+  img33,
+  CirDesign,
+  ClubLogo,
+  SchoolLogo,
+  tiger,
+  embskull,
+  embdragon,
+  imgedit6,
+  imgedit3,
+  imgedit5,
+  imgedit4,
+  imgedit7,
+  imgedit1,
+];
 
 const Portfolio = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const openModal = (index) => {
+    setSelectedImageIndex(index);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const navigate = (direction) => {
+    const newIndex =
+      (selectedImageIndex + direction + images.length) % images.length;
+    setSelectedImageIndex(newIndex);
+  };
+
+  const vectorImages = images.slice(0, 5);
+
   return (
     <div className="">
       <div className="relative m-3 sm:m-10 bg-violet-100 rounded-[20px]">
@@ -38,219 +78,138 @@ const Portfolio = () => {
                 Our Vector Art
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 ">
-                {/* <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="h-96 w-auto">
-                    <img
-                      className="h-full max-w object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={monkey}
-                      alt="img"
-                    />
+                {vectorImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className="group relative items-center justify-center overflow-hidden cursor-pointer"
+                    onClick={() => openModal(index)}
+                  >
+                    <div className="mx-auto max-w-4xl">
+                      <img
+                        className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
+                        src={image}
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div> */}
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={monkey}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={img2}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={vectorcow}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={Img4}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={img33}
-                      alt=""
-                    />
-                  </div>
-                </div>
+                ))}
               </div>
 
               <p className="font-lobster text-5xl mt-16 flex justify-center underline">
                 Our Embroidery Designs
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 ">
-                {/* <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="h-96 w-auto">
-                    <img
-                      className="h-full max-w object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={monkey}
-                      alt="img"
-                    />
+                {images.slice(5, 11).map((image, index) => (
+                  <div
+                    key={index}
+                    className="group relative items-center justify-center overflow-hidden cursor-pointer"
+                    onClick={() => openModal(index + 5)}
+                  >
+                    <div className="mx-auto max-w-4xl">
+                      <img
+                        className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
+                        src={image}
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div> */}
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="bg-green-100 h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={CirDesign}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="bg-white h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={ClubLogo}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="bg-orange-200 py-9 h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={SchoolLogo}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={tiger}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={embskull}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={embdragon}
-                      alt=""
-                    />
-                  </div>
-                </div>
+                ))}
               </div>
 
               <p className="font-lobster text-5xl mt-16 flex justify-center underline">
                 Our Image Editing Service
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 ">
-                {/* <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="h-96 w-auto">
-                    <img
-                      className="h-full max-w object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={monkey}
-                      alt="img"
-                    />
+                {images.slice(11).map((image, index) => (
+                  <div
+                    key={index}
+                    className="group relative items-center justify-center overflow-hidden cursor-pointer"
+                    onClick={() => openModal(index + 11)}
+                  >
+                    <div className="mx-auto max-w-4xl">
+                      <img
+                        className="bg-orange-200 h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
+                        src={image}
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div> */}
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="bg-green-100 h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={imgedit6}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="bg-white h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={imgedit3}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="bg-orange-200 h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={imgedit5}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={imgedit4}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={imgedit7}
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="group relative items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="mx-auto max-w-4xl">
-                    <img
-                      className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
-                      src={imgedit1}
-                      alt=""
-                    />
-                  </div>
-                </div>
+                ))}
               </div>
             </section>
           </motion.div>
         </div>
       </div>
+      {/* Modal */}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Image Modal"
+        ariaHideApp={false}
+        style={{
+          overlay: {
+            backgroundColor: "rgba(0, 0, 0, 0.75)",
+          },
+          content: {
+            top: "50%",
+            left: "50%",
+            right: "auto",
+            bottom: "auto",
+            marginRight: "-50%",
+            transform: "translate(-50%, -50%)",
+            border: "none",
+            borderRadius: "20px",
+            padding: "0",
+          },
+        }}
+      >
+        <motion.img
+          src={images[selectedImageIndex]}
+          alt="Modal Image"
+          className="lg:w-[500px] lg:h-[500px] w-[350px] h-[350] object-contain rounded-xl"
+          onClick={closeModal}
+        />
+        <button
+          onClick={() => navigate(-1)} // left arrow
+          className="absolute bottom-0 opacity-70 hover:opacity-100 left-0 m-4 text-white text-6xl cursor-pointer bg-sky-500 rounded-full p-2 z-100 transform -translate-y-1/2"
+        >
+          {/* &#8249; */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </button>
+        <button
+          onClick={() => navigate(1)} // right arrow
+          className="absolute bottom-0 opacity-80 hover:opacity-100 right-0 m-4 text-white text-6xl cursor-pointer bg-sky-500 rounded-full p-2 z-100 transform -translate-y-1/2"
+        >
+          {/* &#8250; */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </button>
+      </Modal>
     </div>
   );
 };

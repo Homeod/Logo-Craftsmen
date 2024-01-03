@@ -2,6 +2,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
+const dotenv = require("dotenv").config();
 const port = 4444;
 
 app.use(express.json({ limit: "25mb", extended: true }));
@@ -14,13 +15,13 @@ app.post("/contactAdmin", async (req, res) => {
   var smtpTransport = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "designlogocraftsmen@gmail.com",
-      pass: "jlao loxo nbfh pfls",
+      user: process.env.authuser,
+      pass: process.env.authpass,
     },
   });
   var mailOptions = {
-    from: "designlogocraftsmen@gmail.com",
-    to: "art@logocraftsmen.com",
+    from: process.env.authuser,
+    to: process.env.clientemail,
     cc: data.email,
     subject: `New Message from ${data.name}`,
     html: `
@@ -49,13 +50,13 @@ app.post("/uploadImages", async (req, res) => {
   var smtpTransport = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "designlogocraftsmen@gmail.com",
-      pass: "jlao loxo nbfh pfls",
+      user: process.env.authuser,
+      pass: process.env.authpass,
     },
   });
   var mailOptions = {
-    from: "designlogocraftsmen@gmail.com",
-    to: "art@logocraftsmen.com",
+    from: process.env.authuser,
+    to: process.env.clientemail,
     cc: data.email,
     subject: `New Message from ${data.name}`,
     html: `<h3>${data.name}</h3>
@@ -84,6 +85,10 @@ app.post("/uploadImages", async (req, res) => {
     }
     smtpTransport.close();
   });
+});
+
+app.all("*", (req, res) => {
+  res.status(404).json({ message: "Route Not Found" });
 });
 
 app.listen(port, () => {

@@ -58,10 +58,22 @@ const App = () => {
               path="/contact"
               element={<Contact setIsUploadOpen={setIsUploadOpen} />}
             />
-            <Route path="/vector" element={<Vector />} />
-            <Route path="/embroidery" element={<Embroidery />} />
-            <Route path="/imageedit" element={<ImageEdit />} />
-            <Route path="/artvisuals" element={<ArtVisuals />} />
+            <Route
+              path="/vector"
+              element={<Vector setIsUploadOpen={setIsUploadOpen} />}
+            />
+            <Route
+              path="/embroidery"
+              element={<Embroidery setIsUploadOpen={setIsUploadOpen} />}
+            />
+            <Route
+              path="/imageedit"
+              element={<ImageEdit setIsUploadOpen={setIsUploadOpen} />}
+            />
+            <Route
+              path="/artvisuals"
+              element={<ArtVisuals setIsUploadOpen={setIsUploadOpen} />}
+            />
             <Route path="/orderentry" element={<OrderEntry />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/terms" element={<Terms />} />
@@ -70,7 +82,7 @@ const App = () => {
           </Routes>
         </div>
         <div>
-          <Footer/>
+          <Footer />
         </div>
       </BrowserRouter>
       <ToastContainer />

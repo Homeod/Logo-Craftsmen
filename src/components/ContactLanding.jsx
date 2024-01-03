@@ -6,19 +6,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-
-function convertToBase64(file) {
-  return new Promise((resolve, reject) => {
-    const fileReader = new FileReader();
-    fileReader.readAsDataURL(file);
-    fileReader.onload = () => {
-      resolve(fileReader.result);
-    };
-    fileReader.onerror = (error) => {
-      reject(error);
-    };
-  });
-}
+import convertToBase64 from "./ImgtoBase64";
 
 const ContactLanding = ({ setIsUploadOpen }) => {
   const [toShow, setToShow] = useState(window.location.pathname === "/");

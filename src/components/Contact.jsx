@@ -9,22 +9,9 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import Vector from "./Vector";
 import Footer from "./Footer";
-
-function convertToBase64(file) {
-  return new Promise((resolve, reject) => {
-    const fileReader = new FileReader();
-    fileReader.readAsDataURL(file);
-    fileReader.onload = () => {
-      resolve(fileReader.result);
-    };
-    fileReader.onerror = (error) => {
-      reject(error);
-    };
-  });
-}
+import convertToBase64 from "./ImgtoBase64";
 
 const Contact = ({ setIsUploadOpen }) => {
-  const [toShow, setToShow] = useState(window.location.pathname === "/");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -35,9 +22,8 @@ const Contact = ({ setIsUploadOpen }) => {
   });
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate();
 
-  const { name, email, phone, message, ImageFile } = formData;
+  const { name, email, phone, message } = formData;
 
   const options = [
     { value: "Vector Conversion", label: "Vector Conversion" },
@@ -62,44 +48,6 @@ const Contact = ({ setIsUploadOpen }) => {
     }));
   };
 
-  const handleSelectChange = (e) => {
-    const selectedValue = e.target.value;
-    setFormData((p) => ({
-      ...p,
-      service: selectedValue,
-    }));
-  };
-
-  const handleFileChange = async (e) => {
-    const input = e.target;
-    const maxSize = 15 * 1024 * 1024;
-
-    if (input.files.length > 0) {
-      const totalSize = Array.from(input.files).reduce(
-        (acc, file) => acc + file.size,
-        0
-      );
-
-      if (totalSize <= maxSize) {
-        setErrorMessage("");
-      } else {
-        setErrorMessage("Total size of selected attachments exceeds 20 MB.");
-        input.value = "";
-      }
-
-      const imageArray = ImageFile;
-      for (var i = 0; i < input.files.length; i++) {
-        const file = e.target.files[i];
-        const base64 = await convertToBase64(file);
-        imageArray.push(base64);
-      }
-      setFormData((prev) => ({
-        ...prev,
-        ImageFile: imageArray,
-      }));
-    }
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (
@@ -121,14 +69,13 @@ const Contact = ({ setIsUploadOpen }) => {
     }
     setLoading(true);
     const response = await axios.post(
-      `http://localhost:4444/${toShow ? "uploadImages" : "contactAdmin"}`,
+      `http://localhost:4444/contactAdmin`,
       formData
     );
     setLoading(false);
     if (response.statusText === "OK") {
       toast.success("Email sent successfully!");
       setIsUploadOpen(false);
-      if (!toShow) navigate("/");
     } else toast.error("Error occured while sending email");
 
     setFormData({
@@ -136,8 +83,6 @@ const Contact = ({ setIsUploadOpen }) => {
       email: "",
       message: "",
       phone: "",
-      service: "",
-      ImageFile: [],
     });
   };
 
@@ -307,26 +252,6 @@ const Contact = ({ setIsUploadOpen }) => {
                       required
                       placeholder="Your 10-digit phone number *"
                     />
-                    {toShow && (
-                      <select
-                        onChange={handleSelectChange}
-                        className="outline-none border border-black m-2 rounded-[10px]
-                    h-[60px] bg-transparent font-secondary w-full pl-3 focus:border-black focus:border-2 focus:bg-slate-100 placeholder:text-[#757879]"
-                      >
-                        <option value="" className="text-black">
-                          Select Service
-                        </option>
-                        {options.map((option) => (
-                          <option
-                            key={option.value}
-                            value={option.value}
-                            className="text-black"
-                          >
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    )}
                     <textarea
                       className="outline-none border border-black m-2 rounded-[10px]
                     h-[120px] bg-transparent font-secondary w-full p-3 focus:border-black focus:border-2 focus:bg-slate-100 placeholder:text-[#757879]"
@@ -337,17 +262,6 @@ const Contact = ({ setIsUploadOpen }) => {
                       onChange={handleChange}
                       required
                     />
-                    {toShow && (
-                      <input
-                        className="outline-none border border-black m-2 rounded-[10px]
-                    h-[60px] bg-transparent font-secondary w-full pl-3 py-4 focus:border-black focus:border-2 focus:bg-slate-100 placeholder:text-[#757879] "
-                        type="file"
-                        name="ImageFile"
-                        onChange={handleFileChange}
-                        multiple
-                        required
-                      />
-                    )}
                   </div>
                   {errorMessage && (
                     <div className="text-red-500 text-xs">*{errorMessage}</div>

@@ -3,8 +3,9 @@ import { Navbar, Footer, ServiceCard } from "../components";
 import { art1, art2, art3 } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { Link } from "react-router-dom";
 
-const ArtVisuals = () => {
+const ArtVisuals = ({ setIsUploadOpen }) => {
   return (
     <div>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
@@ -12,14 +13,15 @@ const ArtVisuals = () => {
           <div className="flex flex-col gap-6 mt-8 md:px-8 md:py-6">
             <div>
               <div className="md:text-4xl text-2xl leading-8 md:leading-snug md:text-start text-center font-black tracking-widest">
-                Products Mockup!
+                Virtual Mockup!
               </div>
             </div>
             <div className="md:text-lg text-md md:text-start text-center mt-5">
               <span className=" font-serif font-bold text-2xl italic">
-                &quot;See Your Brand Shine! Perfect Mockups Await Your
-                Preview.&quot;
+                &quot;Elevate Your Brand's Radiance! Preview the Power with Our
+                Promotional Products Mockup Service.&quot;
               </span>
+              <br />
               <br />
               <br />
               {/* <span className="text-red-500 font-serif md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
@@ -27,11 +29,25 @@ const ArtVisuals = () => {
               </span> */}
             </div>
             <div className="flex gap-4 items-center md:justify-start justify-around">
-              <button className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg">
-                Upload
-              </button>
-              <button className="bg-blue-400 md:px-6 md:py-3 px-4 py-2 text-white rounded-lg">
-                Contact Us
+              <Link
+                to="/portfolio"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth", // Optional: Add smooth scrolling behavior
+                  });
+                }}
+              >
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Portfolio
+                </button>
+              </Link>
+
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                onClick={() => setIsUploadOpen(true)}
+              >
+                Get Quote
               </button>
             </div>
           </div>
