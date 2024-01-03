@@ -155,7 +155,7 @@ function YourComponent() {
     {
       path: "/artvisuals",
       imageSrc: "src/assets/art1.png",
-      title: "Art / Visual Proofs",
+      title: "Art / Virtual Proofs",
       //   description:
       //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, culpa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, quo?",
     },
