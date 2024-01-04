@@ -68,12 +68,12 @@ const Itemscontainerfooter = () => {
           <li
             className="text-gray-400 hover:text-teal-400 duration-300"
             onClick={() =>
-              openMap("Landmark IT Park Bhayandar West, Maharashtra 401101")
+              openMap("Darshana Heights, Bhayander West, Maharashtra 401101")
             }
           >
             <i className="fas fa-map-marker-alt float-left mt-2"></i>
             <p className="ml-7 cursor-pointer">
-              India:- Landmark IT Park Bhayandar West, Maharashtra 401101
+              India:- Darshana Heights, Bhayander West, Maharashtra 401101
             </p>
           </li>
         </ul>

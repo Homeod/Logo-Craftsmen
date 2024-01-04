@@ -1,7 +1,7 @@
 import {
   monkey,
   tiger,
-  img2,
+  owl,
   Img4,
   embskull,
   img33,
@@ -25,7 +25,7 @@ import { styles } from "../styles";
 
 const images = [
   monkey,
-  img2,
+  owl,
   vectorcow,
   Img4,
   img33,

@@ -179,7 +179,9 @@ const Contact = ({ setIsUploadOpen }) => {
               <a
                 className="text-black hover:text-blue-600 duration-300 hover:shadow-xl"
                 onClick={() =>
-                  openMap("Landmark IT Park Bhayandar West, Maharashtra 401101")
+                  openMap(
+                    "Darshana Heights, Bhayander West, Maharashtra 401101"
+                  )
                 }
               >
                 <div className="relative w-60 h-44 bg-white rounded-lg shadow-xl flex flex-col justify-end pb-2 gap-3 items-center cursor-pointer">
@@ -204,7 +206,7 @@ const Contact = ({ setIsUploadOpen }) => {
                   </svg>
                   <p className="font-semibold text-center">
                     <span className="">India</span>
-                    <br /> Landmark IT Park Bhayandar West, Maharashtra 401101
+                    <br /> Darshana Heights, Bhayander West, 401101.
                   </p>
                 </div>
               </a>

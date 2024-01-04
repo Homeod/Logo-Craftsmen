@@ -32,7 +32,7 @@ import rect_img from "./rect_img.png";
 import square_img from "./square_img.png";
 import monkey from "./monkey.png";
 
-import img2 from "./img2.jpg";
+import owl from "./owl.jpg";
 import img33 from "./img33.jpg";
 import tiger from "./tiger.png";
 import embskull from "./embskull.png";
@@ -107,7 +107,7 @@ export {
   rect_img,
   square_img,
   monkey,
-  img2,
+  owl,
   img33,
   tiger,
   embskull,

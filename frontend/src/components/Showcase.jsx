@@ -4,12 +4,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import {
-  monkey,
-  tiger,
-  img2,
-  embskull,
   img33,
-  vectorcow,
   embdragon,
   imgedit1,
   CirDesign,

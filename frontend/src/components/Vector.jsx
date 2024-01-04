@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Footer, ServiceCard } from "../components";
-import { monkey, img2, vectorcow } from "../assets";
+import { monkey, owl, vectorcow } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
@@ -119,7 +119,7 @@ const Vector = ({ setIsUploadOpen }) => {
                 <div className="flex items-center">
                   <img
                     className="object-cover w-full h-full md:h-auto rounded-xl "
-                    src={img2}
+                    src={owl}
                     alt="Placeholder"
                   />
                 </div>
