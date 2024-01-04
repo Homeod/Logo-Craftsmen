@@ -103,10 +103,10 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
     setLoading(true);
 
     const response = await axios.post(
-      "http://localhost:4444/uploadImages",
+      "https://logo-craftsmen-backend.onrender.com/uploadImages",
       formData
     );
-    if (response.statusText === "OK") {
+    if (response.status === 200) {
       toast.success("Email sent successfully!");
       setIsUploadOpen(false);
     } else toast.error("Error occured while sending email");

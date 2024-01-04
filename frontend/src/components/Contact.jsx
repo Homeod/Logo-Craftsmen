@@ -63,11 +63,11 @@ const Contact = ({ setIsUploadOpen }) => {
     }
     setLoading(true);
     const response = await axios.post(
-      `http://localhost:4444/contactAdmin`,
+      `https://logo-craftsmen-backend.onrender.com/contactAdmin`,
       formData
     );
     setLoading(false);
-    if (response.statusText === "OK") {
+    if (response.status === 200) {
       toast.success("Email sent successfully!");
       setIsUploadOpen(false);
     } else toast.error("Error occured while sending email");

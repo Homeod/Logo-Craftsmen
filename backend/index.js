@@ -6,20 +6,16 @@ const dotenv = require("dotenv").config();
 const port = 4444;
 const path = require("path");
 
-
-
 app.use(express.json({ limit: "25mb", extended: true }));
 app.use(express.urlencoded({ limit: "25mb", extended: true }));
 
-app.use(cors());
+app.use(cors({ origin: "https://logo-craftsmen.vercel.app/" }));
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+  app.use(express.static(path.join(__dirname, "../dist")));
 
   app.get("*", (req, res) =>
-    res.sendFile(
-      path.resolve(__dirname, "../", "frontend", "dist", "index.html")
-    )
+    res.sendFile(path.resolve(__dirname, "../", "dist", "index.html"))
   );
 }
 
@@ -108,15 +104,9 @@ app.listen(port, () => {
   console.log("We are live on port 4444");
 });
 
-
-
-
-
-
 // Your other routes and configurations go here
 
 // Handle React routing, return all requests to React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
-

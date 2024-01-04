@@ -106,11 +106,13 @@ const ContactLanding = ({ setIsUploadOpen }) => {
     }
     setLoading(true);
     const response = await axios.post(
-      `http://localhost:4444/${toShow ? "uploadImages" : "contactAdmin"}`,
+      `https://logo-craftsmen-backend.onrender.com/${
+        toShow ? "uploadImages" : "contactAdmin"
+      }`,
       formData
     );
     setLoading(false);
-    if (response.statusText === "OK") {
+    if (response.status === 200) {
       toast.success("Email sent successfully!");
       setIsUploadOpen(false);
       if (!toShow) navigate("/");
