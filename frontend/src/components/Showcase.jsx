@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import {
-  img33,
+  icecream,
   embdragon,
   imgedit1,
   CirDesign,
 } from "../assets";
 import { SchoolLogo, CrickLogo, CompLogo, ClubLogo } from "../assets";
 
-const images = [ img33, ClubLogo, SchoolLogo, imgedit1,CirDesign , embdragon];
+const images = [ icecream, ClubLogo, SchoolLogo, imgedit1,CirDesign , embdragon];
 
 const Showcase = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);

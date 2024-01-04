@@ -33,7 +33,7 @@ import square_img from "./square_img.png";
 import monkey from "./monkey.png";
 
 import owl from "./owl.jpg";
-import img33 from "./img33.jpg";
+import icecream from "./icecream.jpg";
 import tiger from "./tiger.png";
 import embskull from "./embskull.png";
 import embdragon from "./embdragon.png";
@@ -69,7 +69,7 @@ import ClubLogo from "./logos/ClubLogo.png";
 import CompLogo from "./logos/CompLogo.png";
 import CrickLogo from "./logos/CrickLogo.png";
 import SchoolLogo from "./logos/SchoolLogo.png";
-import Img4 from "./img4.jpg"
+import peacock from "./peacock.jpg"
 
 import hero_emb from "./hero_emb.jpg";
 import hero_imgedits from "./hero_imgedits.jpg";
@@ -108,7 +108,7 @@ export {
   square_img,
   monkey,
   owl,
-  img33,
+  icecream,
   tiger,
   embskull,
   embdragon,
@@ -143,7 +143,7 @@ export {
   CrickLogo,
   SchoolLogo,
   favicon,
-  Img4,
+  peacock,
   hero_emb,
   hero_imgedits,
   hero_mockup,

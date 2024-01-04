@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Img from "../assets/Img4.jpg";
+import Img from "../assets/peacock.jpg";
 import { vectorcow, ClubLogo, art3 } from "../assets";
 import axios from "axios";
 import { toast } from "react-toastify";
