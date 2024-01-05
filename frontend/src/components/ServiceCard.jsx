@@ -104,8 +104,17 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
+import Vector from "../assets/vectorcow.png";
+import Tiger from "../assets/tiger.png";
+import Art from "../assets/art1.png";
+import Order from "../assets/order.jpg";
+import ImageEdit from "../assets/imgedit1.jpeg";
+
 // Your component definition
 function ContentWrapper({ path, imageSrc, title, description }) {
+  const backgroundStyle = {
+    backgroundImage: `url(${imageSrc})`,
+  };
   return (
     <div className="group relative items-center justify-center overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:shadow-black rounded-[20px] w-72 h-96">
       <Link
@@ -118,7 +127,8 @@ function ContentWrapper({ path, imageSrc, title, description }) {
         }}
       >
         <div
-          className={`mx-auto w-full h-full justify-center bg-[url(${imageSrc})] bg-no-repeat bg-cover bg-center rounded-[20px]`}
+          style={backgroundStyle}
+          className={`mx-auto w-full h-full justify-center bg-no-repeat bg-cover bg-center rounded-[20px]`}
         >
           <div className="bg-black bg-opacity-60 w-full h-full pt-32 text-white rounded-[20px] flex items-end justify-center pb-7">
             <div className="font-semibold text-xl flex justify-center mb-5">
@@ -140,35 +150,35 @@ function YourComponent() {
   const services = [
     {
       path: "/vector",
-      imageSrc: "src/assets/vectorcow.png",
+      imageSrc: Vector,
       title: "Vector Conversion",
       //   description:
       //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, culpa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, quo?",
     },
     {
       path: "/embroidery",
-      imageSrc: "src/assets/tiger.png",
+      imageSrc: Tiger,
       title: "Embroidery Digitizing",
       //   description:
       //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, culpa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, quo?",
     },
     {
       path: "/artvisuals",
-      imageSrc: "src/assets/art1.png",
+      imageSrc: Art,
       title: "Art / Virtual Proofs",
       //   description:
       //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, culpa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, quo?",
     },
     {
       path: "/orderentry",
-      imageSrc: "src/assets/order.jpg",
+      imageSrc: Order,
       title: "Order Entry Management",
       //   description:
       //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, culpa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, quo?",
     },
     {
       path: "/imageedit",
-      imageSrc: "src/assets/imgedit1.jpeg",
+      imageSrc: ImageEdit,
       title: "Image Editing",
       //   description:
       //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, culpa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, quo?",
