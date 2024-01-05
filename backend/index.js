@@ -9,7 +9,7 @@ const path = require("path");
 app.use(express.json({ limit: "25mb", extended: true }));
 app.use(express.urlencoded({ limit: "25mb", extended: true }));
 
-app.use(cors({ origin: "https://logo-craftsmen.vercel.app" }));
+app.use(cors({ origin: "https://logocraftsmen.com" }));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../dist")));
