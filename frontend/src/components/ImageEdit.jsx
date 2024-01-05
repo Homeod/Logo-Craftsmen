@@ -135,7 +135,7 @@ const ImageEdit = ({ setIsUploadOpen }) => {
                 </div>
                 <div className="text-left">
                   <p className="text-xl mt-4 ">
-                    <span>Services Offered:</span>
+                    <span className="font-bold">Services Offered:</span>
                     <br />
                     1. <span className="font-bold">
                       Basic Enhancements:
