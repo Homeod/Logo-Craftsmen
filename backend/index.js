@@ -29,16 +29,15 @@ if (process.env.NODE_ENV === "production") {
   );
 }
 
-var smtpTransport = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.authuser,
-    pass: process.env.authpass,
-  },
-});
-
 app.post("/contactAdmin", async (req, res) => {
   var data = req.body;
+  var smtpTransport = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.authuser,
+      pass: process.env.authpass,
+    },
+  });
 
   var mailOptions = {
     from: process.env.authuser,
@@ -62,12 +61,19 @@ app.post("/contactAdmin", async (req, res) => {
     } else {
       res.status(200).json(info.response);
     }
-    // smtpTransport.close();
+    smtpTransport.close();
   });
 });
 
 app.post("/uploadImages", async (req, res) => {
   var data = req.body;
+  var smtpTransport = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.authuser,
+      pass: process.env.authpass,
+    },
+  });
   var mailOptions = {
     from: process.env.authuser,
     to: process.env.clientemail,
@@ -124,7 +130,7 @@ app.post("/uploadImages", async (req, res) => {
     } else {
       res.status(200).json(info.response);
     }
-    // smtpTransport.close();
+    smtpTransport.close();
   });
 });
 
