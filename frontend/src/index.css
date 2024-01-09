@@ -271,7 +271,7 @@
   /* border-radius: 2px; */
 }
 
-/* Button of Get Quote */
+/* Blink Button of Get Quote */
 .button {
   background-color: #1c87c9;
   -webkit-border-radius: 60px;
@@ -286,6 +286,8 @@
   text-align: center;
   text-decoration: none;
 }
+
+
 
 @keyframes glowing {
   0% {

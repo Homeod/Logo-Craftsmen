@@ -103,7 +103,7 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
     setLoading(true);
 
     const response = await axios.post(
-      "http://localhost:4444/uploadImages",
+      "https://logo-craftsmen-backend.onrender.com/uploadImages",
       formData
     );
     if (response.status === 200) {

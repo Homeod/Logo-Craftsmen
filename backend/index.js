@@ -11,6 +11,9 @@ app.use(express.urlencoded({ limit: "25mb", extended: true }));
 
 app.use(cors({ origin: "https://logocraftsmen.com" }));
 
+// app.use(cors({ origin: "http://localhost:5173" }));
+
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../dist")));
 
@@ -19,15 +22,18 @@ if (process.env.NODE_ENV === "production") {
   );
 }
 
+var smtpTransport = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.authuser,
+    pass: process.env.authpass,
+  },
+});
+
+
 app.post("/contactAdmin", async (req, res) => {
   var data = req.body;
-  var smtpTransport = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.authuser,
-      pass: process.env.authpass,
-    },
-  });
+  
   var mailOptions = {
     from: process.env.authuser,
     to: process.env.clientemail,
@@ -50,19 +56,12 @@ app.post("/contactAdmin", async (req, res) => {
     } else {
       res.status(200).json(info.response);
     }
-    smtpTransport.close();
+    // smtpTransport.close();
   });
 });
 
 app.post("/uploadImages", async (req, res) => {
   var data = req.body;
-  var smtpTransport = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.authuser,
-      pass: process.env.authpass,
-    },
-  });
   var mailOptions = {
     from: process.env.authuser,
     to: process.env.clientemail,
@@ -119,7 +118,7 @@ app.post("/uploadImages", async (req, res) => {
     } else {
       res.status(200).json(info.response);
     }
-    smtpTransport.close();
+    // smtpTransport.close();
   });
 });
 
