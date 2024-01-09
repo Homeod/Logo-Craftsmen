@@ -78,12 +78,39 @@ app.post("/uploadImages", async (req, res) => {
     Thankyou.
     `,
     attachments: data.ImageFile.map((file, index) => {
+      const isApplication = file.includes("application");
+      const isImage = file.includes("image");
+
+      // console.log(isApplication, isImage);
+
+      if (!(isApplication || isImage)) {
+        console.error(`Invalid file type for file at index ${index}`);
+        // res.status(400);
+        return null;
+      }
+
+      const splitResult = isApplication
+        ? file.split("application/")[1].split(";")
+        : file.split("image/")[1].split(";");
+
+      if (!splitResult || splitResult.length < 1) {
+        console.log("null came at index", index + 1);
+        // res.status(400);
+        return null;
+      }
+
+      const fileExtension = splitResult[0];
+      const contentType = isApplication
+        ? `application/${fileExtension}`
+        : `image/${fileExtension}`;
+      const content = Buffer.from(file.split("base64,")[1], "base64");
+
       return {
-        filename: `image${index + 1}.jpg`,
-        contentType: "image/jpeg",
-        content: new Buffer.from(file.split("base64,")[1], "base64"),
+        filename: `file${index + 1}`,
+        contentType,
+        content,
       };
-    }),
+    }).filter(Boolean), // Filter out null values
   };
   smtpTransport.sendMail(mailOptions, (error, info) => {
     if (error) {
@@ -102,11 +129,4 @@ app.all("*", (req, res) => {
 
 app.listen(port, () => {
   console.log("We are live on port 4444");
-});
-
-// Your other routes and configurations go here
-
-// Handle React routing, return all requests to React app
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });

@@ -1,28 +1,26 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Img from "../assets/peacock.jpg";
 import { vectorcow, ClubLogo, art3 } from "../assets";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import { styles } from "../styles";
 import convertToBase64 from "./ImgtoBase64";
 
-const ContactLanding = ({ setIsUploadOpen }) => {
-  const [toShow, setToShow] = useState(window.location.pathname === "/");
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    phone: "",
-    service: "",
-    ImageFile: [],
-  });
+const initialFormData = {
+  name: "",
+  email: "",
+  message: "",
+  phone: "",
+  service: "",
+  ImageFile: [],
+};
+
+const ContactLanding = () => {
+  const [formData, setFormData] = useState(initialFormData);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate();
 
-  const { name, email, phone, message, ImageFile } = formData;
+  const { name, email, phone, message, service } = formData;
 
   const options = [
     { value: "Vector Conversion", label: "Vector Conversion" },
@@ -72,7 +70,7 @@ const ContactLanding = ({ setIsUploadOpen }) => {
         input.value = "";
       }
 
-      const imageArray = ImageFile;
+      const imageArray = [];
       for (var i = 0; i < input.files.length; i++) {
         const file = e.target.files[i];
         const base64 = await convertToBase64(file);
@@ -105,27 +103,30 @@ const ContactLanding = ({ setIsUploadOpen }) => {
       );
     }
     setLoading(true);
-    const response = await axios.post(
-      `https://logo-craftsmen-backend.onrender.com/${
-        toShow ? "uploadImages" : "contactAdmin"
-      }`,
-      formData
-    );
-    setLoading(false);
-    if (response.status === 200) {
-      toast.success("Email sent successfully!");
-      setIsUploadOpen(false);
-      if (!toShow) navigate("/");
-    } else toast.error("Error occured while sending email");
 
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-      phone: "",
-      service: "",
-      ImageFile: [],
-    });
+    try {
+      const response = await axios.post(
+        `http://localhost:4444/uploadImages`,
+        formData
+      );
+
+      if (response.status === 200) {
+        toast.success("Email sent successfully!");
+      }
+    } catch (error) {
+      console.error("Error occurred:", error);
+      toast.error("Error occurred while sending email");
+    } finally {
+      setLoading(false);
+      setFormData({
+        ...initialFormData,
+      });
+
+      const fileInput = document.getElementById("fileInput");
+      if (fileInput) {
+        fileInput.value = [];
+      }
+    }
   };
 
   return (
@@ -139,7 +140,7 @@ const ContactLanding = ({ setIsUploadOpen }) => {
           <div className="flex justify-center items-center">
             <div className="flex h-full w-fit items-center justify-center flex-col-reverse gap-6 sm:gap-12 py-8 px-8 text-center lg:text-left sm:mt-4 sm:rounded-lg ">
               <div className="w-full ">
-                <form className="" onSubmit={handleSubmit} mai>
+                <form className="" onSubmit={handleSubmit}>
                   <div className="flex flex-col gap-x-10">
                     <input
                       className="outline-none border border-black m-2 rounded-[10px]
@@ -171,26 +172,27 @@ const ContactLanding = ({ setIsUploadOpen }) => {
                       required
                       placeholder="Your 10-digit phone number *"
                     />
-                    {toShow && (
-                      <select
-                        onChange={handleSelectChange}
-                        className="outline-none border border-black m-2 rounded-[10px]
+
+                    <select
+                      onChange={handleSelectChange}
+                      value={service}
+                      className="outline-none border border-black m-2 rounded-[10px]
                     h-[60px] bg-transparent font-secondary w-full pl-3 focus:border-black focus:border-2 focus:bg-slate-100 placeholder:text-[#757879]"
-                      >
-                        <option value="" className="text-black">
-                          Select Service
+                    >
+                      <option value="" className="text-black">
+                        Select Service
+                      </option>
+                      {options.map((option) => (
+                        <option
+                          key={option.value}
+                          value={option.value}
+                          className="text-black"
+                        >
+                          {option.label}
                         </option>
-                        {options.map((option) => (
-                          <option
-                            key={option.value}
-                            value={option.value}
-                            className="text-black"
-                          >
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    )}
+                      ))}
+                    </select>
+
                     <textarea
                       className="outline-none border border-black m-2 rounded-[10px]
                     h-[120px] bg-transparent font-secondary w-full p-3 focus:border-black focus:border-2 focus:bg-slate-100 placeholder:text-[#757879]"
@@ -201,17 +203,17 @@ const ContactLanding = ({ setIsUploadOpen }) => {
                       onChange={handleChange}
                       required
                     />
-                    {toShow && (
-                      <input
-                        className="outline-none border border-black m-2 rounded-[10px]
+
+                    <input
+                      className="outline-none border border-black m-2 rounded-[10px]
                     h-[60px] bg-transparent font-secondary w-full pl-3 py-4 focus:border-black focus:border-2 focus:bg-slate-100 placeholder:text-[#757879] "
-                        type="file"
-                        name="ImageFile"
-                        onChange={handleFileChange}
-                        multiple
-                        required
-                      />
-                    )}
+                      type="file"
+                      id="fileInput"
+                      name="ImageFile"
+                      onChange={handleFileChange}
+                      multiple
+                      required
+                    />
                   </div>
                   {errorMessage && (
                     <div className="text-red-500 text-xs">*{errorMessage}</div>

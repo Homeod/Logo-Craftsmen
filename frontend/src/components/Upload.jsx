@@ -17,7 +17,7 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const { name, email, message, phone, ImageFile } = formData;
+  const { name, email, message, phone, service } = formData;
 
   const options = [
     { value: "Vector Conversion", label: "Vector Conversion" },
@@ -67,7 +67,7 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
         input.value = "";
       }
 
-      const imageArray = ImageFile;
+      const imageArray = [];
       for (var i = 0; i < input.files.length; i++) {
         const file = e.target.files[i];
         const base64 = await convertToBase64(file);
@@ -103,7 +103,7 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
     setLoading(true);
 
     const response = await axios.post(
-      "https://logo-craftsmen-backend.onrender.com/uploadImages",
+      "http://localhost:4444/uploadImages",
       formData
     );
     if (response.status === 200) {
@@ -112,6 +112,8 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
     } else toast.error("Error occured while sending email");
 
     setLoading(false);
+
+    setIsUploadOpen(false);
   };
 
   return (
@@ -170,6 +172,7 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
 
                     <select
                       onChange={handleSelectChange}
+                      value={service}
                       className="h-[60px] bg-transparent font-secondary w-full pl-3 outline-none appearance-none cursor-pointer border-b border-b-gray-400"
                     >
                       <option value="" className="text-black">
@@ -200,7 +203,6 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
                     h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879] pt-4"
                       type="file"
                       name="ImageFile"
-                      accept=".jpeg, .png, .jpg, .svg"
                       onChange={handleFileChange}
                       multiple
                       required

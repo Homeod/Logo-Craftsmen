@@ -63,7 +63,7 @@ const Contact = ({ setIsUploadOpen }) => {
     }
     setLoading(true);
     const response = await axios.post(
-      `https://logo-craftsmen-backend.onrender.com/contactAdmin`,
+      `http://localhost:4444/contactAdmin`,
       formData
     );
     setLoading(false);
