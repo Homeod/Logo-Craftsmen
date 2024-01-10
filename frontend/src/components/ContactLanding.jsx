@@ -106,7 +106,7 @@ const ContactLanding = () => {
 
     try {
       const response = await axios.post(
-        `https://logo-craftsmen-backend.onrender.com/uploadImages`,
+        `https://logocraftmendeploy.onrender.com/uploadImages`,
         formData
       );
 
