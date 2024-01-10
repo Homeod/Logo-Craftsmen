@@ -22,22 +22,31 @@ app.use(
 // app.use(cors({ origin: "http://localhost:5173" }));
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../dist")));
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
   app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "../", "dist", "index.html"))
+    res.sendFile(path.resolve(__dirname, "../", "frontend/dist", "index.html"))
   );
 }
 
+var smtpTransport = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.authuser,
+    pass: process.env.authpass,
+  },
+});
+
+smtpTransport.verify(function (error, success) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Server is ready to take our messages");
+  }
+});
+
 app.post("/contactAdmin", async (req, res) => {
   var data = req.body;
-  var smtpTransport = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.authuser,
-      pass: process.env.authpass,
-    },
-  });
 
   var mailOptions = {
     from: process.env.authuser,
@@ -61,19 +70,13 @@ app.post("/contactAdmin", async (req, res) => {
     } else {
       res.status(200).json(info.response);
     }
-    smtpTransport.close();
+    // smtpTransport.close();
   });
 });
 
 app.post("/uploadImages", async (req, res) => {
   var data = req.body;
-  var smtpTransport = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.authuser,
-      pass: process.env.authpass,
-    },
-  });
+
   var mailOptions = {
     from: process.env.authuser,
     to: process.env.clientemail,
@@ -92,11 +95,8 @@ app.post("/uploadImages", async (req, res) => {
       const isApplication = file.includes("application");
       const isImage = file.includes("image");
 
-      // console.log(isApplication, isImage);
-
       if (!(isApplication || isImage)) {
         console.error(`Invalid file type for file at index ${index}`);
-        // res.status(400);
         return null;
       }
 
@@ -106,7 +106,6 @@ app.post("/uploadImages", async (req, res) => {
 
       if (!splitResult || splitResult.length < 1) {
         console.log("null came at index", index + 1);
-        // res.status(400);
         return null;
       }
 
@@ -121,7 +120,7 @@ app.post("/uploadImages", async (req, res) => {
         contentType,
         content,
       };
-    }).filter(Boolean), // Filter out null values
+    }).filter(Boolean),
   };
   smtpTransport.sendMail(mailOptions, (error, info) => {
     if (error) {
@@ -130,7 +129,6 @@ app.post("/uploadImages", async (req, res) => {
     } else {
       res.status(200).json(info.response);
     }
-    smtpTransport.close();
   });
 });
 
