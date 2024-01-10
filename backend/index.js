@@ -15,6 +15,7 @@ app.use(
       "https://logocraftsmen.com",
       "https://logo-craftsmen.vercel.app",
       "http://localhost:5173",
+      'https://www.logocraftsmen.com'
     ],
   })
 );
