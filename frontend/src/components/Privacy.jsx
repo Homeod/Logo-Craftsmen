@@ -7,7 +7,7 @@ const Privacy = () => {
   return (
     <div className="relative m-3 sm:m-10 bg-emerald-200 rounded-[20px]">
       <Helmet>
-        <title>Privacy</title>
+        <title>Privacy | Logo Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -21,8 +21,10 @@ const Privacy = () => {
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>
           <section className="container mx-auto ">
-            <p className={styles.sectionSubText}>Your Safety is our Concern</p>
-            <p className={styles.sectionHeadText}>Privacy Policy</p>
+            <h2 className={styles.sectionSubText}>
+              Your Safety is our Concern
+            </h2>
+            <h1 className={styles.sectionHeadText}>Privacy Policy</h1>
             <br />
             <br />
             <p>

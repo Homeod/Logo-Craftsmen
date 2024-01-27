@@ -36,7 +36,7 @@ const FAQs = () => {
   return (
     <div>
       <Helmet>
-        <title>FAQ | Frequently Asked Questions</title>
+        <title>FAQ | Frequently Asked Questions | Logo Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"

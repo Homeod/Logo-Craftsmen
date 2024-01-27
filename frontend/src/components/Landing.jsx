@@ -143,8 +143,8 @@ const Landing = () => {
       <div className="m-3 sm:m-10 pb-8 flex flex-col bg-fuchsia-400 rounded-[20px]">
         <div className={`${styles.padding}`}>
           <motion.div variants={textVariant()}>
-            <p className={styles.sectionSubText}>Our Efficiency</p>
-            <p className={styles.sectionHeadText}>Why Choose Us</p>
+            <h2 className={styles.sectionSubText}>Our Efficiency</h2>
+            <h1 className={styles.sectionHeadText}>Why Choose Us</h1>
           </motion.div>
 
           <div className="mt-10 flex flex-wrap gap-4 items-center justify-center">
@@ -158,8 +158,8 @@ const Landing = () => {
       <div className="m-3 sm:m-10 pb-6 bg-violet-200 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
-            <p className={styles.sectionSubText}>What others say</p>
-            <p className={styles.sectionHeadText}>Testimonials</p>
+            <h2 className={styles.sectionSubText}>What others say</h2>
+            <h1 className={styles.sectionHeadText}>Testimonials</h1>
           </motion.div>
         </div>
 
@@ -179,8 +179,8 @@ const Landing = () => {
       <div className="m-4 sm:m-10 pb-6 flex flex-col bg-amber-300 rounded-[20px]">
         <div className={`${styles.padding}`}>
           <motion.div variants={textVariant()}>
-            <p className={styles.sectionSubText}>How we move ahead</p>
-            <p className={styles.sectionHeadText}>Process Flow</p>
+            <h2 className={styles.sectionSubText}>How we move ahead</h2>
+            <h1 className={styles.sectionHeadText}>Process Flow</h1>
           </motion.div>
 
           <VerticalTimeline>

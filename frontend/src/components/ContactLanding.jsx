@@ -133,10 +133,10 @@ const ContactLanding = () => {
     <div>
       <div className="m-3 sm:m-10 flex flex-col bg-fuchsia-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
-          <p className={styles.sectionSubText}>
+          <h2 className={styles.sectionSubText}>
             Upload your file, and watch us craft your design
-          </p>
-          <p className={styles.sectionHeadText}>Get Quotation</p>
+          </h2>
+          <h1 className={styles.sectionHeadText}>Get Quotation</h1>
           <div className="flex justify-center items-center">
             <div className="flex h-full w-fit items-center justify-center flex-col-reverse gap-6 sm:gap-12 py-8 px-8 text-center lg:text-left sm:mt-4 sm:rounded-lg ">
               <div className="w-full ">

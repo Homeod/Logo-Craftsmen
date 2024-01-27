@@ -10,7 +10,7 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
   return (
     <div>
       <Helmet>
-        <title>Art / Virtual Proofs</title>
+        <title>Art / Virtual Proofs | Logo Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -76,12 +76,12 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
             <section className="container mx-auto ">
-              <p className={styles.sectionSubText}>
+              <h2 className={styles.sectionSubText}>
                 Mockup for Virtual Proof by Logo Craftsmen
-              </p>
-              <p className={styles.sectionHeadText}>
+              </h2>
+              <h1 className={styles.sectionHeadText}>
                 Visualize Your Brand's Impact.
-              </p>
+              </h1>
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="text-left">
                   <p className="text-xl mt-4 ">
@@ -147,9 +147,9 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
                 </div>
                 <div className="text-left">
                   <p className="text-xl mt-4 ">
-                    <span className="font-bold">
+                    <h3 className="font-bold">
                       Why Choose Our Mockup for Virtual Proof Service?
-                    </span>
+                    </h3>
                     <br />
                     1.{" "}
                     <span className="font-bold">
@@ -201,9 +201,9 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
             <section className="container mx-auto ">
-              <p className="flex justify-center font-semibold text-4xl">
+              <h3 className="flex justify-center font-semibold text-4xl">
                 Why Trust Logo Craftsmen?
-              </p>
+              </h3>
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   1. <span className="font-bold">Precision Personified:</span>{" "}

@@ -7,7 +7,7 @@ const Terms = () => {
   return (
     <div className="relative m-3 sm:m-10 bg-sky-200 rounded-[20px]">
       <Helmet>
-        <title>Terms</title>
+        <title>Terms | Logo Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -21,8 +21,10 @@ const Terms = () => {
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>
           <section className="container mx-auto ">
-            <p className={styles.sectionSubText}>Your Comfort is our Comfort</p>
-            <p className={styles.sectionHeadText}>Terms Of Service</p>
+            <h2 className={styles.sectionSubText}>
+              Your Comfort is our Comfort
+            </h2>
+            <h1 className={styles.sectionHeadText}>Terms Of Service</h1>
             <br />
             <br />
             <p>

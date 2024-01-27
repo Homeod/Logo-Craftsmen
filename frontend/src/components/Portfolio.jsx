@@ -67,7 +67,7 @@ const Portfolio = () => {
   return (
     <div>
       <Helmet>
-        <title>Portfolio</title>
+        <title>Portfolio | Logo Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -82,8 +82,8 @@ const Portfolio = () => {
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
             <section className="container mx-auto ">
-              <p className={styles.sectionSubText}>Tour to the Logos </p>
-              <p className={styles.sectionHeadText}>Showcases.</p>
+              <h2 className={styles.sectionSubText}>Tour to the Logos </h2>
+              <h1 className={styles.sectionHeadText}>Showcases.</h1>
               <p className="font-lobster text-5xl mt-16 flex justify-center underline">
                 Our Vector Art
               </p>

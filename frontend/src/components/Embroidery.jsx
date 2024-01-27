@@ -10,7 +10,7 @@ const Embroidery = ({ setIsUploadOpen }) => {
   return (
     <div>
       <Helmet>
-        <title>Embroidery Digitizing</title>
+        <title>Embroidery Digitizing | Logo Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -83,12 +83,12 @@ const Embroidery = ({ setIsUploadOpen }) => {
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
             <section className="container mx-auto ">
-              <p className={styles.sectionSubText}>
+              <h2 className={styles.sectionSubText}>
                 Stitching Your Vision Into Reality{" "}
-              </p>
-              <p className={styles.sectionHeadText}>
+              </h2>
+              <h1 className={styles.sectionHeadText}>
                 Embroidery Digitizing Services.
-              </p>
+              </h1>
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="text-left">
                   <p className="text-xl mt-4 ">
@@ -190,9 +190,9 @@ const Embroidery = ({ setIsUploadOpen }) => {
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
             <section className="container mx-auto ">
-              <p className="flex justify-center font-semibold text-4xl">
+              <h3 className="flex justify-center font-semibold text-4xl">
                 Why Choose Our Embroidery Digitizing Services?
-              </p>
+              </h3>
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   <span className="font-bold">Precision in Detail:</span> Our

@@ -93,7 +93,7 @@ const Contact = ({ setIsUploadOpen }) => {
   return (
     <div>
       <Helmet>
-        <title>Contact</title>
+        <title>Contact | Logo Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -106,8 +106,8 @@ const Contact = ({ setIsUploadOpen }) => {
       </Helmet>
       <div className="m-3 sm:m-10 pb-8 flex flex-col bg-fuchsia-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
-          <p className={styles.sectionSubText}>Want a Conversation</p>
-          <p className={styles.sectionHeadText}>Contact us</p>
+          <h2 className={styles.sectionSubText}>Want a Conversation</h2>
+          <h1 className={styles.sectionHeadText}>Contact us</h1>
 
           <div className="flex justify-center items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mx-auto">

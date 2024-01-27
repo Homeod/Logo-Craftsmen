@@ -32,8 +32,8 @@ const Showcase = () => {
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>
           <section className="container mx-auto">
-            <p className={styles.sectionSubText}>Tour to the Logos </p>
-            <p className={styles.sectionHeadText}>Showcases</p>
+            <h2 className={styles.sectionSubText}>Tour to the Logos </h2>
+            <h1 className={styles.sectionHeadText}>Showcases</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
               {images.map((image, index) => (
                 <div

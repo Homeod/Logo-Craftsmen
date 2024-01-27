@@ -9,10 +9,10 @@ const Error = () => {
     <div className="m-3 sm:m-10 border-2 border-violet-400 bg-violet-100 rounded-[20px]">
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>
-          <p className={styles.sectionSubText}>Upppseyy!!! </p>
-          <p className={`${styles.sectionHeadText}flex justify-between`}>
+          <h2 className={styles.sectionSubText}>Upppseyy!!! </h2>
+          <h1 className={`${styles.sectionHeadText} flex justify-between`}>
             Wrong Place.
-          </p>
+          </h1>
 
           <div className="container ">
             <p className="mt-4 text-center text-semibold font-sans text-xl ">

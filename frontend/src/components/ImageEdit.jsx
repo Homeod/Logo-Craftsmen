@@ -10,7 +10,7 @@ const ImageEdit = ({ setIsUploadOpen }) => {
   return (
     <div>
       <Helmet>
-        <title>Image Editing</title>
+        <title>Image Editing | Logo Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -76,10 +76,12 @@ const ImageEdit = ({ setIsUploadOpen }) => {
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
             <section className="container mx-auto ">
-              <p className={styles.sectionSubText}>
+              <h2 className={styles.sectionSubText}>
                 Transforming Visions into Visual Masterpieces{" "}
-              </p>
-              <p className={styles.sectionHeadText}>Image Editing Services.</p>
+              </h2>
+              <h1 className={styles.sectionHeadText}>
+                Image Editing Services.
+              </h1>
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="text-left">
                   <p className="text-xl mt-4 ">

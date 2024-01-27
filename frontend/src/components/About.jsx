@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div className="pt-10 md:pt-10 bg-white">
       <Helmet>
-        <title>About</title>
+        <title>About | Logo Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -38,8 +38,8 @@ const About = () => {
               <div className="relative bg-[url(https://static-cse.canva.com/blob/976320/Careers.png)] h-[500px] md:h-[400px] bg-no-repeat bg-cover bg-center rounded-[20px]">
                 <div className="absolute inset-0 bg-white bg-opacity-60 rounded-[20px] ">
                   <div className="m-10">
-                    <p className={styles.sectionSubText}>What is </p>
-                    <p className={styles.sectionHeadText}>Our Motivation.</p>
+                    <h2 className={styles.sectionSubText}>What is </h2>
+                    <h1 className={styles.sectionHeadText}>Our Motivation.</h1>
                     <p className="text-xl text-black text-center lg:mt-6">
                       What motivates us every day is the belief that every
                       design deserves to be transformed with precision, whether
@@ -59,8 +59,8 @@ const About = () => {
       <div className="m-3 sm:m-10 border-2 border-violet-400 bg-violet-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
-            <p className={styles.sectionSubText}>Lets talk about </p>
-            <p className={styles.sectionHeadText}>Our Journey.</p>
+            <h2 className={styles.sectionSubText}>Lets talk about </h2>
+            <h1 className={styles.sectionHeadText}>Our Journey.</h1>
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="text-left">
                 <p className="text-xl mt-4 ">
@@ -107,8 +107,8 @@ const About = () => {
       <div className="m-3 sm:m-10 border-2 border-orange-400 bg-orange-100 rounded-[20px]">
         <div className={`${styles.padding}  rounded-2xl min-h-[300px]`}>
           <motion.div>
-            <p className={styles.sectionSubText}>Things we follow </p>
-            <p className={styles.sectionHeadText}>Our Values.</p>
+            <h2 className={styles.sectionSubText}>Things we follow </h2>
+            <h1 className={styles.sectionHeadText}>Our Values.</h1>
             <div className="container mx-auto px-4 py-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-1 sm:gap-4">
                 <div className="p-4">
