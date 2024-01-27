@@ -67,7 +67,7 @@ const Portfolio = () => {
   return (
     <div>
       <Helmet>
-        <title>Portfolio | Logo Logo Craftsmen </title>
+        <title>Portfolio | Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -77,6 +77,10 @@ const Portfolio = () => {
           name="keywords"
           content="Logo Craftsmen portfolio, vector art, embroidery designs, image editing, graphic design, creative illustrations, precision craftsmanship, professional design services, digital art, logo showcase, artistic creations, design diversity, creative exploration, visual storytelling, intricate embroidery, vector conversion, image enhancement, design precision"
         />
+        <link
+          rel="canonical"
+          href="https://logo-craftsmen.vercel.app/portfolio"
+        ></link>
       </Helmet>
       <div className="relative m-3 sm:m-10 bg-violet-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>

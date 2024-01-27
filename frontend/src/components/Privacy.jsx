@@ -7,7 +7,7 @@ const Privacy = () => {
   return (
     <div className="relative m-3 sm:m-10 bg-emerald-200 rounded-[20px]">
       <Helmet>
-        <title>Privacy | Logo Logo Craftsmen </title>
+        <title>Privacy | Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -17,6 +17,10 @@ const Privacy = () => {
           name="keywords"
           content="Logo Craftsmen, privacy policy, trust, personalized design services, cookies, security measures, information protection, your privacy matters, transparent practices, managing preferences, design choices, age-appropriate design, policy evolution, communication"
         />
+        <link
+          rel="canonical"
+          href="https://logo-craftsmen.vercel.app/privacy"
+        ></link>
       </Helmet>
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>

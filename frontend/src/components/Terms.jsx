@@ -7,7 +7,7 @@ const Terms = () => {
   return (
     <div className="relative m-3 sm:m-10 bg-sky-200 rounded-[20px]">
       <Helmet>
-        <title>Terms | Logo Logo Craftsmen </title>
+        <title>Terms | Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -17,6 +17,10 @@ const Terms = () => {
           name="keywords"
           content="Logo Craftsmen, terms of service, crafted designs, design integrity, intellectual property, creative journey, copyright compliance, trust in our craft, liability, termination of services, user satisfaction, evolving together, modifications to terms, design experience."
         />
+        <link
+          rel="canonical"
+          href="https://logo-craftsmen.vercel.app/terms"
+        ></link>
       </Helmet>
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>

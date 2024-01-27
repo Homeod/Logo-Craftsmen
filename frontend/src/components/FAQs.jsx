@@ -36,7 +36,7 @@ const FAQs = () => {
   return (
     <div>
       <Helmet>
-        <title>FAQ | Frequently Asked Questions | Logo Logo Craftsmen </title>
+        <title>FAQ | Frequently Asked Questions | Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -46,6 +46,10 @@ const FAQs = () => {
           name="keywords"
           content="logo design, vector conversion, embroidery services, turnaround time, file formats, design guarantees, design revisions, pricing structure, embroidery on specific fabrics, rush services, Logo Craftsmen, design consultation, design process, client satisfaction"
         />
+        <link
+          rel="canonical"
+          href="https://logo-craftsmen.vercel.app/faqs"
+        ></link>
       </Helmet>
 
       <div className="py-10 md:py-10 border-b border-gray-100">

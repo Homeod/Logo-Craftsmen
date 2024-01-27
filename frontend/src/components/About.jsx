@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div className="pt-10 md:pt-10 bg-white">
       <Helmet>
-        <title>About | Logo Logo Craftsmen </title>
+        <title>About | Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -20,6 +20,10 @@ const About = () => {
           name="keywords"
           content="Logo Craftsmen, about us, logo design, vector conversion, embroidery services, craftsmanship, precision, design journey, design values, collaboration, quality, customer satisfaction, design exploration, crafting legacies, precision in design, story behind Logo Craftsmen, bringing visions to life, professional design services, creative journey, design precision"
         />
+        <link
+          rel="canonical"
+          href="https://logo-craftsmen.vercel.app/about"
+        ></link>
       </Helmet>
       <div className="pb-2 w-full text-center ">
         <h2 className="pb-6 font-medium w-full text-center">About</h2>

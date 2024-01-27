@@ -9,7 +9,7 @@ const ImageEdit = () => {
   return (
     <div>
       <Helmet>
-        <title>Order Entry Management | Logo Logo Craftsmen </title>
+        <title>Order Entry Management | Logo Craftsmen </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -19,6 +19,10 @@ const ImageEdit = () => {
           name="keywords"
           content="Order entry services, CRM integration, data accuracy, order processing efficiency, customized solutions, supplier and distributor support, industry experience, Logo Craftsmen, data entry excellence, order tracking, tailored CRM integration, rush services, proven track record, customer satisfaction, order management process, expedited services, efficiency in order entry, seamless integration, tailored solutions for suppliers, elevated order processing."
         />
+        <link
+          rel="canonical"
+          href="https://logo-craftsmen.vercel.app/orderentry"
+        ></link>
       </Helmet>
       <div className="m-3 sm:m-10 bg-violet-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
