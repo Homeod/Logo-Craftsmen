@@ -1,14 +1,26 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-import { rect_img, square_img } from "../assets";
+import { square_img } from "../assets";
 import { styles } from "../styles";
-import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <div className="pt-10 md:pt-10 bg-white">
+      <Helmet>
+        <title>About</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Discover the story behind Logo Craftsmen, where precision meets passion in logo design, vector conversion, and embroidery services. Explore our motivation, journey, and values that drive our commitment to crafting exquisite designs. Learn about our dedication to precision, collaboration, quality, and customer satisfaction. Join us in bringing your design visions to life with the power of craftsmanship and care."
+        />
+        <meta
+          name="keywords"
+          content="Logo Craftsmen, about us, logo design, vector conversion, embroidery services, craftsmanship, precision, design journey, design values, collaboration, quality, customer satisfaction, design exploration, crafting legacies, precision in design, story behind Logo Craftsmen, bringing visions to life, professional design services, creative journey, design precision"
+        />
+      </Helmet>
       <div className="pb-2 w-full text-center ">
         <h2 className="pb-6 font-medium w-full text-center">About</h2>
         <h4 className="font-normal text-4xl font-serif text-violet-900">
@@ -24,11 +36,6 @@ const About = () => {
           <motion.div>
             <section className="container mx-auto">
               <div className="relative bg-[url(https://static-cse.canva.com/blob/976320/Careers.png)] h-[500px] md:h-[400px] bg-no-repeat bg-cover bg-center rounded-[20px]">
-                {/* <img
-                  className="object-cover w-full h-64 md:h-96 sm:h-full opacity-50"
-                  src={rect_img}
-                  alt="Motivation img"
-                /> */}
                 <div className="absolute inset-0 bg-white bg-opacity-60 rounded-[20px] ">
                   <div className="m-10">
                     <p className={styles.sectionSubText}>What is </p>
@@ -52,7 +59,6 @@ const About = () => {
       <div className="m-3 sm:m-10 border-2 border-violet-400 bg-violet-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
-            {/* <section className="container mx-auto "> */}
             <p className={styles.sectionSubText}>Lets talk about </p>
             <p className={styles.sectionHeadText}>Our Journey.</p>
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
@@ -86,13 +92,14 @@ const About = () => {
               </div>
               <div className="text-center">
                 <img
+                  loading="lazy"
                   className="object-cover w-full h-full md:h-auto rounded-[20px] sm:pb-0 pb-3"
                   src={square_img}
-                  alt="Placeholder"
+                  alt="Square image"
+                  title="Square image"
                 />
               </div>
             </div>
-            {/* </section> */}
           </motion.div>
         </div>
       </div>
@@ -163,7 +170,7 @@ const About = () => {
               onClick={() => {
                 window.scrollTo({
                   top: 0,
-                  behavior: "smooth", // Optional: Add smooth scrolling behavior
+                  behavior: "smooth",
                 });
               }}
             >
@@ -171,12 +178,6 @@ const About = () => {
                 Contact Us
               </button>
             </Link>
-            {/* <a
-              className="bg-red-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded  m-4"
-              href="/contact"
-            >
-              Contact Us
-            </a> */}
           </div>
         </div>
       </div>

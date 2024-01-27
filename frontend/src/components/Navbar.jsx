@@ -1,11 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-
-// import craftsmen from '../assets/craftsmen.png';
 import { navLinks } from "../constents";
-
 import { hamburg, closee, craftsmen } from "../assets";
-
 
 const Navbar = ({ setIsUploadOpen }) => {
   const [active, setActive] = useState("");
@@ -24,10 +20,9 @@ const Navbar = ({ setIsUploadOpen }) => {
   };
 
   const handleMouseLeave = () => {
-    // Add a delay before hiding the dropdown
     dropdownTimeoutRef.current = setTimeout(() => {
       setActive(null);
-    }, 500); // Adjust the delay in milliseconds (e.g., 300ms)
+    }, 500);
   };
 
   useEffect(() => {
@@ -35,16 +30,13 @@ const Navbar = ({ setIsUploadOpen }) => {
       const scrollDistance = window.scrollY;
       const viewportWidth = window.innerWidth;
 
-      // Set hasScrolled to true based on the viewport width and scroll distance
       setHasScrolled(
         viewportWidth >= 768 ? scrollDistance >= 75 : scrollDistance >= 50
       );
     };
 
-    // Attach the scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -63,44 +55,25 @@ const Navbar = ({ setIsUploadOpen }) => {
           onClick={() => {
             window.scrollTo({
               top: 0,
-              behavior: "smooth", // Optional: Add smooth scrolling behavior
+              behavior: "smooth",
             });
           }}
         >
           <img
+            loading="lazy"
             src={craftsmen}
             alt="logo"
+            title="logo"
             className="ml-auto sm:ml-2 md:ml-10 lg:ml-10 w-42 h-24 object-contain "
           />
         </Link>
-
-        {/* <ul className="list-none hidden sm:flex flex-row gap-10 mr-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.title ? "text-black" : "text-neutral-500"
-              } hover:text-black text-[18px] font-medium cursor-pointer`}
-              onClick={() => {
-                setActive(link.title);
-                window.scrollTo(0, 0);
-              }}
-            >
-              {link.id === "upload" ? (
-                <span className="" onClick={() => setIsUploadOpen(true)}>{link.title}</span>
-              ) : (
-                <Link to={`/${link.id}`}>{link.title}</Link>
-              )}
-            </li>
-          ))}
-        </ul> */}
 
         <ul
           className="list-none lg:flex flex-row gap-10 mr-10 hidden "
           onClick={() => {
             window.scrollTo({
               top: 0,
-              behavior: "smooth", // Optional: Add smooth scrolling behavior
+              behavior: "smooth",
             });
           }}
         >
@@ -150,45 +123,14 @@ const Navbar = ({ setIsUploadOpen }) => {
 
         <div className="lg:hidden flex flex-1 justify-end items-center ">
           <img
+            loading="lazy"
             src={toggle ? closee : hamburg}
             alt="hamburg"
-            // className="w-[28px] h-[28px] object-contain cursor-pointer mr-1"
+            title="hamburg"
             className="w-[28px] h-[28px] object-contain cursor-pointer mr-4"
             onClick={() => setToggle(!toggle)}
           />
 
-          {/* <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } absolute w-full h-fit top-0 left-0 mt-24 bg-gray-50  
-          z-10 flex items-center justify-around`}
-          >
-            <ul className="list-none flex justify-end items-center flex-col gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-black" : "text-neutral-500"
-                  } hover:text-black text-[16px] font-medium cursor-pointer`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                    window.scrollTo(0, 0);
-                  }}
-                >
-                  {link.id === "upload" ? (
-                    <span onClick={() => setIsUploadOpen(true)}>
-                      {link.title}
-                    </span>
-                  ) : (
-                    <Link to={`/${link.id}`}>{link.title}</Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div> */}
-
-          {/* For Mobile Devices  */}
           <div
             className={`${
               !toggle ? "hidden" : "flex"
@@ -202,12 +144,10 @@ const Navbar = ({ setIsUploadOpen }) => {
                 window.scrollTo(0, 0);
               }}
             >
-              {/* "Services" as heading without a link */}
               <li className="text-black text-[16px] font-bold cursor-not-allowed  border-b-2 pb-1">
                 Services:
               </li>
 
-              {/* Sublinks after "Services" */}
               {navLinks
                 .find((link) => link.title === "Services")
                 ?.sublinks.map((sublink) => (
@@ -215,7 +155,6 @@ const Navbar = ({ setIsUploadOpen }) => {
                     key={sublink.link}
                     className="text-black text-[16px] font-medium cursor-not-allowed "
                     onClick={() => {
-                      // Handle the sublink click here
                       setToggle(false);
                     }}
                   >
@@ -223,7 +162,6 @@ const Navbar = ({ setIsUploadOpen }) => {
                   </li>
                 ))}
 
-              {/* "About" and other links */}
               {navLinks
                 .filter((link) => link.title !== "Services")
                 .map((link) => (
@@ -235,15 +173,10 @@ const Navbar = ({ setIsUploadOpen }) => {
                         setToggle(!toggle);
                         setActive(link.title);
                       } else {
-                        setToggle(false); // Close toggle for links without sublinks
+                        setToggle(false);
                       }
                     }}
                   >
-                    {/* {link.id ? (
-                      <Link to={`/${link.id}`}>{link.title}</Link>
-                    ) : (
-                      <span>{link.title}</span>
-                    )} */}
                     {link.id === "upload" ? (
                       <span className="" onClick={() => setIsUploadOpen(true)}>
                         {link.title}

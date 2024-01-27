@@ -1,10 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { Helmet } from "react-helmet";
 
 const Terms = () => {
   return (
     <div className="relative m-3 sm:m-10 bg-sky-200 rounded-[20px]">
+      <Helmet>
+        <title>Terms</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Explore the terms of service at Logo Craftsmen, where your comfort is prioritized. Discover our commitment to delivering crafted designs tailored to your vision. Learn about the integrity of your designs, your creative journey with us, and the trust we place in our craft. Review how we tailor our services, ensuring satisfaction, and understand our commitment to evolving together with you. Welcome to Logo Craftsmen's Terms of Service – your gateway to a seamless and trusted design experience."
+        />
+        <meta
+          name="keywords"
+          content="Logo Craftsmen, terms of service, crafted designs, design integrity, intellectual property, creative journey, copyright compliance, trust in our craft, liability, termination of services, user satisfaction, evolving together, modifications to terms, design experience."
+        />
+      </Helmet>
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>
           <section className="container mx-auto ">

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Img from "../assets/peacock.jpg";
+import Peacock from "../assets/peacock.jpg";
 import { vectorcow, ClubLogo, art3 } from "../assets";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { styles } from "../styles";
+import { Helmet } from "react-helmet";
 
 const Contact = ({ setIsUploadOpen }) => {
   const [formData, setFormData] = useState({
@@ -91,6 +92,18 @@ const Contact = ({ setIsUploadOpen }) => {
 
   return (
     <div>
+      <Helmet>
+        <title>Contact</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Contact Logo Craftsmen for professional logo design, vector conversion, and embroidery services. Connect with us using the provided phone number or email address.Use the contact form to send us a message. Explore our gallery featuring vector art, logo designs, and more. We look forward to helping you bring your design ideas to life!"
+        />
+        <meta
+          name="keywords"
+          content="contact Logo Craftsmen, logo design services, vector conversion, embroidery services, professional design services, contact information,name, phone number, email address,type a message,USA, India, design gallery, vector art, logo designs, design consultation, design ideas, logo craftsmanship"
+        />
+      </Helmet>
       <div className="m-3 sm:m-10 pb-8 flex flex-col bg-fuchsia-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <p className={styles.sectionSubText}>Want a Conversation</p>
@@ -277,29 +290,45 @@ const Contact = ({ setIsUploadOpen }) => {
                 <div className="gallery">
                   <div className="card">
                     <figure>
-                      <img src={vectorcow} alt="Forest" />
-                    </figure>
-                  </div>
-                  <div className="card">
-                    <figure>
-                      <img src={Img} alt="Wooden Bridge" />
-                    </figure>
-                  </div>
-                  <div className="card">
-                    <figure>
                       <img
-                        src={ClubLogo}
-                        alt="Forest mountains"
-                        className="bg-white"
+                        loading="lazy"
+                        src={vectorcow}
+                        alt=" Vector Cow"
+                        title="Vector Cow"
+                        className="w-full h-full"
                       />
                     </figure>
                   </div>
                   <div className="card">
                     <figure>
                       <img
+                        loading="lazy"
+                        src={Peacock}
+                        alt="Peacock"
+                        title="Peacock"
+                        className="w-full h-full"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card">
+                    <figure>
+                      <img
+                        loading="lazy"
+                        src={ClubLogo}
+                        alt="Club Logo"
+                        title="Club Logo"
+                        className="bg-white w-full h-full"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card">
+                    <figure>
+                      <img
+                        loading="lazy"
                         src={art3}
-                        alt="Lavender Field"
-                        className="bg-sky-300"
+                        alt="Art 3"
+                        title="Art 3"
+                        className="bg-sky-300 w-full h-full"
                       />
                     </figure>
                   </div>

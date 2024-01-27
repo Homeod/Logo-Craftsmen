@@ -20,13 +20,15 @@ const Itemscontainerfooter = () => {
           onClick={() => {
             window.scrollTo({
               top: 0,
-              behavior: "smooth", // Optional: Add smooth scrolling behavior
+              behavior: "smooth",
             });
           }}
         >
           <img
+            loading="lazy"
             src={lcwhite}
             alt="logo"
+            title="logo"
             className=" w-42 h-24 object-contain lg:justify-start bg "
           />
         </Link>

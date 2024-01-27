@@ -1,13 +1,27 @@
 import React from "react";
-import { Navbar, Footer, ServiceCard } from "../components";
+import { ServiceCard } from "../components";
 import { monkey, owl, vectorcow } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Vector = ({ setIsUploadOpen }) => {
   return (
     <div>
+      <Helmet>
+        <title>Vector Conversion</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Transform your raster images into crisp, scalable vector graphics. Our expert team ensures precision and quality in every conversion, allowing your designs to shine in various mediums without loss of detail."
+        />
+        <meta
+          name="keywords"
+          content="	illustrator vector art,	vector line art,	Adobe Illustrator artwork,	creating vector art,	vector art for screen printing,	vector digital art,	text to vector Ai,	Adobe Illustrator advanced vector artwork,	Ai convert text to vector,	Illustrator turns text into vector,	image for vector art,	raster to vector
+          "
+        />
+      </Helmet>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
         <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-10 ">
           <div className="flex flex-col gap-6 mt-8 md:px-8 md:py-6">
@@ -20,13 +34,8 @@ const Vector = ({ setIsUploadOpen }) => {
               <span className="font-semibold font-serif text-2xl italic">
                 Unlock Limitless Possibilities! Transform Raster to Vector with
                 Precision. Elevate Your Designs Today!
-                {/* <span className="text-4xl">Vectors.</span> */}
               </span>
               <br />
-              {/* <br /> */}
-              {/* <span className="text-gray-500 font-black md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
-                GRAB THE OFFER NOW
-              </span> */}
               <br />
               <span className="font-semibold font-playfair text-2xl">
                 Price Starting from <span className="text-5xl">$1.99</span>
@@ -38,7 +47,7 @@ const Vector = ({ setIsUploadOpen }) => {
                 onClick={() => {
                   window.scrollTo({
                     top: 0,
-                    behavior: "smooth", // Optional: Add smooth scrolling behavior
+                    behavior: "smooth",
                   });
                 }}
               >
@@ -57,7 +66,10 @@ const Vector = ({ setIsUploadOpen }) => {
           </div>
           <div className="flex items-center justify-center mx-auto my-6 ">
             <img
+              loading="lazy"
               src={vectorcow}
+              alt="Vector Cow"
+              title="Vector Cow"
               className="md:w-full md:h-[24rem] sm:w-[60vw] mx-auto rounded-2xl shadow-zinc-700 "
             />
           </div>
@@ -111,16 +123,20 @@ const Vector = ({ setIsUploadOpen }) => {
                 </div>
                 <div className="flex items-center">
                   <img
+                    loading="lazy"
                     className="object-cover w-full h-full md:h-auto rounded-xl border-2 border-black  "
                     src={monkey}
-                    alt="Placeholder"
+                    alt="monkey"
+                    title="monkey"
                   />
                 </div>
                 <div className="flex items-center">
                   <img
+                    loading="lazy"
                     className="object-cover w-full h-full md:h-auto rounded-xl "
                     src={owl}
-                    alt="Placeholder"
+                    alt="owl"
+                    title="owl"
                   />
                 </div>
                 <div className="text-left">
@@ -171,7 +187,6 @@ const Vector = ({ setIsUploadOpen }) => {
               <p className="flex justify-center font-semibold text-4xl">
                 Why Choose Our Vector Artwork Services?
               </p>
-              {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6"> */}
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   <span className="font-bold">Scalability</span>: Enjoy the
@@ -215,55 +230,10 @@ const Vector = ({ setIsUploadOpen }) => {
                   </span>
                 </p>
               </div>
-              {/* </div> */}
             </section>
           </motion.div>
         </div>
       </div>
-
-      {/* bg img opacity txt */}
-      {/* <div className="relative bg-[url(https://static-cse.canva.com/blob/976320/Careers.png)] h-[500px] md:h-[400px] bg-no-repeat bg-cover bg-center rounded-[20px]"> */}
-      {/* <img
-                  className="object-cover w-full h-64 md:h-96 sm:h-full opacity-50"
-                  src={rect_img}
-                  alt="Motivation img"
-                /> */}
-      {/* <div className="absolute inset-0 bg-white bg-opacity-60 rounded-[20px] ">
-          <div className="m-10">
-            <p className="flex justify-center font-semibold text-4xl">
-              Why Choose Our Vector Artwork Services?
-            </p>
-            <p className="text-xl text-black text-center lg:mt-6">
-              Scalability: Enjoy the freedom to use your images at any size
-              without compromising quality. Perfect for banners, billboards, or
-              any application where your visuals need to make a statement.
-              <br />
-              Versatility: Vectorized images are versatile and can be easily
-              adapted for various mediums, from digital platforms to physical
-              merchandise.
-              <br />
-              Consistency: Maintain a consistent visual identity across
-              different applications. Vector artwork ensures that your brand's
-              visual elements remain uniform and recognizable.
-              <br />
-              Professional Touch: Our team of experienced designers and advanced
-              tools ensure a professional touch to every vectorization project.
-              Expect precision, creativity, and a commitment to delivering
-              results that exceed expectations.
-              <br />
-              Don't let poor quality imageshinder your progress. Trust Logo
-              Craftsmen for: Raster to Vector Conversion/Image to Vector
-              Conversion JPG to Vector Conversion/Vector Logo Conversion Vector
-              Line Drawing/Vector Map Drawing Vector Floor Plan
-              Drawing/Architectural Vector Drawing Elevate your visual
-              storytelling with Logo Craftsmen&#39;s Vector Artwork Services.
-              Whether it&#39;s breathing new life into your logo or enhancing
-              complex graphics, our commitment to precision ensures your visuals
-              leave a lasting impression.
-            </p>
-          </div>
-        </div>
-      </div> */}
 
       <ServiceCard />
     </div>

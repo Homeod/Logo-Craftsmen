@@ -24,8 +24,10 @@ const ExperienceCard = ({ experience }) => (
     icon={
       <div className="flex justify-center items-center w-full h-full">
         <img
+          loading="lazy"
           src={experience.icon}
           alt={experience.company_name}
+          title={experience.company_name}
           className="w-[60%] h-[60%] object-contain"
         />
       </div>
@@ -68,7 +70,13 @@ const ServiceCard = ({ index, title, description, icon }) => {
           }}
           className="bg-red-100 rounded-[20px] py-5 px-8 min-h[280px] flex justify-evenly items-center flex-col"
         >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+          <img
+            loading="lazy"
+            src={icon}
+            alt={title}
+            title={title}
+            className="w-16 h-16 object-contain"
+          />
           <h3 className="text-black text-[18px] font-semibold text-center ">
             {title}
           </h3>
@@ -110,7 +118,9 @@ const FeedbackCard = ({
         <img
           src={image}
           alt={`feedback-by-${name}`}
+          title={`feedback-by-${name}`}
           className="w-10 h-10 rounded-full object-cover"
+          loading="lazy"
         />
       </div>
     </div>
@@ -169,10 +179,8 @@ const Landing = () => {
       <div className="m-4 sm:m-10 pb-6 flex flex-col bg-amber-300 rounded-[20px]">
         <div className={`${styles.padding}`}>
           <motion.div variants={textVariant()}>
-            {/* <h2 className="flex justify-center items-center font-semibold text-3xl mt-20"> */}
             <p className={styles.sectionSubText}>How we move ahead</p>
             <p className={styles.sectionHeadText}>Process Flow</p>
-            {/* </h2> */}
           </motion.div>
 
           <VerticalTimeline>

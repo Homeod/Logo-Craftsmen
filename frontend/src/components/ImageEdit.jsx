@@ -1,13 +1,27 @@
 import React from "react";
-import { Navbar, Footer, ServiceCard } from "../components";
+import { ServiceCard } from "../components";
 import { imgedit1, imgedit2, imgedit3 } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ImageEdit = ({ setIsUploadOpen }) => {
   return (
     <div>
+      <Helmet>
+        <title>Image Editing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Perfect your images with our professional image editing services. Whether it's retouching, color correction, or background removal, our skilled team enhances your visuals to meet the highest standards. Achieve the polished look your brand deserves."
+        />
+        <meta
+          name="keywords"
+          content="professional photo editing services,	ecommerce image editing services,	photo enhancement service,	image retouching,	photo editing services for photographers,	high end photo retouching services,	professional photo retouching,	best photo restoration services,	photo touchup,	ecommerce photo editing,	professional photo restoration,	i need someone to photoshop a picture for me,	photo correction service,	old photo restoration online,	remove background ,	clipping path photoshop,	faded photo restoration,	retouch pictures,	image editing services for ecommerce
+          "
+        />
+      </Helmet>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
         <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-10 ">
           <div className="flex flex-col gap-6 mt-8 md:px-8 md:py-6">
@@ -23,9 +37,6 @@ const ImageEdit = ({ setIsUploadOpen }) => {
               </span>
               <br />
               <br />
-              {/* <span className="text-black-500 font-serif md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
-                SALE OF THE MONTH
-              </span> */}
             </div>
             <div className="flex gap-4 items-center md:justify-start justify-center">
               <Link
@@ -33,7 +44,7 @@ const ImageEdit = ({ setIsUploadOpen }) => {
                 onClick={() => {
                   window.scrollTo({
                     top: 0,
-                    behavior: "smooth", // Optional: Add smooth scrolling behavior
+                    behavior: "smooth",
                   });
                 }}
               >
@@ -52,7 +63,10 @@ const ImageEdit = ({ setIsUploadOpen }) => {
           </div>
           <div className="flex items-center justify-center mx-auto my-6 ">
             <img
+              loading="lazy"
               src={imgedit1}
+              alt="Image Edit 1"
+              title="Image Edit 1"
               className="md:w-full md:h-[24rem] sm:w-[60vw] mx-auto rounded-2xl shadow-zinc-700 "
             />
           </div>
@@ -121,16 +135,20 @@ const ImageEdit = ({ setIsUploadOpen }) => {
                 </div>
                 <div className="flex items-center">
                   <img
+                    loading="lazy"
                     className="object-cover w-full h-full md:h-auto  "
                     src={imgedit2}
-                    alt=""
+                    alt="Image Edit 2"
+                    title="Image Edit 2"
                   />
                 </div>
                 <div className="flex items-center">
                   <img
+                    loading="lazy"
                     className="object-cover w-full h-full md:h-auto "
                     src={imgedit3}
-                    alt=""
+                    alt="Image Edit 3"
+                    title="Image Edit 3"
                   />
                 </div>
                 <div className="text-left">
@@ -175,7 +193,6 @@ const ImageEdit = ({ setIsUploadOpen }) => {
               <p className="flex justify-center font-semibold text-4xl">
                 Why Choose Our Image Editing Services?
               </p>
-              {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6"> */}
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   1. <span className="font-bold">Professional Expertise:</span>{" "}
@@ -213,7 +230,6 @@ const ImageEdit = ({ setIsUploadOpen }) => {
                   </span>
                 </p>
               </div>
-              {/* </div> */}
             </section>
           </motion.div>
         </div>

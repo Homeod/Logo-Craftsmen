@@ -8,7 +8,6 @@ const Error = () => {
   return (
     <div className="m-3 sm:m-10 border-2 border-violet-400 bg-violet-100 rounded-[20px]">
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
-        {/* <div className="p-10 rounded-2xl min-h-[300px]"> */}
         <motion.div>
           <p className={styles.sectionSubText}>Upppseyy!!! </p>
           <p className={`${styles.sectionHeadText}flex justify-between`}>
@@ -22,8 +21,10 @@ const Error = () => {
             <div className="flex flex-row justify-center items-center">
               <p className=" text-center text-bold font-bold text-[120px]">4</p>
               <img
+                loading="lazy"
                 src={CirDesign}
-                alt="Image"
+                alt="Circle Design"
+                title="Circle Design"
                 className="w-[120px] h-[120px]"
               />
               <p className=" text-center text-bold font-bold text-[120px]">4</p>
@@ -37,7 +38,7 @@ const Error = () => {
               onClick={() => {
                 window.scrollTo({
                   top: 0,
-                  behavior: "smooth", // Optional: Add smooth scrolling behavior
+                  behavior: "smooth",
                 });
               }}
             >

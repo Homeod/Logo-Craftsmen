@@ -5,9 +5,9 @@ const Itemsfooter = ({ Links, title }) => {
   return (
     <div className="flex justify-center">
       <ul>
-        <h1 className="mb-1 font-semibold underline underline-offset-8 text-center">
+        <div className="mb-1 font-semibold underline underline-offset-8 text-center">
           {title}
-        </h1>
+        </div>
         {Links.map((link) => (
           <li key={link.name}>
             <Link
@@ -16,7 +16,7 @@ const Itemsfooter = ({ Links, title }) => {
               onClick={() => {
                 window.scrollTo({
                   top: 0,
-                  behavior: "smooth", // Optional: Add smooth scrolling behavior
+                  behavior: "smooth",
                 });
               }}
             >

@@ -1,13 +1,26 @@
 import React from "react";
-import { Footer, ServiceCard } from "../components";
+import { ServiceCard } from "../components";
 import { embskull, embdragon, tiger } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Embroidery = ({ setIsUploadOpen }) => {
   return (
     <div>
+      <Helmet>
+        <title>Embroidery Digitizing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Elevate your brand with our cutting-edge embroidery digitizing services. From transforming logos to intricate designs, we meticulously digitize your artwork for flawless stitching. Fast, affordable, and crafted to perfection, our digitization process ensures that your embroidered designs reflect the true essence of your brand on textiles."
+        />
+        <meta
+          name="keywords"
+          content="embroidery digitizing services,	digitize logo for embroidery,	digital embroidery machine,	online embroidery digitizing,	logo digitizing,	wilcom embroidery,	digitize image for embroidery,	machine embroidery digitizing service,	best embroidery digitizing service,	digitize embroidery designs,	get logo digitized for embroidery,	professional embroidery digitizers,	digitize my logo for embroidery,	best digitizing service for embroidery,	dst digitizing,	custom embroidery digitizing services,	patch digitizing,	emb digitizing,	puff digitizing,	punch digitizing for embroidery design"
+        />
+      </Helmet>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
         <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-10 ">
           <div className="flex flex-col gap-6 mt-8 md:px-8 md:py-6">
@@ -17,19 +30,13 @@ const Embroidery = ({ setIsUploadOpen }) => {
               </div>
             </div>
             <div className="md:text-lg text-md md:text-start text-center mt-5">
-              {/* <span className=" font-serif text-2xl">
-                From Logos to Apparel -{" "} */}
               <span className="text-2xl font-bold">
                 Dress Your Brand in Elegance! Our Embroidery Design Services
                 Transform Ideas into Textile Art.
-                {/* </span> */}
               </span>
               <br />
               <br />
-              {/* <span className="text-gray-500 font-black md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
-                EARLY OFFERS!
-              </span> */}
-              
+
               <span className="font-playfair text-3xl ">
                 Price:{" "}
                 <span className="text-4xl font-bold">
@@ -43,7 +50,7 @@ const Embroidery = ({ setIsUploadOpen }) => {
                 onClick={() => {
                   window.scrollTo({
                     top: 0,
-                    behavior: "smooth", // Optional: Add smooth scrolling behavior
+                    behavior: "smooth",
                   });
                 }}
               >
@@ -62,7 +69,10 @@ const Embroidery = ({ setIsUploadOpen }) => {
           </div>
           <div className="flex items-center justify-center mx-auto my-6 ">
             <img
+              loading="lazy"
               src={tiger}
+              alt="Tiger"
+              title="Tiger"
               className="md:w-full md:h-[24rem] sm:w-[60vw] mx-auto rounded-2xl shadow-zinc-700 "
             />
           </div>
@@ -130,16 +140,20 @@ const Embroidery = ({ setIsUploadOpen }) => {
                 </div>
                 <div className="flex items-center">
                   <img
+                    loading="lazy"
                     className="object-cover w-full h-full md:h-auto  "
                     src={embskull}
-                    alt=""
+                    alt="Skull"
+                    title="Skull"
                   />
                 </div>
                 <div className="flex items-center">
                   <img
+                    loading="lazy"
                     className="object-cover w-full h-full md:h-auto "
                     src={embdragon}
-                    alt=""
+                    alt="Dragon"
+                    title="Dragon"
                   />
                 </div>
                 <div className="text-left">
@@ -179,7 +193,6 @@ const Embroidery = ({ setIsUploadOpen }) => {
               <p className="flex justify-center font-semibold text-4xl">
                 Why Choose Our Embroidery Digitizing Services?
               </p>
-              {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6"> */}
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   <span className="font-bold">Precision in Detail:</span> Our
@@ -213,7 +226,6 @@ const Embroidery = ({ setIsUploadOpen }) => {
                   </span>
                 </p>
               </div>
-              {/* </div> */}
             </section>
           </motion.div>
         </div>

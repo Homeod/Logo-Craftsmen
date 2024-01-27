@@ -1,10 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { Helmet } from "react-helmet";
 
 const Privacy = () => {
   return (
     <div className="relative m-3 sm:m-10 bg-emerald-200 rounded-[20px]">
+      <Helmet>
+        <title>Privacy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Explore Logo Craftsmen's commitment to your safety through our Privacy Policy. Designed with your trust in mind, this policy outlines how we handle your information, ensuring a secure and personalized design experience. Discover how we prioritize your privacy, utilize cookies for enhancements, and implement security measures to safeguard your information. Your privacy matters, and Logo Craftsmen is dedicated to transparent practices, empowering you to manage your preferences and choices in crafting your design journey."
+        />
+        <meta
+          name="keywords"
+          content="Logo Craftsmen, privacy policy, trust, personalized design services, cookies, security measures, information protection, your privacy matters, transparent practices, managing preferences, design choices, age-appropriate design, policy evolution, communication"
+        />
+      </Helmet>
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>
           <section className="container mx-auto ">

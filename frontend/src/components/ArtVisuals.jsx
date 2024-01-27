@@ -1,13 +1,26 @@
 import React from "react";
-import { Navbar, Footer, ServiceCard } from "../components";
+import { ServiceCard } from "../components";
 import { art1, art2, art3 } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ArtVisuals = ({ setIsUploadOpen }) => {
   return (
     <div>
+      <Helmet>
+        <title>Art / Virtual Proofs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Visualize your brand on promotional products before production. Our mockup services allow you to preview your logo or design on various items, ensuring a perfect match with your brand identity. Make informed decisions and stand out with confidence."
+        />
+        <meta
+          name="keywords"
+          content="promotional items mockup,	stadium cup mockup,	promotion stand mockup,	company logo merchandise,	mock up template,	t shirt design mockup,	create clothing mockups"
+        />
+      </Helmet>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
         <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-10 ">
           <div className="flex flex-col gap-6 mt-8 md:px-8 md:py-6">
@@ -24,9 +37,6 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
               <br />
               <br />
               <br />
-              {/* <span className="text-red-500 font-serif md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]">
-                WINTER SALE IS LIVE
-              </span> */}
             </div>
             <div className="flex gap-4 items-center md:justify-start justify-around">
               <Link
@@ -34,7 +44,7 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
                 onClick={() => {
                   window.scrollTo({
                     top: 0,
-                    behavior: "smooth", // Optional: Add smooth scrolling behavior
+                    behavior: "smooth",
                   });
                 }}
               >
@@ -53,8 +63,11 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
           </div>
           <div className="flex items-center justify-center mx-auto my-6 ">
             <img
+              loading="lazy"
               src={art1}
               className="md:w-full md:h-[24rem] sm:w-[60vw] mx-auto rounded-2xl shadow-zinc-700 "
+              alt="Art 1"
+              title="Art 1"
             />
           </div>
         </div>
@@ -116,16 +129,20 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
                 </div>
                 <div className="flex items-center">
                   <img
+                    loading="lazy"
                     className="object-cover w-full h-full md:h-auto  "
                     src={art2}
-                    alt=""
+                    alt="Art 2"
+                    title="Art 2"
                   />
                 </div>
                 <div className="flex items-center">
                   <img
+                    loading="lazy"
                     className="object-cover w-full h-full md:h-auto "
                     src={art3}
-                    alt=""
+                    alt="Art 3"
+                    title="Art 3"
                   />
                 </div>
                 <div className="text-left">
@@ -187,7 +204,6 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
               <p className="flex justify-center font-semibold text-4xl">
                 Why Trust Logo Craftsmen?
               </p>
-              {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6"> */}
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   1. <span className="font-bold">Precision Personified:</span>{" "}
@@ -220,7 +236,6 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
                   </span>
                 </p>
               </div>
-              {/* </div> */}
             </section>
           </motion.div>
         </div>

@@ -14,16 +14,21 @@ app.use(
     origin: [
       "https://logocraftsmen.com",
       "https://logo-craftsmen.vercel.app",
-      "http://localhost:5173",
-      'https://www.logocraftsmen.com'
+      "https://www.logocraftsmen.com",
     ],
   })
 );
 
-// app.use(cors({ origin: "http://localhost:5173" }));
-
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../dist")));
+  app.use(
+    express.static(path.join(__dirname, "../dist"), {
+      setHeaders: (res, path, stat) => {
+        if (path.endsWith(".js")) {
+          res.setHeader("Content-Type", "application/javascript");
+        }
+      },
+    })
+  );
 
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(__dirname, "../", "dist", "index.html"))
@@ -31,10 +36,16 @@ if (process.env.NODE_ENV === "production") {
 }
 
 var smtpTransport = nodemailer.createTransport({
-  service: "gmail",
+  service: "Godaddy",
+  host: "smtpout.secureserver.net",
+  port: 587,
+  secure: false,
   auth: {
     user: process.env.authuser,
     pass: process.env.authpass,
+  },
+  tls: {
+    rejectUnauthorized: false,
   },
 });
 
@@ -42,7 +53,7 @@ smtpTransport.verify(function (error, success) {
   if (error) {
     console.log(error);
   } else {
-    console.log("Server is ready to take our messages");
+    console.log("Server is ready to take our messages", success);
   }
 });
 
@@ -64,14 +75,15 @@ app.post("/contactAdmin", async (req, res) => {
     Thankyou.
     `,
   };
+
   smtpTransport.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
       res.status(400).json(error);
     } else {
+      console.log(info);
       res.status(200).json(info.response);
     }
-    // smtpTransport.close();
   });
 });
 

@@ -27,6 +27,7 @@
     "maath": "^0.10.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.4",
     "react-icons": "^4.12.0",
     "react-ionicons": "^4.2.1",
     "react-modal": "^3.16.1",

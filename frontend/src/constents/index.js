@@ -49,10 +49,6 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
-  // {
-  //   id: "faqs",
-  //   title: "FAQ",
-  // },
 ];
 
 const services = [
@@ -224,7 +220,7 @@ const faqs = [
     question:
       "What file formats will I receive for my vector or embroidery design?",
     answer:
-      "For vector conversions, we provide the final design in commonly used vector formats such as AI, EPS, and SVG, which are ideal for printing and digital use. For embroidery designs, you&#39;ll receive the design in formats compatible with embroidery machines, such as DST, PES, or other industry-standard formats.",
+      "For vector conversions, we provide the final design in commonly used vector formats such as AI, EPS, and SVG, which are ideal for printing and digital use. For embroidery designs, you'll receive the design in formats compatible with embroidery machines, such as DST, PES, or other industry-standard formats.",
   },
   {
     question: "Do you offer any guarantees or revisions for your designs?",
@@ -277,8 +273,8 @@ export const Insights = [
 ];
 
 export const Company = [
-  { name: "About Us", link: "/about" },
-  { name: "Contact Us", link: "/contact" },
+  { name: "About", link: "/about" },
+  { name: "Contact", link: "/contact" },
 ];
 
 export const Icons = [

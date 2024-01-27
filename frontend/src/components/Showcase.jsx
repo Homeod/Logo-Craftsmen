@@ -3,15 +3,10 @@ import Modal from "react-modal";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
-import {
-  icecream,
-  embdragon,
-  imgedit1,
-  CirDesign,
-} from "../assets";
+import { icecream, embdragon, imgedit1, CirDesign } from "../assets";
 import { SchoolLogo, CrickLogo, CompLogo, ClubLogo } from "../assets";
 
-const images = [ icecream, ClubLogo, SchoolLogo, imgedit1,CirDesign , embdragon];
+const images = [icecream, ClubLogo, SchoolLogo, imgedit1, CirDesign, embdragon];
 
 const Showcase = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -48,9 +43,11 @@ const Showcase = () => {
                 >
                   <div className="mx-auto max-w-4xl">
                     <img
+                      loading="lazy"
                       className="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 rounded-xl"
                       src={image}
-                      alt=""
+                      alt="Showcase"
+                      title="Showcase"
                     />
                   </div>
                 </div>
@@ -64,7 +61,7 @@ const Showcase = () => {
                   onClick={() => {
                     window.scrollTo({
                       top: 0,
-                      behavior: "smooth", // Optional: Add smooth scrolling behavior
+                      behavior: "smooth",
                     });
                   }}
                 >
@@ -78,12 +75,11 @@ const Showcase = () => {
         </motion.div>
       </div>
 
-      {/* Modal */}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Image Modal"
-        ariaHideApp={false} // to prevent accessibility issues
+        ariaHideApp={false}
         style={{
           overlay: {
             backgroundColor: "rgba(0, 0, 0, 0.75)",
@@ -108,10 +104,9 @@ const Showcase = () => {
           onClick={closeModal}
         />
         <button
-          onClick={() => navigate(-1)} // left arrow
+          onClick={() => navigate(-1)}
           className="absolute bottom-0 opacity-70 hover:opacity-100 left-0 m-4 text-white text-6xl cursor-pointer bg-sky-500 rounded-full p-2 z-100 transform -translate-y-1/2"
         >
-          {/* &#8249; */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -128,10 +123,9 @@ const Showcase = () => {
           </svg>
         </button>
         <button
-          onClick={() => navigate(1)} // right arrow
+          onClick={() => navigate(1)}
           className="absolute bottom-0 opacity-80 hover:opacity-100 right-0 m-4 text-white text-6xl cursor-pointer bg-sky-500 rounded-full p-2 z-100 transform -translate-y-1/2"
         >
-          {/* &#8250; */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Img from "../assets/peacock.jpg";
+import Peacock from "../assets/peacock.jpg";
 import { vectorcow, ClubLogo, art3 } from "../assets";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -233,29 +233,45 @@ const ContactLanding = () => {
                 <div className="gallery">
                   <div className="card">
                     <figure>
-                      <img src={vectorcow} alt="Forest" />
-                    </figure>
-                  </div>
-                  <div className="card">
-                    <figure>
-                      <img src={Img} alt="Wooden Bridge" />
-                    </figure>
-                  </div>
-                  <div className="card">
-                    <figure>
                       <img
-                        src={ClubLogo}
-                        alt="Forest mountains"
-                        className="bg-white"
+                        loading="lazy"
+                        src={vectorcow}
+                        alt="Vector Cow"
+                        title="Vector Cow"
+                        className="w-full h-full"
                       />
                     </figure>
                   </div>
                   <div className="card">
                     <figure>
                       <img
+                        loading="lazy"
+                        src={Peacock}
+                        alt="Peacock"
+                        title="Peacock"
+                        className="w-full h-full"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card">
+                    <figure>
+                      <img
+                        loading="lazy"
+                        src={ClubLogo}
+                        alt="Club Logo"
+                        title="Club Logo"
+                        className="bg-white w-full h-full"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card">
+                    <figure>
+                      <img
+                        loading="lazy"
                         src={art3}
-                        alt="Lavender Field"
-                        className="bg-sky-300"
+                        alt="Art 3"
+                        title="Art 3"
+                        className="bg-sky-300 w-full h-full"
                       />
                     </figure>
                   </div>

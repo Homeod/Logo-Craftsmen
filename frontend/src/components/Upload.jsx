@@ -52,7 +52,7 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
 
   const handleFileChange = async (e) => {
     const input = e.target;
-    const maxSize = 15 * 1024 * 1024; // 20 MB in bytes
+    const maxSize = 15 * 1024 * 1024;
 
     if (input.files.length > 0) {
       const totalSize = Array.from(input.files).reduce(

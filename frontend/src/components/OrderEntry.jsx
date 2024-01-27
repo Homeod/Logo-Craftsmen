@@ -1,13 +1,25 @@
 import React from "react";
-import { Navbar, ServiceCard, Contact } from "../components";
+import { ServiceCard, Contact } from "../components";
 import { order1, order2 } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { Helmet } from "react-helmet";
 
 const ImageEdit = () => {
   return (
     <div>
-      <Navbar />
+      <Helmet>
+        <title>Order Entry Management</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Elevate your order entry process with Logo Craftsmen's customized solutions. Our order entry services seamlessly integrate with your unique Customer Relationship Management (CRM) systems, providing tailored solutions for suppliers and distributors. With over 12 years of industry experience, we prioritize data accuracy, order processing efficiency, and offer services such as custom CRM integration, data entry excellence, and order tracking. Discover the advantages of our proven track record, industry expertise, and free rush services for time-sensitive operations."
+        />
+        <meta
+          name="keywords"
+          content="Order entry services, CRM integration, data accuracy, order processing efficiency, customized solutions, supplier and distributor support, industry experience, Logo Craftsmen, data entry excellence, order tracking, tailored CRM integration, rush services, proven track record, customer satisfaction, order management process, expedited services, efficiency in order entry, seamless integration, tailored solutions for suppliers, elevated order processing."
+        />
+      </Helmet>
       <div className="m-3 sm:m-10 bg-violet-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
@@ -70,16 +82,20 @@ const ImageEdit = () => {
                 </div>
                 <div className="flex items-center">
                   <img
+                    loading="lazy"
                     className="object-cover w-full h-full md:h-auto  "
                     src={order1}
-                    alt=""
+                    alt="Order 1"
+                    title="Order 1"
                   />
                 </div>
                 <div className="flex items-center">
                   <img
+                    loading="lazy"
                     className="object-cover w-full h-full md:h-auto "
                     src={order2}
-                    alt=""
+                    alt="Order 2"
+                    title="Order 2"
                   />
                 </div>
                 <div className="text-left">
@@ -126,7 +142,6 @@ const ImageEdit = () => {
               <p className="flex justify-center font-semibold text-4xl">
                 Why Choose Our Order Entry Services?
               </p>
-              {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6"> */}
               <div className="text-left">
                 <p className="text-xl mt-4 ">
                   1. <span className="font-bold">Tailored Solutions:</span> We
@@ -165,7 +180,6 @@ const ImageEdit = () => {
                   </span>
                 </p>
               </div>
-              {/* </div> */}
             </section>
           </motion.div>
         </div>
