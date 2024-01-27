@@ -17,10 +17,7 @@ const Terms = () => {
           name="keywords"
           content="Logo Craftsmen, terms of service, crafted designs, design integrity, intellectual property, creative journey, copyright compliance, trust in our craft, liability, termination of services, user satisfaction, evolving together, modifications to terms, design experience."
         />
-        <link
-          rel="canonical"
-          href="https://logo-craftsmen.vercel.app/terms"
-        ></link>
+        <link rel="canonical" href="https://logo-craftsmen.vercel.app/terms" />
       </Helmet>
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>

@@ -20,7 +20,7 @@ const Privacy = () => {
         <link
           rel="canonical"
           href="https://logo-craftsmen.vercel.app/privacy"
-        ></link>
+        />
       </Helmet>
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>

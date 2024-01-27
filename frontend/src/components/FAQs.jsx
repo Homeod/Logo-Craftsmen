@@ -46,10 +46,7 @@ const FAQs = () => {
           name="keywords"
           content="logo design, vector conversion, embroidery services, turnaround time, file formats, design guarantees, design revisions, pricing structure, embroidery on specific fabrics, rush services, Logo Craftsmen, design consultation, design process, client satisfaction"
         />
-        <link
-          rel="canonical"
-          href="https://logo-craftsmen.vercel.app/faqs"
-        ></link>
+        <link rel="canonical" href="https://logo-craftsmen.vercel.app/faqs" />
       </Helmet>
 
       <div className="py-10 md:py-10 border-b border-gray-100">

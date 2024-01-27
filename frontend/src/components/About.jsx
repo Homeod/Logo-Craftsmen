@@ -20,10 +20,7 @@ const About = () => {
           name="keywords"
           content="Logo Craftsmen, about us, logo design, vector conversion, embroidery services, craftsmanship, precision, design journey, design values, collaboration, quality, customer satisfaction, design exploration, crafting legacies, precision in design, story behind Logo Craftsmen, bringing visions to life, professional design services, creative journey, design precision"
         />
-        <link
-          rel="canonical"
-          href="https://logo-craftsmen.vercel.app/about"
-        ></link>
+        <link rel="canonical" href="https://logo-craftsmen.vercel.app/about" />
       </Helmet>
       <div className="pb-2 w-full text-center ">
         <h2 className="pb-6 font-medium w-full text-center">About</h2>

@@ -80,7 +80,7 @@ const Portfolio = () => {
         <link
           rel="canonical"
           href="https://logo-craftsmen.vercel.app/portfolio"
-        ></link>
+        />
       </Helmet>
       <div className="relative m-3 sm:m-10 bg-violet-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
