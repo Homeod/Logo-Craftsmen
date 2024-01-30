@@ -136,7 +136,7 @@ const ContactLanding = () => {
           <h2 className={styles.sectionSubText}>
             Upload your file, and watch us craft your design
           </h2>
-          <h1 className={styles.sectionHeadText}>Get Quotation</h1>
+          <h2 className={styles.sectionHeadText}>Get Quotation</h2>
           <div className="flex justify-center items-center">
             <div className="flex h-full w-fit items-center justify-center flex-col-reverse gap-6 sm:gap-12 py-8 px-8 text-center lg:text-left sm:mt-4 sm:rounded-lg ">
               <div className="w-full ">

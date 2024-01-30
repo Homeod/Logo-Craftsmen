@@ -77,13 +77,13 @@ const Hero = () => {
             />
             <div className="absolute inset-0 bg-white bg-opacity-50 rounded-[20px] text-center ">
               <AnimatedDiv>
-                <h1 className="lg:text-[65px] font-bold text-black font-playfair text-[40px] px-5">
+                <h2 className="lg:text-[65px] font-bold text-black font-playfair text-[40px] px-5">
                   Embroidery{" "}
                   <span className="text-blue-800 lg:text-[65px] font-bold font-playfair">
                     Design
                   </span>{" "}
                   Excellence!
-                </h1>
+                </h2>
                 <h2 className="lg:text-[45px] font-semibold font-playfair text-[30px] px-5">
                   From Logos to Apparel –
                   <span className="text-rose-900  lg:text-[45px] font-playfair text-[30px]">
@@ -126,7 +126,7 @@ const Hero = () => {
             />
             <div className="absolute inset-0 bg-white bg-opacity-60 rounded-[20px]  ">
               <AnimatedDiv>
-                <h1 className="lg:text-[65px] font-bold text-black font-playfair text-[40px] px-5  text-center">
+                <h2 className="lg:text-[65px] font-bold text-black font-playfair text-[40px] px-5  text-center">
                   Transform{" "}
                   <span className="text-pink-800 lg:text-[65px] text-[40px] font-bold font-playfair">
                     Raster{" "}
@@ -138,7 +138,7 @@ const Hero = () => {
                     Vector
                   </span>{" "}
                   Magic!
-                </h1>
+                </h2>
                 <h2 className="lg:text-[45px] font-semibold font-playfair text-[30px] lg:ml-0 ml-14">
                   Elevate{" "}
                   <span className="text-blue-800 lg:text-[45px] font-playfair">
@@ -176,9 +176,9 @@ const Hero = () => {
             />
             <div className="absolute inset-0 bg-white bg-opacity-60 rounded-[20px] ">
               <AnimatedDiv>
-                <h1 className="lg:text-[65px] font-bold text-black  font-playfair text-[40px]">
+                <h2 className="lg:text-[65px] font-bold text-black  font-playfair text-[40px]">
                   Virtual Mockup
-                </h1>
+                </h2>
                 <h2 className="lg:text-[45px] font-semibold  lg:px-20 font-playfair text-[30px]">
                   See Your{" "}
                   <span className=" lg:text-[45px] text-amber-700 font-playfair text-[30px]">
@@ -218,11 +218,11 @@ const Hero = () => {
             />
             <div className="absolute inset-0 bg-white bg-opacity-60 rounded-[20px] ">
               <AnimatedDiv>
-                <h1 className="lg:text-[65px] font-bold text-black  font-playfair text-[40px] text-center">
+                <h2 className="lg:text-[65px] font-bold text-black  font-playfair text-[40px] text-center">
                   Image <br className="sm:hidden" />
                   Editing <br className="sm:hidden" />
                   Excellence !
-                </h1>
+                </h2>
                 <h2 className="lg:text-[55px] font-semibold lg:px-20 font-playfair text-[30px]">
                   <span className="lg:text-[55px]  text-rose-700 font-playfair">
                     Visual

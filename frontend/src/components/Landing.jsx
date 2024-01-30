@@ -159,7 +159,7 @@ const Landing = () => {
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <motion.div>
             <h2 className={styles.sectionSubText}>What others say</h2>
-            <h1 className={styles.sectionHeadText}>Testimonials</h1>
+            <h2 className={styles.sectionHeadText}>Testimonials</h2>
           </motion.div>
         </div>
 
@@ -180,7 +180,7 @@ const Landing = () => {
         <div className={`${styles.padding}`}>
           <motion.div variants={textVariant()}>
             <h2 className={styles.sectionSubText}>How we move ahead</h2>
-            <h1 className={styles.sectionHeadText}>Process Flow</h1>
+            <h2 className={styles.sectionHeadText}>Process Flow</h2>
           </motion.div>
 
           <VerticalTimeline>

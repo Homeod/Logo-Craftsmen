@@ -35,9 +35,9 @@ const Itemscontainerfooter = () => {
       </div>
       <div className="flex justify-center lg:text-left md:text-center text-center">
         <ul>
-          <h1 className="mb-1 font-semibold underline underline-offset-8">
+          <h2 className="mb-1 font-semibold underline underline-offset-8">
             Contacts
-          </h1>
+          </h2>
           <a
             href="tel:+859-181-3460"
             title="859-181-3460"

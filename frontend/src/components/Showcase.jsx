@@ -33,7 +33,7 @@ const Showcase = () => {
         <motion.div>
           <section className="container mx-auto">
             <h2 className={styles.sectionSubText}>Tour to the Logos </h2>
-            <h1 className={styles.sectionHeadText}>Showcases</h1>
+            <h2 className={styles.sectionHeadText}>Showcases</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
               {images.map((image, index) => (
                 <div
