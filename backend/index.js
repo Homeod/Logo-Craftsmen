@@ -14,17 +14,18 @@ app.use(
     origin: [
       "https://logocraftsmen.com",
       "https://logo-craftsmen.vercel.app",
-      "http://localhost:5173",
       "https://www.logocraftsmen.com",
     ],
   })
 );
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../dist")));
+  app.use(express.static(path.join(__dirname, "..frontend/dist")));
 
   app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "../", "dist", "index.html"))
+    res.sendFile(
+      path.resolve(__dirname, "../", "frontend", "dist", "index.html")
+    )
   );
 }
 
