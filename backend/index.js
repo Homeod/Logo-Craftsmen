@@ -21,15 +21,7 @@ app.use(
 );
 
 if (process.env.NODE_ENV === "production") {
-  app.use(
-    express.static(path.join(__dirname, "../dist"), {
-      setHeaders: (res, path, stat) => {
-        if (path.endsWith(".js")) {
-          res.setHeader("Content-Type", "application/javascript");
-        }
-      },
-    })
-  );
+  app.use(express.static(path.join(__dirname, "../dist")));
 
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(__dirname, "../", "dist", "index.html"))
