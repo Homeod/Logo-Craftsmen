@@ -30,17 +30,13 @@ if (process.env.NODE_ENV === "production") {
 }
 
 var smtpTransport = nodemailer.createTransport({
-  service: "Godaddy",
   host: "smtpout.secureserver.net",
   port: 465,
-  secure: false,
   auth: {
     user: process.env.authuser,
     pass: process.env.authpass,
   },
-  tls: {
-    rejectUnauthorized: false,
-  },
+  secure: true,
 });
 
 smtpTransport.verify(function (error, success) {
