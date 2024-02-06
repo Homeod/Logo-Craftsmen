@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
 const dotenv = require("dotenv").config();
-const port = 4444;
+const port = process.env.PORT;
 const path = require("path");
 
 app.use(express.json({ limit: "25mb", extended: true }));
