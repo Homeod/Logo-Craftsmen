@@ -64,7 +64,7 @@ const Contact = ({ setIsUploadOpen }) => {
     }
     setLoading(true);
     const response = await axios.post(
-      `https://logocraftmendeploy.onrender.com/contactAdmin`,
+      `https://backend-logocraftsmen.onrender.com/contactAdmin`,
       formData
     );
     setLoading(false);

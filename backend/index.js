@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
 const dotenv = require("dotenv").config();
-const port = 4444;
+const port = process.env.PORT;
 const path = require("path");
 
 app.use(express.json({ limit: "25mb", extended: true }));
@@ -19,34 +19,14 @@ app.use(
   })
 );
 
-if (process.env.NODE_ENV === "production") {
-  app.use(
-    express.static(path.join(__dirname, "../dist"), {
-      setHeaders: (res, path, stat) => {
-        if (path.endsWith(".js")) {
-          res.setHeader("Content-Type", "application/javascript");
-        }
-      },
-    })
-  );
-
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "../", "dist", "index.html"))
-  );
-}
-
 var smtpTransport = nodemailer.createTransport({
-  service: "Godaddy",
   host: "smtpout.secureserver.net",
-  port: 587,
-  secure: false,
+  port: 465,
   auth: {
     user: process.env.authuser,
     pass: process.env.authpass,
   },
-  tls: {
-    rejectUnauthorized: false,
-  },
+  secure: true,
 });
 
 smtpTransport.verify(function (error, success) {
