@@ -103,10 +103,7 @@ const Contact = ({ setIsUploadOpen }) => {
           name="keywords"
           content="contact Logo Craftsmen, logo design services, vector conversion, embroidery services, professional design services, contact information,name, phone number, email address,type a message,USA, India, design gallery, vector art, logo designs, design consultation, design ideas, logo craftsmanship"
         />
-        <link
-          rel="canonical"
-          href="https://logo-craftsmen.vercel.app/contact"
-        />
+        <link rel="canonical" href="https://logocraftsmen.com/contact" />
       </Helmet>
       <div className="m-3 sm:m-10 pb-8 flex flex-col bg-fuchsia-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>

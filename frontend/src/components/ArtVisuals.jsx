@@ -20,10 +20,7 @@ const ArtVisuals = ({ setIsUploadOpen }) => {
           name="keywords"
           content="promotional items mockup,	stadium cup mockup,	promotion stand mockup,	company logo merchandise,	mock up template,	t shirt design mockup,	create clothing mockups"
         />
-        <link
-          rel="canonical"
-          href="https://logo-craftsmen.vercel.app/artvisuals"
-        />
+        <link rel="canonical" href="https://logocraftsmen.com/artvisuals" />
       </Helmet>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
         <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-10 ">

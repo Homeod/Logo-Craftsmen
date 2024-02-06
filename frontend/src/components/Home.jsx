@@ -16,7 +16,7 @@ const Home = () => {
           name="keywords"
           content="logo design, vector conversion, embroidery services, turnaround time, file formats, design guarantees, design revisions, pricing structure, embroidery on specific fabrics, rush services, Logo Craftsmen, design consultation, design process, client satisfaction"
         />
-        <link rel="canonical" href="https://logo-craftsmen.vercel.app/"></link>
+        <link rel="canonical" href="https://logocraftsmen.com/"></link>
       </Helmet> */}
       <div className="Home">
         <Hero />

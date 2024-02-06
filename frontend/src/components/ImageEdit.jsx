@@ -21,10 +21,7 @@ const ImageEdit = ({ setIsUploadOpen }) => {
           content="professional photo editing services,	ecommerce image editing services,	photo enhancement service,	image retouching,	photo editing services for photographers,	high end photo retouching services,	professional photo retouching,	best photo restoration services,	photo touchup,	ecommerce photo editing,	professional photo restoration,	i need someone to photoshop a picture for me,	photo correction service,	old photo restoration online,	remove background ,	clipping path photoshop,	faded photo restoration,	retouch pictures,	image editing services for ecommerce
           "
         />
-        <link
-          rel="canonical"
-          href="https://logo-craftsmen.vercel.app/imageedit"
-        />
+        <link rel="canonical" href="https://logocraftsmen.com/imageedit" />
       </Helmet>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
         <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-10 ">

@@ -17,10 +17,7 @@ const Privacy = () => {
           name="keywords"
           content="Logo Craftsmen, privacy policy, trust, personalized design services, cookies, security measures, information protection, your privacy matters, transparent practices, managing preferences, design choices, age-appropriate design, policy evolution, communication"
         />
-        <link
-          rel="canonical"
-          href="https://logo-craftsmen.vercel.app/privacy"
-        />
+        <link rel="canonical" href="https://logocraftsmen.com/privacy" />
       </Helmet>
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>

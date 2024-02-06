@@ -20,10 +20,7 @@ const Embroidery = ({ setIsUploadOpen }) => {
           name="keywords"
           content="embroidery digitizing services,	digitize logo for embroidery,	digital embroidery machine,	online embroidery digitizing,	logo digitizing,	wilcom embroidery,	digitize image for embroidery,	machine embroidery digitizing service,	best embroidery digitizing service,	digitize embroidery designs,	get logo digitized for embroidery,	professional embroidery digitizers,	digitize my logo for embroidery,	best digitizing service for embroidery,	dst digitizing,	custom embroidery digitizing services,	patch digitizing,	emb digitizing,	puff digitizing,	punch digitizing for embroidery design"
         />
-        <link
-          rel="canonical"
-          href="https://logo-craftsmen.vercel.app/embroidery"
-        />
+        <link rel="canonical" href="https://logocraftsmen.com/embroidery" />
       </Helmet>
       <div className="m-3 sm:m-10 border-2 border-green-400 bg-green-100 rounded-[20px]">
         <div className="grid md:grid-cols-2 md:grid-rows-1 auto-rows-min md:gap-2 gap-4 px-8 py-10 ">
