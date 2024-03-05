@@ -105,7 +105,7 @@ const Hero = () => {
                 </h2>
                 <Link
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute md-bottom-16 lg:-bottom-5 -bottom-5"
-                  href="/embroidery"
+                  to="/embroidery"
                 >
                   Learn More
                 </Link>
@@ -155,7 +155,7 @@ const Hero = () => {
                 </h2>
                 <Link
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute lg:-bottom-20 -bottom-20 md:-bottom-32"
-                  href="/vector"
+                  to="/vector"
                 >
                   Learn More
                 </Link>
@@ -197,7 +197,7 @@ const Hero = () => {
                 </h2>
                 <Link
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute lg:-bottom-16 -bottom-24"
-                  href="/artvisuals"
+                  to="/artvisuals"
                 >
                   Learn More
                 </Link>
@@ -243,7 +243,7 @@ const Hero = () => {
                 </h2>
                 <Link
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute lg:-bottom-28 -bottom-8 md:-bottom-36"
-                  href="/imageedit"
+                  to="/imageedit"
                 >
                   Learn More
                 </Link>
