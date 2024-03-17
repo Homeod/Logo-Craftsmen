@@ -3,10 +3,17 @@ import Modal from "react-modal";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
-import { icecream, embdragon, imgedit1, CirDesign } from "../assets";
-import { SchoolLogo, CrickLogo, CompLogo, ClubLogo } from "../assets";
+import { icecream, embdragonshow, imgedit1, CirDesign } from "../assets";
+import { SchoolLogo, ClubLogo } from "../assets";
 
-const images = [icecream, ClubLogo, SchoolLogo, imgedit1, CirDesign, embdragon];
+const images = [
+  icecream,
+  ClubLogo,
+  SchoolLogo,
+  imgedit1,
+  CirDesign,
+  embdragonshow,
+];
 
 const Showcase = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);

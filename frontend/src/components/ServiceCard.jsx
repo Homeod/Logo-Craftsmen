@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import Vector from "../assets/vectorcow.png";
-import Tiger from "../assets/tiger.png";
-import Art from "../assets/art1.png";
+import Vector from "../assets/vectorcow.jpg";
+import Tiger from "../assets/tiger.jpg";
+import Art from "../assets/art1.jpg";
 import Order from "../assets/order.jpg";
 import ImageEdit from "../assets/imgedit1.jpeg";
 

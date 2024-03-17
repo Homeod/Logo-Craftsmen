@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Peacock from "../assets/peacock.jpg";
-import { vectorcow, ClubLogo, art3 } from "../assets";
+import { vectorcow, ClubLogo, art3, ClubLogowhite, artblue } from "../assets";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { styles } from "../styles";
@@ -257,7 +257,7 @@ const ContactLanding = () => {
                     <figure>
                       <img
                         loading="lazy"
-                        src={ClubLogo}
+                        src={ClubLogowhite}
                         alt="Club Logo"
                         title="Club Logo"
                         className="bg-white w-full h-full"
@@ -268,9 +268,9 @@ const ContactLanding = () => {
                     <figure>
                       <img
                         loading="lazy"
-                        src={art3}
+                        src={artblue}
                         alt="Art 3"
-                        title="Art 3"
+                        title="Logo Print Art"
                         className="bg-sky-300 w-full h-full"
                       />
                     </figure>

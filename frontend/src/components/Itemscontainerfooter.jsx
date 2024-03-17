@@ -1,7 +1,7 @@
 import Itemsfooter from "./Itemsfooter";
 import { Insights, Services, Company } from "../constents";
 import { Link } from "react-router-dom";
-import { lcwhite } from "../assets";
+import { lcwhite_footer } from "../assets";
 
 const Itemscontainerfooter = () => {
   const openMap = (address) => {
@@ -26,7 +26,7 @@ const Itemscontainerfooter = () => {
         >
           <img
             loading="lazy"
-            src={lcwhite}
+            src={lcwhite_footer}
             alt="logo"
             title="logo"
             className=" w-42 h-24 object-contain lg:justify-start bg "

@@ -1,43 +1,25 @@
-import logo from "./logo.svg";
-import github from "./github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
-import closee from "./closee.svg";
-import hamburg from "./hamburg.svg";
-import craftsmen from "./craftsmen.svg";
-import craftsmenlogo from "./craftsmenlogo.png";
-import lcwhite from "./lcwhite.png"
+import menu from "./menu-01.png";
+import closee from "./closee-01.jpg";
+import hamburg from "./hamburg-01.jpg";
+import craftsmen from "./craftsmen-01.jpg";
+import lcwhite from "./lcwhite.jpg";
+import lcwhite_footer from "./lcwhite_footer.jpg";
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
-
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-
-
-import rect_img from "./rect_img.png";
-import square_img from "./square_img.png";
-import monkey from "./monkey.png";
-
+import rect_img from "./rect_img.jpg";
+import square_img from "./square_img.jpg";
+import monkey from "./monkey.jpg";
+import peacock from "./peacock.jpg";
 import owl from "./owl.jpg";
 import icecream from "./icecream.jpg";
-import tiger from "./tiger.png";
-import embskull from "./embskull.png";
-import embdragon from "./embdragon.png";
-import vectorcow from "./vectorcow.png";
+import tiger from "./tiger.jpg";
+import tiger01 from "./tiger_01.jpg";
+import tiger02 from "./tiger_02.jpg";
+import embskull from "./embskull.jpg";
+import embskull1 from "./embskull_1.jpg";
+import embdragon from "./embdragon.jpg";
+import embdragonport from "./embdragon_01.jpg";
+import embdragonshow from "./embdragon_pink.jpg";
+import vectorcow from "./vectorcow.jpg";
 import imgedit1 from "./imgedit1.jpeg";
 import imgedit2 from "./imgedit2.jpeg";
 import imgedit3 from "./imgedit3.jpeg";
@@ -47,71 +29,68 @@ import imgedit6 from "./imgedit6.jpeg";
 import imgedit7 from "./imgedit7.jpeg";
 import imgedit8 from "./imgedit8.jpeg";
 import imgedit9 from "./imgedit9.jpeg";
-import art1 from "./art1.png";
-import art2 from "./art2.png";
-import art3 from "./art3.png";
+import art1 from "./2_art1.jpg";
+import art2 from "./1_art2.jpg";
+import art3 from "./1_art3.jpg";
+import artblue from "./artblue.jpg";
 import order from "./order.jpg";
-import order1 from "./order1.png";
-import order2 from "./order2.png";
-import map from "./map.png";
+import order1 from "./1_order1.jpg";
+import order2 from "./2_order2.jpg";
 import fastandfree from "./fastandfree.png";
 import proprecision from "./proprecision.png";
 import vision from "./vision.png";
 import ontime from "./ontime.png";
-import consult from "./consult.png";
-import designphase from "./designphase.png";
-import qualitycontrol from "./qualitycontrol.png";
-import delivery from "./delivery.png";
+import consult from "./consult.jpg";
+import designphase from "./designphase.jpg";
+import qualitycontrol from "./qualitycontrol.jpg";
+import delivery from "./delivery.jpg";
 import favicon from "./favicon.png";
 
-import CirDesign from "./logos/CirDesign.png";
-import ClubLogo from "./logos/ClubLogo.png";
-import CompLogo from "./logos/CompLogo.png";
-import CrickLogo from "./logos/CrickLogo.png";
-import SchoolLogo from "./logos/SchoolLogo.png";
-import peacock from "./peacock.jpg"
+import CirDesign404 from "./logos/1_CirDesign_404.jpg";
+import CirDesignshow from "./logos/1_CirDesign_showcase.jpg";
+import CirDesignwhite from "./logos/1_CirDesign_white.jpg";
+import CirDesign from "./logos/1_CirDesign.jpg";
+import ClubLogoshow from "./logos/2_ClubLogo_showcase.jpg";
+import ClubLogowhite from "./logos/2_ClubLogo_white.jpg";
+import ClubLogo from "./logos/2_ClubLogo.jpg";
+import SchoolLogoshow from "./logos/3_SchoolLogo_showcase.jpg";
+import SchoolLogowhite from "./logos/3_SchoolLogo_white.jpg";
+import SchoolLogo from "./logos/3_SchoolLogo.jpg";
+import tigershow from "./logos/4_tiger_showcase.jpg";
+import tigerwhite from "./logos/4_tiger_white.jpg";
+import tigerland from "./logos/4_tiger.jpg";
+import CompLogoshow from "./logos/5_CompLogo_showcase.jpg";
+import CompLogowhite from "./logos/5_CompLogo_white.jpg";
+import CompLogo from "./logos/5_CompLogo.jpg";
+import CrickLogoshow from "./logos/6_CrickLogo_showcase.jpg";
+import CrickLogowhite from "./logos/6_CrickLogo_white.jpg";
+import CrickLogo from "./logos/6_CrickLogo.jpg";
 
 import hero_emb from "./hero_emb.jpg";
 import hero_imgedits from "./hero_imgedits.jpg";
 import hero_mockup from "./hero_mockup.jpg";
 import hero_vector from "./hero_vector.jpg";
 
-
 export {
-  logo,
-  github,
   menu,
   hamburg,
   craftsmen,
-  craftsmenlogo,
   lcwhite,
-  close,
+  lcwhite_footer,
   closee,
-  css,
-  docker,
-  figma,
-  git,
-  html,
-  javascript,
-  mongodb,
-  nodejs,
-  reactjs,
-  redux,
-  tailwind,
-  typescript,
-  threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   rect_img,
   square_img,
   monkey,
   owl,
   icecream,
   tiger,
+  tiger01,
+  tiger02,
   embskull,
+  embskull1,
   embdragon,
+  embdragonport,
+  embdragonshow,
   vectorcow,
   imgedit1,
   imgedit2,
@@ -125,10 +104,10 @@ export {
   art1,
   art2,
   art3,
+  artblue,
   order,
   order1,
   order2,
-  map,
   fastandfree,
   proprecision,
   vision,
@@ -138,10 +117,24 @@ export {
   qualitycontrol,
   delivery,
   CirDesign,
+  CirDesign404,
+  CirDesignshow,
+  CirDesignwhite,
   ClubLogo,
+  ClubLogoshow,
+  ClubLogowhite,
   CompLogo,
+  CompLogoshow,
+  CompLogowhite,
   CrickLogo,
+  CrickLogoshow,
+  CrickLogowhite,
   SchoolLogo,
+  SchoolLogoshow,
+  SchoolLogowhite,
+  tigershow,
+  tigerwhite,
+  tigerland,
   favicon,
   peacock,
   hero_emb,

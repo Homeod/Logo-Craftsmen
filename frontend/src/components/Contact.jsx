@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Peacock from "../assets/peacock.jpg";
-import { vectorcow, ClubLogo, art3 } from "../assets";
+import { vectorcow, ClubLogowhite, artblue } from "../assets";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { styles } from "../styles";
@@ -315,7 +315,7 @@ const Contact = ({ setIsUploadOpen }) => {
                     <figure>
                       <img
                         loading="lazy"
-                        src={ClubLogo}
+                        src={ClubLogowhite}
                         alt="Club Logo"
                         title="Club Logo"
                         className="bg-white w-full h-full"
@@ -326,7 +326,7 @@ const Contact = ({ setIsUploadOpen }) => {
                     <figure>
                       <img
                         loading="lazy"
-                        src={art3}
+                        src={artblue}
                         alt="Art 3"
                         title="Art 3"
                         className="bg-sky-300 w-full h-full"

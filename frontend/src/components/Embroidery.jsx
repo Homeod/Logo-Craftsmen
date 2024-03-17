@@ -1,6 +1,6 @@
 import React from "react";
 import { ServiceCard } from "../components";
-import { embskull, embdragon, tiger } from "../assets";
+import { embskull1, embdragonport, tiger01 } from "../assets";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
@@ -71,7 +71,7 @@ const Embroidery = ({ setIsUploadOpen }) => {
           <div className="flex items-center justify-center mx-auto my-6 ">
             <img
               loading="lazy"
-              src={tiger}
+              src={tiger01}
               alt="Tiger"
               title="Tiger"
               className="md:w-full md:h-[24rem] sm:w-[60vw] mx-auto rounded-2xl shadow-zinc-700 "
@@ -143,7 +143,7 @@ const Embroidery = ({ setIsUploadOpen }) => {
                   <img
                     loading="lazy"
                     className="object-cover w-full h-full md:h-auto  "
-                    src={embskull}
+                    src={embskull1}
                     alt="Skull"
                     title="Skull"
                   />
@@ -152,7 +152,7 @@ const Embroidery = ({ setIsUploadOpen }) => {
                   <img
                     loading="lazy"
                     className="object-cover w-full h-full md:h-auto "
-                    src={embdragon}
+                    src={embdragonport}
                     alt="Dragon"
                     title="Dragon"
                   />

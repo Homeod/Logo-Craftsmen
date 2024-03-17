@@ -1,7 +1,7 @@
 import React from "react";
 import { styles } from "../styles";
 import { motion } from "framer-motion";
-import { CirDesign } from "../assets";
+import { CirDesign404 } from "../assets";
 import { Link } from "react-router-dom";
 
 const Error = () => {
@@ -22,7 +22,7 @@ const Error = () => {
               <p className=" text-center text-bold font-bold text-[120px]">4</p>
               <img
                 loading="lazy"
-                src={CirDesign}
+                src={CirDesign404}
                 alt="Circle Design"
                 title="Circle Design"
                 className="w-[120px] h-[120px]"

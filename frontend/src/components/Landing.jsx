@@ -1,7 +1,7 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-
+import { Helmet } from "react-helmet";
 import { styles } from "../styles";
 import { services, experiences, testimonials } from "../constents";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -28,7 +28,7 @@ const ExperienceCard = ({ experience }) => (
           src={experience.icon}
           alt={experience.company_name}
           title={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
+          className="w-full h-full rounded-full"
         />
       </div>
     }
@@ -130,6 +130,10 @@ const FeedbackCard = ({
 const Landing = () => {
   return (
     <>
+      <Helmet>
+        <title>Logo Craftsmen</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Helmet>
       <div>
         <Home />
       </div>
