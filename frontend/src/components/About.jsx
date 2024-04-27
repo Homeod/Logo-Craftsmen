@@ -36,7 +36,7 @@ const About = () => {
         <div className="sm:px-10 lg:px-10 px-2 rounded-2xl min-h-[300px]">
           <motion.div>
             <section className="container mx-auto">
-              <div className="relative bg-[url(https://static-cse.canva.com/blob/976320/Careers.png)] h-[500px] md:h-[400px] bg-no-repeat bg-cover bg-center rounded-[20px]">
+              <div className="relative bg-[url(./assets/Careers.png)] h-[500px] md:h-[400px] bg-no-repeat bg-cover bg-center rounded-[20px]">
                 <div className="absolute inset-0 bg-white bg-opacity-60 rounded-[20px] ">
                   <div className="m-10">
                     <h2 className={styles.sectionSubText}>What is </h2>

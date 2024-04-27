@@ -5,6 +5,8 @@ import craftsmen from "./craftsmen-01.jpg";
 import lcwhite from "./lcwhite.jpg";
 import lcwhite_footer from "./lcwhite_footer.jpg";
 
+import careers from "./Careers.png";
+
 import rect_img from "./rect_img.jpg";
 import square_img from "./square_img.jpg";
 import monkey from "./monkey.jpg";
@@ -78,6 +80,7 @@ export {
   lcwhite,
   lcwhite_footer,
   closee,
+  careers,
   rect_img,
   square_img,
   monkey,

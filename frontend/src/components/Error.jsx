@@ -3,10 +3,16 @@ import { styles } from "../styles";
 import { motion } from "framer-motion";
 import { CirDesign404 } from "../assets";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Error = () => {
   return (
     <div className="m-3 sm:m-10 border-2 border-violet-400 bg-violet-100 rounded-[20px]">
+      <Helmet>
+        <title>Error | Logo Craftsmen </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
         <motion.div>
           <h2 className={styles.sectionSubText}>Upppseyy!!! </h2>
