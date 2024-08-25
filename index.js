@@ -44,15 +44,34 @@ app.post("/contactAdmin", async (req, res) => {
     from: process.env.authuser,
     to: process.env.clientemail,
     cc: data.email,
-    subject: `New Message from ${data.name}`,
+    subject: `Thank You, ${data.name}, for Contacting Us – We’re on It!`,
     html: `
-    <h3>${data.name}</h3>
-    <h3>${data.email}</h3>
-    <p>Phone : ${data.phone}</p>
-    <br></br>
-    <p>${data.message}</p>
-
-    Thankyou.
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f4f4; border-radius: 10px;">
+        <h2 style="color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px;">New Message from ${data.name}</h2>
+        <div style="background-color: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+          <p style="color: #555; line-height: 1.5;">
+            <strong>Name:</strong> ${data.name}
+          </p>
+          <p style="color: #555; line-height: 1.5;">
+            <strong>Email:</strong> ${data.email}
+          </p>
+          <p style="color: #555; line-height: 1.5;">
+            <strong>Phone:</strong> ${data.phone}
+          </p>
+          <p style="color: #555; line-height: 1.5; margin-top: 20px;">
+            ${data.message}
+          </p>
+        </div>
+        <p style="color: #333; font-size: 14px; margin-top: 30px; text-align: center;">
+          Hello! We wanted to let you know we received your message and will be in touch ASAP.
+        </p>
+        <p style="color: #333; font-size: 16px; text-align: center;">
+          Regards,<br>Logo Craftsmen
+        </p>
+        <p style="color: #777; font-size: 12px; text-align: center; margin-top: 20px;">
+          Thank you for contacting us.
+        </p>
+      </div>
     `,
   };
 
@@ -74,15 +93,33 @@ app.post("/uploadImages", async (req, res) => {
     from: process.env.authuser,
     to: process.env.clientemail,
     cc: data.email,
-    subject: `New Message from ${data.name}`,
-    html: `<h3>${data.name}</h3>
-    <h3>${data.email}</h3>
-    <p>Phone : ${data.phone}</p>
-    <br></br>
-    <h3>${data.service}</h3>
-    <p>${data.message}</p>
-
-    Thankyou.
+    subject: `Thank You, ${data.name}, for Contacting Us – We’re on It!`,
+    html: `<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f4f4; border-radius: 10px;">
+        <h2 style="color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px;">New Message from ${data.name}</h2>
+        <div style="background-color: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+          <p style="color: #555; line-height: 1.5;">
+            <strong>Name:</strong> ${data.name}
+          </p>
+          <p style="color: #555; line-height: 1.5;">
+            <strong>Email:</strong> ${data.email}
+          </p>
+          <p style="color: #555; line-height: 1.5;">
+            <strong>Phone:</strong> ${data.phone}
+          </p>
+          <p style="color: #555; line-height: 1.5; margin-top: 20px;">
+            ${data.message}
+          </p>
+        </div>
+        <p style="color: #333; font-size: 14px; margin-top: 30px; text-align: center;">
+          Hello! We wanted to let you know we received your message and will be in touch ASAP.
+        </p>
+        <p style="color: #333; font-size: 16px; text-align: center;">
+          Regards,<br>Logo Craftsmen
+        </p>
+        <p style="color: #777; font-size: 12px; text-align: center; margin-top: 20px;">
+          Thank you for contacting us.
+        </p>
+      </div>
     `,
     attachments: data.ImageFile.map((file, index) => {
       const isApplication = file.includes("application");
