@@ -148,10 +148,9 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
         formData
       );
       if (response.status === 200) {
-        setIsUploadOpen(false);
-        console.log("Navigating to success page");
-        navigate("/thankyou"); // Navigate to the desired path on success
         toast.success("Email sent successfully!");
+        setIsUploadOpen(false);
+        navigate("/thankyou"); // Navigate to the desired path on success
       } else {
         toast.error("Error occurred while sending email");
       }
