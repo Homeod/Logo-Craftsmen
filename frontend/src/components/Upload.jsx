@@ -82,42 +82,6 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
     }
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   if (
-  //     !((phone.startsWith("91") && phone.length === 12) || phone.length === 10)
-  //   ) {
-  //     toast.error("Phone Number Not valid");
-  //     return;
-  //   }
-  //   const serializedFormData = JSON.stringify(formData);
-  //   const payloadSizeInBytes = new TextEncoder().encode(
-  //     serializedFormData
-  //   ).length;
-  //   const maxTotalPayloadSize = 25 * 1024 * 1024;
-
-  //   if (payloadSizeInBytes > maxTotalPayloadSize) {
-  //     toast.error(
-  //       "Payload Size is greater than 25mb. Try to reduce size of images."
-  //     );
-  //   }
-  //   setLoading(true);
-
-  //   const response = await axios.post(
-  //     "https://backend-logocraftsmen.onrender.com/uploadImages",
-  //     formData
-  //   );
-  //   if (response.status === 200) {
-  //     toast.success("Email sent successfully!");
-  //     setIsUploadOpen(false);
-  //   } else toast.error("Error occured while sending email");
-
-  //   setLoading(false);
-
-  //   setIsUploadOpen(false);
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -137,29 +101,65 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
       toast.error(
         "Payload Size is greater than 25mb. Try to reduce size of images."
       );
-      return;
     }
-
     setLoading(true);
 
-    try {
-      const response = await axios.post(
-        "https://backend-logocraftsmen.onrender.com/uploadImages",
-        formData
-      );
-      if (response.status === 200) {
-        toast.success("Email sent successfully!");
-        setIsUploadOpen(false);
-        navigate("/thankyou"); // Navigate to the desired path on success
-      } else {
-        toast.error("Error occurred while sending email");
-      }
-    } catch (error) {
-      toast.error("Error occurred while sending email");
-    }
+    const response = await axios.post(
+      "https://backend-logocraftsmen.onrender.com/uploadImages",
+      formData
+    );
+    if (response.status === 200) {
+      toast.success("Email sent successfully!");
+      setIsUploadOpen(false);
+    } else toast.error("Error occured while sending email");
 
     setLoading(false);
+
+    setIsUploadOpen(false);
   };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   if (
+  //     !((phone.startsWith("91") && phone.length === 12) || phone.length === 10)
+  //   ) {
+  //     toast.error("Phone Number Not valid");
+  //     return;
+  //   }
+  //   const serializedFormData = JSON.stringify(formData);
+  //   const payloadSizeInBytes = new TextEncoder().encode(
+  //     serializedFormData
+  //   ).length;
+  //   const maxTotalPayloadSize = 25 * 1024 * 1024;
+
+  //   if (payloadSizeInBytes > maxTotalPayloadSize) {
+  //     toast.error(
+  //       "Payload Size is greater than 25mb. Try to reduce size of images."
+  //     );
+  //     return;
+  //   }
+
+  //   setLoading(true);
+
+  //   try {
+  //     const response = await axios.post(
+  //       "https://backend-logocraftsmen.onrender.com/uploadImages",
+  //       formData
+  //     );
+  //     if (response.status === 200) {
+  //       toast.success("Email sent successfully!");
+  //       setIsUploadOpen(false);
+  //       navigate("/thankyou"); // Navigate to the desired path on success
+  //     } else {
+  //       toast.error("Error occurred while sending email");
+  //     }
+  //   } catch (error) {
+  //     toast.error("Error occurred while sending email");
+  //   }
+
+  //   setLoading(false);
+  // };
 
   return (
     <Modal
