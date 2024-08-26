@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { faqs } from "../constents";
+import { faqs } from "../contents";
 import { Helmet } from "react-helmet";
 
 const AccordionSection = ({

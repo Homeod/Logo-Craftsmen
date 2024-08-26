@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { navLinks } from "../constents";
+import { navLinks } from "../contents";
 import { hamburg, closee, craftsmen } from "../assets";
 
 const Navbar = ({ setIsUploadOpen }) => {

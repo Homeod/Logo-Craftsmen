@@ -3,7 +3,7 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import { styles } from "../styles";
-import { services, experiences, testimonials } from "../constents";
+import { services, experiences, testimonials } from "../contents";
 import { fadeIn, textVariant } from "../utils/motion";
 import Home from "./Home";
 import ContactLanding from "./ContactLanding";

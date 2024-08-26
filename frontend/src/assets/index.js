@@ -73,6 +73,8 @@ import hero_imgedits from "./hero_imgedits.jpg";
 import hero_mockup from "./hero_mockup.jpg";
 import hero_vector from "./hero_vector.jpg";
 
+import thankyou from "./thankyou.jpg";
+
 export {
   menu,
   hamburg,
@@ -144,4 +146,5 @@ export {
   hero_imgedits,
   hero_mockup,
   hero_vector,
+  thankyou,
 };

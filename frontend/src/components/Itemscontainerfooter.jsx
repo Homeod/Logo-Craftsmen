@@ -1,5 +1,5 @@
 import Itemsfooter from "./Itemsfooter";
-import { Insights, Services, Company } from "../constents";
+import { Insights, Services, Company } from "../contents";
 import { Link } from "react-router-dom";
 import { lcwhite_footer } from "../assets";
 

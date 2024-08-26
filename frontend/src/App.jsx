@@ -22,6 +22,7 @@ import Home from "./components/Home";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Upload from "./components/Upload";
+import ThankYou from "./components/ThankYou";
 
 const App = () => {
   const [isUploadOpen, setIsUploadOpen] = useState(false);
@@ -73,6 +74,7 @@ const App = () => {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/thankyou" element={<ThankYou />} />
             <Route path="/*" element={<Error />} />
           </Routes>
         </div>
