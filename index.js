@@ -93,7 +93,7 @@ app.post("/uploadImages", async (req, res) => {
     from: process.env.authuser,
     to: process.env.clientemail,
     cc: data.email,
-    subject: `Thank You, ${data.name}, for Contacting Us – We’re on It!`,
+    subject: `Logo Craftsmen-Thank You, ${data.name}, for Contacting Us – We’re on It!`,
     html: `<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f4f4; border-radius: 10px;">
         <h2 style="color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px;">New Message from ${data.name}</h2>
         <div style="background-color: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
