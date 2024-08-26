@@ -16,6 +16,7 @@ import Error from "./Error";
 import ContactLanding from "./ContactLanding";
 import Terms from "./Terms";
 import Privacy from "./Privacy";
+import ThankYou from "./ThankYou";
 
 export {
   Hero,
@@ -36,4 +37,5 @@ export {
   ContactLanding,
   Terms,
   Privacy,
+  ThankYou,
 };
