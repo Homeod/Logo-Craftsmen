@@ -5,6 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { styles } from "../styles";
 import convertToBase64 from "./ImgtoBase64";
+import { useNavigate } from "react-router-dom";
 
 const initialFormData = {
   name: "",
@@ -19,7 +20,7 @@ const ContactLanding = () => {
   const [formData, setFormData] = useState(initialFormData);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
+  const navigate = useNavigate();
   const { name, email, phone, message, service } = formData;
 
   const options = [
@@ -112,6 +113,7 @@ const ContactLanding = () => {
 
       if (response.status === 200) {
         toast.success("Email sent successfully!");
+        navigate("/thankyou");
       }
     } catch (error) {
       console.error("Error occurred:", error);

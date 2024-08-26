@@ -5,6 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { styles } from "../styles";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 const Contact = ({ setIsUploadOpen }) => {
   const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ const Contact = ({ setIsUploadOpen }) => {
   });
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
+  const navigate = useNavigate();
   const { name, email, phone, message } = formData;
 
   const options = [
@@ -63,15 +64,22 @@ const Contact = ({ setIsUploadOpen }) => {
       );
     }
     setLoading(true);
-    const response = await axios.post(
-      `https://backend-logocraftsmen.onrender.com/contactAdmin`,
-      formData
-    );
-    setLoading(false);
-    if (response.status === 200) {
-      toast.success("Email sent successfully!");
-      setIsUploadOpen(false);
-    } else toast.error("Error occured while sending email");
+
+    try {
+      const response = await axios.post(
+        `https://backend-logocraftsmen.onrender.com/contactAdmin`,
+        formData
+      );
+      setLoading(false);
+      if (response.status === 200) {
+        toast.success("Email sent successfully!");
+        setIsUploadOpen(false);
+        setLoading(false);
+        navigate("/thankyou");
+      } else toast.error("Error occured while sending email");
+    } catch (error) {
+      toast.error("Error occured while sending email");
+    }
 
     setFormData({
       name: "",

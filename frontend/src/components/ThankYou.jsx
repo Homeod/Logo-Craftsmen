@@ -2,10 +2,15 @@ import React from "react";
 import { styles } from "../styles";
 import { thankyou } from "../assets";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ThankYou = () => {
   return (
     <div>
+      <Helmet>
+        <title>Thank You | Logo Craftsmen </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Helmet>
       <div className="m-3 sm:m-10 flex flex-col bg-fuchsia-100 rounded-[20px]">
         <div className={`${styles.padding} rounded-2xl min-h-[300px]`}>
           <h2 className={styles.sectionSubText}>
