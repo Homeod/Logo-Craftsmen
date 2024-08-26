@@ -114,6 +114,7 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
         setIsUploadOpen(false);
         setLoading(false);
         navigate("/thankyou");
+        window.scrollTo(0, 0);
       } else toast.error("Error occured while sending email");
     } catch (error) {
       toast.error("Error occured while sending email");

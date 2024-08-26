@@ -114,6 +114,7 @@ const ContactLanding = () => {
       if (response.status === 200) {
         toast.success("Email sent successfully!");
         navigate("/thankyou");
+        window.scrollTo(0, 0);
       }
     } catch (error) {
       console.error("Error occurred:", error);

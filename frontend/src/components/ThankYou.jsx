@@ -84,7 +84,7 @@ const Button = ({ label }) => (
         strokeDashoffset="150"
       />
     </svg>
-    <span className="relative z-10">{label}</span>
+    <span className="relative">{label}</span>
   </button>
 );
 
