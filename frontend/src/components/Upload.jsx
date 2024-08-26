@@ -3,6 +3,7 @@ import { Fade, Modal } from "@mui/material";
 import axios from "axios";
 import { toast } from "react-toastify";
 import convertToBase64 from "./ImgtoBase64";
+import { useNavigate } from "react-router-dom";
 
 const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
     ImageFile: [],
   });
 
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -109,6 +111,8 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
     if (response.status === 200) {
       toast.success("Email sent successfully!");
       setIsUploadOpen(false);
+      setLoading(false);
+      navigate("/thankyou");
     } else toast.error("Error occured while sending email");
 
     setLoading(false);
