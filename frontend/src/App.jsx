@@ -27,11 +27,15 @@ import Upload from "./components/Upload";
 const App = () => {
   const [isUploadOpen, setIsUploadOpen] = useState(false);
   return (
-    <div>
-      {isUploadOpen && (
-        <Upload isUploadOpen={isUploadOpen} setIsUploadOpen={setIsUploadOpen} />
-      )}
-      <BrowserRouter>
+    <BrowserRouter>
+      <div>
+        {isUploadOpen && (
+          <Upload
+            isUploadOpen={isUploadOpen}
+            setIsUploadOpen={setIsUploadOpen}
+          />
+        )}
+
         <div className="relative z-0 ">
           <div className="bg-cover bg-no-repeat pb-24">
             <Navbar setIsUploadOpen={setIsUploadOpen} />
@@ -81,9 +85,10 @@ const App = () => {
         <div>
           <Footer />
         </div>
-      </BrowserRouter>
-      <ToastContainer />
-    </div>
+
+        <ToastContainer />
+      </div>
+    </BrowserRouter>
   );
 };
 

@@ -104,20 +104,22 @@ const Upload = ({ isUploadOpen, setIsUploadOpen }) => {
     }
     setLoading(true);
 
-    const response = await axios.post(
-      "https://backend-logocraftsmen.onrender.com/uploadImages",
-      formData
-    );
-    if (response.status === 200) {
-      toast.success("Email sent successfully!");
-      setIsUploadOpen(false);
-      setLoading(false);
-      navigate("/thankyou");
-    } else toast.error("Error occured while sending email");
+    try {
+      const response = await axios.post(
+        "https://backend-logocraftsmen.onrender.com/uploadImages",
+        formData
+      );
+      if (response.status === 200) {
+        toast.success("Email sent successfully!");
+        setIsUploadOpen(false);
+        setLoading(false);
+        navigate("/thankyou");
+      } else toast.error("Error occured while sending email");
+    } catch (error) {
+      toast.error("Error occured while sending email");
+    }
 
     setLoading(false);
-
-    setIsUploadOpen(false);
   };
 
   return (
