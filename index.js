@@ -59,7 +59,7 @@ app.post("/contactAdmin", async (req, res) => {
             <strong>Phone:</strong> ${data.phone}
           </p>
           <p style="color: #555; line-height: 1.5; margin-top: 20px;">
-            ${data.message}
+            <strong>Message:</strong> ${data.message}
           </p>
         </div>
         <p style="color: #333; font-size: 14px; margin-top: 30px; text-align: center;">
@@ -106,8 +106,11 @@ app.post("/uploadImages", async (req, res) => {
           <p style="color: #555; line-height: 1.5;">
             <strong>Phone:</strong> ${data.phone}
           </p>
+          <p style="color: #555; line-height: 1.5;">
+            <strong>Service:</strong> ${data.service}
+          </p>
           <p style="color: #555; line-height: 1.5; margin-top: 20px;">
-            ${data.message}
+            <strong>Message:</strong> ${data.message}
           </p>
         </div>
         <p style="color: #333; font-size: 14px; margin-top: 30px; text-align: center;">
